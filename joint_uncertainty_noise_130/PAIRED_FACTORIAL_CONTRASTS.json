@@ -1,0 +1,386 @@
+[
+  {
+    "seed": 3000,
+    "mode": "baseline",
+    "outcome": "once_only_ordered_coverage",
+    "uncertainty_effect_quiet": 0.0,
+    "uncertainty_effect_noisy": 0.0,
+    "interaction": 0.0
+  },
+  {
+    "seed": 3001,
+    "mode": "baseline",
+    "outcome": "once_only_ordered_coverage",
+    "uncertainty_effect_quiet": 0.0,
+    "uncertainty_effect_noisy": 0.0,
+    "interaction": 0.0
+  },
+  {
+    "seed": 3002,
+    "mode": "baseline",
+    "outcome": "once_only_ordered_coverage",
+    "uncertainty_effect_quiet": 0.0,
+    "uncertainty_effect_noisy": 0.0,
+    "interaction": 0.0
+  },
+  {
+    "seed": 3003,
+    "mode": "baseline",
+    "outcome": "once_only_ordered_coverage",
+    "uncertainty_effect_quiet": 0.0,
+    "uncertainty_effect_noisy": 0.0,
+    "interaction": 0.0
+  },
+  {
+    "seed": 3004,
+    "mode": "baseline",
+    "outcome": "once_only_ordered_coverage",
+    "uncertainty_effect_quiet": 0.0,
+    "uncertainty_effect_noisy": 0.0,
+    "interaction": 0.0
+  },
+  {
+    "seed": 3005,
+    "mode": "baseline",
+    "outcome": "once_only_ordered_coverage",
+    "uncertainty_effect_quiet": 0.0,
+    "uncertainty_effect_noisy": 0.0,
+    "interaction": 0.0
+  },
+  {
+    "seed": 3000,
+    "mode": "baseline",
+    "outcome": "pure_source_duplicate_occurrences",
+    "uncertainty_effect_quiet": 0,
+    "uncertainty_effect_noisy": 0,
+    "interaction": 0
+  },
+  {
+    "seed": 3001,
+    "mode": "baseline",
+    "outcome": "pure_source_duplicate_occurrences",
+    "uncertainty_effect_quiet": 0,
+    "uncertainty_effect_noisy": 0,
+    "interaction": 0
+  },
+  {
+    "seed": 3002,
+    "mode": "baseline",
+    "outcome": "pure_source_duplicate_occurrences",
+    "uncertainty_effect_quiet": 0,
+    "uncertainty_effect_noisy": 0,
+    "interaction": 0
+  },
+  {
+    "seed": 3003,
+    "mode": "baseline",
+    "outcome": "pure_source_duplicate_occurrences",
+    "uncertainty_effect_quiet": 0,
+    "uncertainty_effect_noisy": 0,
+    "interaction": 0
+  },
+  {
+    "seed": 3004,
+    "mode": "baseline",
+    "outcome": "pure_source_duplicate_occurrences",
+    "uncertainty_effect_quiet": 0,
+    "uncertainty_effect_noisy": 0,
+    "interaction": 0
+  },
+  {
+    "seed": 3005,
+    "mode": "baseline",
+    "outcome": "pure_source_duplicate_occurrences",
+    "uncertainty_effect_quiet": 0,
+    "uncertainty_effect_noisy": 0,
+    "interaction": 0
+  },
+  {
+    "seed": 3000,
+    "mode": "baseline",
+    "outcome": "other_events",
+    "uncertainty_effect_quiet": 0,
+    "uncertainty_effect_noisy": 0,
+    "interaction": 0
+  },
+  {
+    "seed": 3001,
+    "mode": "baseline",
+    "outcome": "other_events",
+    "uncertainty_effect_quiet": 0,
+    "uncertainty_effect_noisy": 0,
+    "interaction": 0
+  },
+  {
+    "seed": 3002,
+    "mode": "baseline",
+    "outcome": "other_events",
+    "uncertainty_effect_quiet": 0,
+    "uncertainty_effect_noisy": 0,
+    "interaction": 0
+  },
+  {
+    "seed": 3003,
+    "mode": "baseline",
+    "outcome": "other_events",
+    "uncertainty_effect_quiet": 0,
+    "uncertainty_effect_noisy": 0,
+    "interaction": 0
+  },
+  {
+    "seed": 3004,
+    "mode": "baseline",
+    "outcome": "other_events",
+    "uncertainty_effect_quiet": 0,
+    "uncertainty_effect_noisy": 0,
+    "interaction": 0
+  },
+  {
+    "seed": 3005,
+    "mode": "baseline",
+    "outcome": "other_events",
+    "uncertainty_effect_quiet": 0,
+    "uncertainty_effect_noisy": 0,
+    "interaction": 0
+  },
+  {
+    "seed": 3000,
+    "mode": "baseline",
+    "outcome": "complete_word",
+    "uncertainty_effect_quiet": 0,
+    "uncertainty_effect_noisy": 0,
+    "interaction": 0
+  },
+  {
+    "seed": 3001,
+    "mode": "baseline",
+    "outcome": "complete_word",
+    "uncertainty_effect_quiet": 0,
+    "uncertainty_effect_noisy": 0,
+    "interaction": 0
+  },
+  {
+    "seed": 3002,
+    "mode": "baseline",
+    "outcome": "complete_word",
+    "uncertainty_effect_quiet": 0,
+    "uncertainty_effect_noisy": 0,
+    "interaction": 0
+  },
+  {
+    "seed": 3003,
+    "mode": "baseline",
+    "outcome": "complete_word",
+    "uncertainty_effect_quiet": 0,
+    "uncertainty_effect_noisy": 0,
+    "interaction": 0
+  },
+  {
+    "seed": 3004,
+    "mode": "baseline",
+    "outcome": "complete_word",
+    "uncertainty_effect_quiet": 0,
+    "uncertainty_effect_noisy": 0,
+    "interaction": 0
+  },
+  {
+    "seed": 3005,
+    "mode": "baseline",
+    "outcome": "complete_word",
+    "uncertainty_effect_quiet": 0,
+    "uncertainty_effect_noisy": 0,
+    "interaction": 0
+  },
+  {
+    "seed": 3000,
+    "mode": "mixed",
+    "outcome": "once_only_ordered_coverage",
+    "uncertainty_effect_quiet": 0.0,
+    "uncertainty_effect_noisy": 0.001953125,
+    "interaction": 0.001953125
+  },
+  {
+    "seed": 3001,
+    "mode": "mixed",
+    "outcome": "once_only_ordered_coverage",
+    "uncertainty_effect_quiet": 0.0,
+    "uncertainty_effect_noisy": 0.0,
+    "interaction": 0.0
+  },
+  {
+    "seed": 3002,
+    "mode": "mixed",
+    "outcome": "once_only_ordered_coverage",
+    "uncertainty_effect_quiet": 0.0,
+    "uncertainty_effect_noisy": 0.0,
+    "interaction": 0.0
+  },
+  {
+    "seed": 3003,
+    "mode": "mixed",
+    "outcome": "once_only_ordered_coverage",
+    "uncertainty_effect_quiet": 0.0,
+    "uncertainty_effect_noisy": 0.0,
+    "interaction": 0.0
+  },
+  {
+    "seed": 3004,
+    "mode": "mixed",
+    "outcome": "once_only_ordered_coverage",
+    "uncertainty_effect_quiet": 0.0,
+    "uncertainty_effect_noisy": 0.0,
+    "interaction": 0.0
+  },
+  {
+    "seed": 3005,
+    "mode": "mixed",
+    "outcome": "once_only_ordered_coverage",
+    "uncertainty_effect_quiet": 0.0,
+    "uncertainty_effect_noisy": 0.0,
+    "interaction": 0.0
+  },
+  {
+    "seed": 3000,
+    "mode": "mixed",
+    "outcome": "pure_source_duplicate_occurrences",
+    "uncertainty_effect_quiet": 0,
+    "uncertainty_effect_noisy": 0,
+    "interaction": 0
+  },
+  {
+    "seed": 3001,
+    "mode": "mixed",
+    "outcome": "pure_source_duplicate_occurrences",
+    "uncertainty_effect_quiet": 0,
+    "uncertainty_effect_noisy": 0,
+    "interaction": 0
+  },
+  {
+    "seed": 3002,
+    "mode": "mixed",
+    "outcome": "pure_source_duplicate_occurrences",
+    "uncertainty_effect_quiet": 0,
+    "uncertainty_effect_noisy": 0,
+    "interaction": 0
+  },
+  {
+    "seed": 3003,
+    "mode": "mixed",
+    "outcome": "pure_source_duplicate_occurrences",
+    "uncertainty_effect_quiet": 0,
+    "uncertainty_effect_noisy": 0,
+    "interaction": 0
+  },
+  {
+    "seed": 3004,
+    "mode": "mixed",
+    "outcome": "pure_source_duplicate_occurrences",
+    "uncertainty_effect_quiet": 0,
+    "uncertainty_effect_noisy": 0,
+    "interaction": 0
+  },
+  {
+    "seed": 3005,
+    "mode": "mixed",
+    "outcome": "pure_source_duplicate_occurrences",
+    "uncertainty_effect_quiet": 0,
+    "uncertainty_effect_noisy": 0,
+    "interaction": 0
+  },
+  {
+    "seed": 3000,
+    "mode": "mixed",
+    "outcome": "other_events",
+    "uncertainty_effect_quiet": 0,
+    "uncertainty_effect_noisy": 5,
+    "interaction": 5
+  },
+  {
+    "seed": 3001,
+    "mode": "mixed",
+    "outcome": "other_events",
+    "uncertainty_effect_quiet": 0,
+    "uncertainty_effect_noisy": 0,
+    "interaction": 0
+  },
+  {
+    "seed": 3002,
+    "mode": "mixed",
+    "outcome": "other_events",
+    "uncertainty_effect_quiet": 0,
+    "uncertainty_effect_noisy": 0,
+    "interaction": 0
+  },
+  {
+    "seed": 3003,
+    "mode": "mixed",
+    "outcome": "other_events",
+    "uncertainty_effect_quiet": 0,
+    "uncertainty_effect_noisy": 0,
+    "interaction": 0
+  },
+  {
+    "seed": 3004,
+    "mode": "mixed",
+    "outcome": "other_events",
+    "uncertainty_effect_quiet": 0,
+    "uncertainty_effect_noisy": 0,
+    "interaction": 0
+  },
+  {
+    "seed": 3005,
+    "mode": "mixed",
+    "outcome": "other_events",
+    "uncertainty_effect_quiet": 0,
+    "uncertainty_effect_noisy": 0,
+    "interaction": 0
+  },
+  {
+    "seed": 3000,
+    "mode": "mixed",
+    "outcome": "complete_word",
+    "uncertainty_effect_quiet": 0,
+    "uncertainty_effect_noisy": 0,
+    "interaction": 0
+  },
+  {
+    "seed": 3001,
+    "mode": "mixed",
+    "outcome": "complete_word",
+    "uncertainty_effect_quiet": 0,
+    "uncertainty_effect_noisy": 0,
+    "interaction": 0
+  },
+  {
+    "seed": 3002,
+    "mode": "mixed",
+    "outcome": "complete_word",
+    "uncertainty_effect_quiet": 0,
+    "uncertainty_effect_noisy": 0,
+    "interaction": 0
+  },
+  {
+    "seed": 3003,
+    "mode": "mixed",
+    "outcome": "complete_word",
+    "uncertainty_effect_quiet": 0,
+    "uncertainty_effect_noisy": 0,
+    "interaction": 0
+  },
+  {
+    "seed": 3004,
+    "mode": "mixed",
+    "outcome": "complete_word",
+    "uncertainty_effect_quiet": 0,
+    "uncertainty_effect_noisy": 0,
+    "interaction": 0
+  },
+  {
+    "seed": 3005,
+    "mode": "mixed",
+    "outcome": "complete_word",
+    "uncertainty_effect_quiet": 0,
+    "uncertainty_effect_noisy": 0,
+    "interaction": 0
+  }
+]

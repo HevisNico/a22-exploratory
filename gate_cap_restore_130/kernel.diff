@@ -1,0 +1,43 @@
+--- original_point_cell.cpp
++++ point_cell.cpp
+@@ -29,11 +29,12 @@
+     }
+     return (lo+hi)*.5;
+ }
++static double GAIN_CAP=4.;
+ extern "C" int point_cell(const Pulse* input,int size,const State* initial,int frozen,int ungated,
+  double probe_start,Output* output,int capacity,State* terminal,State* before,
+  long long* gain_moves,double* diagnostic,long long tail_label,char* error,int error_capacity){
+  try {
+-    const double INF=std::numeric_limits<double>::infinity(),cap=std::log(4.);
++    const double INF=std::numeric_limits<double>::infinity(),cap=std::log(GAIN_CAP);
+     std::vector<Event> events;events.reserve(size*6);
+     double previous_end[3]={-INF,-INF,-INF};
+     for(int i=0;i<size;i++){
+@@ -55,6 +56,7 @@
+     int phase=0,nout=0;size_t idx=0;bool snap=false;long long moves=0;
+     double raw[3]={-INF,-INF,-INF},amplitude[3]={0,0,0},mark[3]={-INF,-INF,-INF},err[3]={-INF,-INF,-INF};
+     long long labels[3]={-1,-1,-1},error_labels[3]={-1,-1,-1};
++    double requested_ready=0.,requested_protected=0.;
+     double last_gain=-1.,last_b=-1.,tail_dz=0.,tail_db=0.; long long total_moves=0,tail_moves=0;
+     auto state=[&](){State st;std::copy(z,z+3,st.z);st.b=b;st.q=q;st.time=t;st.phase=phase;return st;};
+     auto emit=[&](){
+@@ -89,6 +91,10 @@
+         }
+         int old=phase;
+         if(phase==0)q=charge(dt);else if(phase==1)q*=std::exp(-A*dt);else q*=std::exp(-intb(dt));
++        if(!frozen)for(int p=0;p<3;p++)if(err[p]!=-INF){
++            double demand=.8*std::exp(-LE*(t-err[p]))*(-std::expm1(-LE*dt));
++            if(old==0)requested_ready+=demand;else requested_protected+=demand;
++        }
+         if(!frozen&&(old==0||ungated))for(int p=0;p<3;p++)if(err[p]!=-INF){
+             if(raw[p]!=-INF)throw std::runtime_error("own raw/error overlap");
+             double inc=.8*std::exp(-LE*(t-err[p]))*(-std::expm1(-LE*dt));
+@@ -112,6 +118,6 @@
+             idx++;
+         }
+     }
+-    *terminal=state();if(!snap)*before=*terminal;*gain_moves=moves;diagnostic[0]=total_moves;diagnostic[1]=tail_moves;diagnostic[2]=tail_dz;diagnostic[3]=tail_db;diagnostic[4]=last_gain;diagnostic[5]=last_b;return nout;
++    *terminal=state();if(!snap)*before=*terminal;*gain_moves=moves;diagnostic[0]=total_moves;diagnostic[1]=tail_moves;diagnostic[2]=tail_dz;diagnostic[3]=tail_db;diagnostic[4]=last_gain;diagnostic[5]=last_b;diagnostic[6]=requested_ready;diagnostic[7]=requested_protected;return nout;
+  }catch(const std::exception& e){std::snprintf(error,error_capacity,"%s",e.what());return -1;}
+ }

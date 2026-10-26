@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "scope": "Fully-fixed gains4 b0.08, primary24 impulses, low noise seed0, all130 layers against Python solver",
+  "max_final_output_time_difference": 1.1368683772161603e-13,
+  "discrete_mismatches": []
+}

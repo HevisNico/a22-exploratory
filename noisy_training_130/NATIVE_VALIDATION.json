@@ -1,0 +1,14 @@
+{
+  "local": {
+    "cases": 12,
+    "label_mismatches": [],
+    "max_date_error": 5.684341886080802e-14,
+    "max_gain_error": 7.016609515630989e-14
+  },
+  "full_512_training_and_four_tests": {
+    "mismatches": [],
+    "max_gain_error": 3.519134761376108e-09,
+    "max_date_error": 2.6284396881237626e-10
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,48 @@
+A22 — JOINT UNCERTAINTY AND NOISE: WHAT THIS PILOT SHOWS
+
+The combination has now been simulated directly. Six new heterogeneous physical
+realizations with relative uncertainty epsilon=1e-4 were acquired and tested with
+low-level link noise. Every uncertain/noisy realization transmitted all 128 true
+source impulses exactly once, in order, on all 12 lanes at layer 130 in the
+no-decoy test. All six corresponding acquisitions passed the terminal training
+criterion. Every scheduled outcome is retained; simulator failures: zero.
+
+The nominal noisy regime also passes 6/6 baseline words. Its average relative
+interval RMS is 0.518236%, versus 0.497467% with physical uncertainty and noise.
+This small difference must not be advertised as an improvement: only six paired
+seeds and six independent physical draws were used, with no inferential test.
+The useful finding is coexistence in this tested regime, not a claim that physical
+uncertainty improves timing or is harmless everywhere in the parameter box.
+
+With 24 lateral full-amplitude decoys, both noisy regimes have 3/6 complete words.
+Uncertain/noisy once-only coverage is 99.967448%, with mean 8.833 added timing
+events and 0.500 removals across the 12 lanes. Nominal/noisy coverage is 99.934896%,
+with mean 8.500 additions and 1.500 removals. High per-pulse coverage is compatible
+with imperfect complete words because one extra or missing event breaks a word.
+The joint test does not remove the already identified selectivity limit.
+
+Both quiet regimes pass 6/6 baseline words and 6/6 mixed words. Quiet nominal
+networks are identical across seeds, so this is one deterministic nominal quiet
+reference replicated for pairing, not six independent successful devices.
+
+The physical draw was made once for each cell/port/parameter and reused during
+acquisition and test and in both uncertain regimes. Paired nominal/uncertain
+conditions use the same latent link-noise keys. Acquisition and test keys are
+disjoint. Four predeclared criteria were reported: transmission, complete words,
+extra outputs and timing error. All failures would be kept separately from
+simulator refusals; none was silently removed or replaced.
+
+A defensible wording is:
+"In a six-seed exploratory pilot at epsilon=1e-4 and low link noise, all six
+networks learned and then preserved the 128-pulse word on every output lane in
+the absence of decoys. With lateral decoys, three of six complete words remained
+perfect. These results provide numerical evidence for the joint operation of
+fixed physical heterogeneity and temporally varying link noise in this regime."
+
+This is not a proof for all physical parameters in the box or all noise sequences.
+It does not include the separate initial-state uncertainty delta, larger noise,
+all decoy classes, gate-off controls, hybrid comparisons or a global energy claim.
+The Gaussian log-amplitude distribution is unbounded, so a deterministic guarantee
+for every possible noise draw is outside this finite-path simulator's domain.
+A mathematical joint guarantee would require a precisely bounded noise class
+and a validated inclusion of all relevant hybrid trajectories for that class.

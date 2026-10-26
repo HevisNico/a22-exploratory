@@ -1,0 +1,20 @@
+--- previous/point_cell.cpp
++++ fixed_control/point_cell.cpp
+@@ -73,7 +73,7 @@
+         double target=phase==1?std::min(ext,fast_end):ext;
+         if(!std::isfinite(target)){if(phase!=2)throw std::runtime_error("infinite target");target=t+20.;}
+         double dt=std::max(0.,target-t),Bs[3]={0,0,0};
+-        if(b<1.1&&!frozen)for(int p=0;p<3;p++)if(mark[p]!=-INF)Bs[p]=.5*std::exp(-LM*(t-mark[p]));
++        if(b<1.1&&frozen!=1)for(int p=0;p<3;p++)if(mark[p]!=-INF)Bs[p]=.5*std::exp(-LM*(t-mark[p]));
+         auto db=[&](double u){double value=0.;for(int p=0;p<3;p++)value+=Bs[p]*(-std::expm1(-LM*u));return value;};
+         double captime=(b<1.1&&b+db(dt)>1.1)?root([&](double u){return db(u)-(1.1-b);},dt):INF;
+         auto intb=[&](double u){double v=std::min(u,captime),value=b*v;for(int p=0;p<3;p++)value+=Bs[p]*(v+std::expm1(-LM*v)/LM);return value+1.1*std::max(0.,u-v);};
+@@ -89,7 +89,7 @@
+         }
+         int old=phase;
+         if(phase==0)q=charge(dt);else if(phase==1)q*=std::exp(-A*dt);else q*=std::exp(-intb(dt));
+-        if(!frozen&&(old==0||ungated))for(int p=0;p<3;p++)if(err[p]!=-INF){
++        if(frozen==0&&(old==0||ungated))for(int p=0;p<3;p++)if(err[p]!=-INF){
+             if(raw[p]!=-INF)throw std::runtime_error("own raw/error overlap");
+             double inc=.8*std::exp(-LE*(t-err[p]))*(-std::expm1(-LE*dt));
+             if(inc>0&&z[p]<cap&&t>=probe_start)moves++;

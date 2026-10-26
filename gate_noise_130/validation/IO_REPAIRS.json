@@ -1,0 +1,17 @@
+{
+  "reason": "Two initially completed processes left truncated JSON files; replayed with checked atomic output. No seed or outcome excluded.",
+  "replayed": [
+    {
+      "name": "normal_0_9",
+      "seconds": 111.473,
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "name": "normal_0_13",
+      "seconds": 104.827,
+      "exit": 0,
+      "error": ""
+    }
+  ]
+}

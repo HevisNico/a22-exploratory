@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "mismatches": [],
+  "max_gain_error": 1.188475984292836e-10,
+  "max_probe_date_error": 3.8198777474462986e-11,
+  "checks": [
+    {
+      "freeze": false,
+      "final_recall": 0.0,
+      "minimum_quiet_time": 3035.8920270474255
+    },
+    {
+      "freeze": true,
+      "final_recall": 0.0,
+      "minimum_quiet_time": 3035.8920270474255
+    }
+  ],
+  "method": "training/test split compared with full uninterrupted 128-pulse noisy simulation, seed 0, both adaptive and frozen test"
+}

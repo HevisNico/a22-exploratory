@@ -1,0 +1,30 @@
+A22 — JOINT PARAMETER UNCERTAINTY AND LINK-NOISE PILOT
+
+Status: completed exploratory pilot. Physical parameters are sampled once per device and reused in acquisition and both tests.
+All 24 acquisitions and all 48 evaluations completed; simulator failures: 0. No failed model transmission is excluded.
+Six seeds (3000–3005), four paired acquisition/test regimes, 2048 acquisition pulses, 128 evaluation pulses, layer 130 with 12 lanes.
+Uncertainty: independent uniform relative +/-1e-4 on C, L_m, L_s, L_e and M, separately per cell and port. Same field in quiet/noisy uncertain arms.
+Noise: sigma_log_amplitude=.05, jitter_sd=.015 and mean link delay=.1. Paired nominal/uncertain arms share latent keys; acquisition stage 0 and test stage 8001 are disjoint.
+
+arm | mode | acquisition words /6 | test words /6 | once-only coverage | mean relative interval RMS | mean decoy additions / removals
+nominal_quiet | baseline | 6/6 | 6/6 | 100.000000% | 0.000000% | 0.000 / 0.000
+nominal_quiet | mixed | 6/6 | 6/6 | 100.000000% | 0.000577% | 0.000 / 0.000
+nominal_noisy | baseline | 6/6 | 6/6 | 100.000000% | 0.518236% | 8.500 / 1.500
+nominal_noisy | mixed | 6/6 | 3/6 | 99.934896% | 0.594276% | 8.500 / 1.500
+uncertain_quiet | baseline | 6/6 | 6/6 | 100.000000% | 0.000000% | 0.000 / 0.000
+uncertain_quiet | mixed | 6/6 | 6/6 | 100.000000% | 0.000577% | 0.000 / 0.000
+uncertain_noisy | baseline | 6/6 | 6/6 | 100.000000% | 0.497467% | 8.833 / 0.500
+uncertain_noisy | mixed | 6/6 | 3/6 | 99.967448% | 0.504225% | 8.833 / 0.500
+
+LIMITS
+Six fixed heterogeneous physical draws, epsilon=1e-4, low link noise only. No coverage of the full parameter box or proof for every noise realization.
+Every failed acquisition is retained. These aggregate results never condition on training success.
+Nominal quiet networks are physically identical across the six seeds; six logical reference rows do not provide six independent nominal-quiet devices.
+Quiet/noisy factor changes acquisition AND test noise; it is a total regime effect, not isolation of test-time susceptibility.
+Same latent link-noise field is used for paired nominal/uncertain conditions; different physical trajectories can consume different downstream keys.
+No initial-state uncertainty is included. Main constants a, kappa, r, r_m, b_max and pump stay nominal.
+Timing RMS excludes invalid adjacent-source pairs; pair coverage and transmission failures are reported alongside it.
+Passive tags are not complete residual-charge causal histories. Added timing events can include displacements.
+No independent inferential confirmation, necessity comparison, hybrid comparison or lifecycle energy superiority is claimed.
+
+The stored physical fields, source locks, checkpoints, raw outputs, per-seed metrics and independent ODE checks accompany these results. No simulation continues after this pilot.

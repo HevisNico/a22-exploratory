@@ -1,0 +1,14 @@
+{
+  "sample_size": 30000,
+  "normal_mean": 0.0082594579002516,
+  "normal_std": 1.0043090166410018,
+  "jitter_standardized_mean": 0.007999921275389362,
+  "jitter_standardized_std": 0.9969872135215407,
+  "normal_jitter_correlation": 0.003235526018517734,
+  "min_scaled_arrival_delay_at_strong_level": 0.02205771365940054,
+  "stage_ids": {
+    "train": 0,
+    "test24": 24,
+    "test128": 128
+  }
+}

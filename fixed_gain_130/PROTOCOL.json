@@ -1,0 +1,60 @@
+{
+  "fixed_before_new_baseline_results": true,
+  "date": "2026-10-25",
+  "question": "Does a network with maximum gains fixed from t=0 achieve the previously observed noisy transmission without gain learning?",
+  "layers": 130,
+  "lanes": 12,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "levels": [
+    {
+      "sigma": 0.05,
+      "jitter_std": 0.015
+    },
+    {
+      "sigma": 0.1,
+      "jitter_std": 0.03
+    },
+    {
+      "sigma": 0.15000000000000002,
+      "jitter_std": 0.045
+    }
+  ],
+  "training_pulses": 2048,
+  "training_gap": 8,
+  "delay": 0.1,
+  "conditions": {
+    "fixed_all": "All three gains=4 and b=0.08 fixed from t=0; no parameter learning in training or tests. Primary unlearned baseline.",
+    "fixed_gain": "All three gains=4 fixed from t=0, b=0.08 initially with its original local update; test b adaptive and frozen copies. Secondary decomposition.",
+    "normal_reference": "Previously completed normal noisy training, exact learned checkpoint and matched test field reused, not counted as new independent seeds.",
+    "ungated_reference": "Previously completed ungated noisy training, frozen learned checkpoint comparator.",
+    "fixed_all_max_b": "Secondary fully nonlearning comparator: gains=4 and b=1.1 (the original upper bound) from t=0, fixed throughout. Tests whether nominal b handicaps the unlearned comparator at shorter intervals. No tuning from data."
+  },
+  "primary_test": "128 held-out irregular impulses at original base gap20 (20..24), all12 lanes at layer130. Primary fixed_all baseline versus previous normal frozen; fixed_all_max_b is declared secondary. 24 impulses secondary.",
+  "secondary_fast_test": "Same counts with base gap8 (8..9.6), declared before baseline results to check rate dependence; held-out random stage count+1000, distinct from training and primary tests. Re-test normal and ungated learned checkpoints under this identical faster field.",
+  "noise_field": "Same SplitMix64/Box-Muller fields as previous campaign; labels and occurrences matched across conditions, stage0 training, count primary test, count+1000 fast test.",
+  "statistics": "Seed unit only; paired bootstrap 20000 percentile resamples; exact two-sided sign tests. Holm across3 primary normal-frozen minus fixed-all recall comparisons. Other analyses exploratory.",
+  "no_selection": "No seed excluded; fixed 2048 training pulses, no outcome-dependent extension, no gain or b tuning on held-out data.",
+  "fixed_b_note": "b=0.08 is the original nominal initial value, not selected from results. No optimality claim versus every possible fixed-gain/fixed-b design.",
+  "data_policy": "Original results retained; new output files, no replacement of earlier deliverables."
+}

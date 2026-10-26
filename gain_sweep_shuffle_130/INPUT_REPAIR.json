@@ -1,0 +1,10 @@
+{
+  "file": "normal_2_9.states",
+  "original_sha256": "1515d5a3e4716c0056ce4021cb201c47ef63913185fee3b5e3ae2d35890acf16",
+  "repaired_sha256": "2d0c2c1cc00a7a7b4b6d81cd64aa4d37ec5f1b9c6acf992918586efa9cba91cc",
+  "reason": "supplied checkpoint truncated after 1547 complete rows and 2 fields of row1548",
+  "source": "normal_2_9.json training[*].cells[*].state",
+  "source_sha256": "fd000ed41292f2a56283c53780a22956e2737d838c212dbadfc67634b3fbaea9",
+  "verified": "all available 1547 full rows and 2 fields match exactly",
+  "restored_states": 1560
+}

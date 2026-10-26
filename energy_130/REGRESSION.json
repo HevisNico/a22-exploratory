@@ -1,0 +1,2203 @@
+{
+  "checks": 366,
+  "errors": [],
+  "details": [
+    {
+      "file": "L-1_s0_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L-1_s0_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L0_s0_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L0_s0_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L0_s10_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L0_s10_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L0_s11_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L0_s11_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L0_s12_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L0_s12_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L0_s13_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L0_s13_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L0_s14_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L0_s14_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L0_s15_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L0_s15_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L0_s16_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L0_s16_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L0_s17_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L0_s17_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L0_s18_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L0_s18_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L0_s19_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L0_s19_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L0_s1_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L0_s1_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L0_s2_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L0_s2_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L0_s3_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L0_s3_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L0_s4_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L0_s4_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L0_s5_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L0_s5_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L0_s6_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L0_s6_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L0_s7_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L0_s7_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L0_s8_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L0_s8_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L0_s9_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L0_s9_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L1_s0_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L1_s0_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L1_s10_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L1_s10_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L1_s11_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L1_s11_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L1_s12_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L1_s12_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L1_s13_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L1_s13_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L1_s14_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L1_s14_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L1_s15_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L1_s15_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L1_s16_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L1_s16_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L1_s17_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L1_s17_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L1_s18_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L1_s18_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L1_s19_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L1_s19_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L1_s1_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L1_s1_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L1_s2_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L1_s2_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L1_s3_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L1_s3_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L1_s4_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L1_s4_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L1_s5_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L1_s5_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L1_s6_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L1_s6_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L1_s7_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L1_s7_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L1_s8_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L1_s8_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L1_s9_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L1_s9_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L2_s0_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L2_s0_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L2_s10_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L2_s10_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L2_s11_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L2_s11_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L2_s12_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L2_s12_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L2_s13_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L2_s13_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L2_s14_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L2_s14_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L2_s15_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L2_s15_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L2_s16_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L2_s16_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L2_s17_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L2_s17_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L2_s18_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L2_s18_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L2_s19_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L2_s19_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L2_s1_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L2_s1_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L2_s2_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L2_s2_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L2_s3_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L2_s3_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L2_s4_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L2_s4_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L2_s5_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L2_s5_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L2_s6_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L2_s6_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L2_s7_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L2_s7_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L2_s8_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L2_s8_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L2_s9_gate_off.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L2_s9_gate_on.json",
+      "kind": "trained states",
+      "max_absolute_difference": 0.0,
+      "bitwise_equal": true
+    },
+    {
+      "file": "L-1_s0_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L-1_s0_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L-1_s0_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L-1_s0_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s0_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s0_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s0_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s0_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s10_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s10_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s10_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s10_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s11_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s11_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s11_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s11_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s12_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s12_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s12_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s12_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s13_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s13_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s13_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s13_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s14_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s14_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s14_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s14_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s15_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s15_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s15_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s15_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s16_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s16_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s16_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s16_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s17_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s17_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s17_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s17_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s18_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s18_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s18_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s18_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s19_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s19_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s19_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s19_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s1_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s1_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s1_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s1_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s2_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s2_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s2_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s2_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s3_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s3_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s3_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s3_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s4_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s4_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s4_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s4_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s5_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s5_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s5_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s5_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s6_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s6_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s6_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s6_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s7_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s7_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s7_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s7_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s8_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s8_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s8_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s8_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s9_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s9_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s9_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L0_s9_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s0_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s0_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s0_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s0_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s10_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s10_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s10_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s10_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s11_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s11_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s11_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s11_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s12_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s12_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s12_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s12_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s13_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s13_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s13_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s13_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s14_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s14_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s14_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s14_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s15_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s15_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s15_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s15_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s16_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s16_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s16_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s16_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s17_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s17_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s17_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s17_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s18_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s18_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s18_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s18_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s19_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s19_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s19_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s19_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s1_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s1_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s1_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s1_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s2_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s2_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s2_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s2_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s3_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s3_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s3_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s3_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s4_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s4_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s4_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s4_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s5_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s5_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s5_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s5_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s6_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s6_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s6_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s6_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s7_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s7_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s7_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s7_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s8_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s8_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s8_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s8_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s9_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s9_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s9_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L1_s9_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s0_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s0_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s0_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s0_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s10_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s10_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s10_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s10_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s11_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s11_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s11_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s11_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s12_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s12_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s12_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s12_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s13_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s13_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s13_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s13_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s14_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s14_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s14_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s14_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s15_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s15_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s15_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s15_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s16_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s16_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s16_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s16_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s17_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s17_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s17_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s17_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s18_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s18_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s18_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s18_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s19_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s19_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s19_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s19_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s1_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s1_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s1_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s1_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s2_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s2_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s2_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s2_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s3_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s3_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s3_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s3_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s4_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s4_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s4_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s4_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s5_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s5_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s5_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s5_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s6_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s6_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s6_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s6_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s7_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s7_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s7_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s7_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s8_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s8_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s8_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s8_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s9_gate_on.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s9_normal_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s9_trained_off.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    },
+    {
+      "file": "L2_s9_uniform4_frozen.json",
+      "kind": "held-out events and work",
+      "exact_output_events": true,
+      "relative_work_difference": 0.0
+    }
+  ],
+  "note": "Historical agreement is a regression check, not independent model validation. The independent ODE oracle is in VALIDATION.json."
+}

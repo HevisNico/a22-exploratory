@@ -1,0 +1,44 @@
+{
+  "datasets": 180,
+  "primary": {
+    "L0_normal_minus_ungated_128_active": {
+      "n": 20,
+      "mean_delta": -0.005078125,
+      "CI95": [
+        -0.013671875,
+        0.0
+      ],
+      "wins": 0,
+      "ties": 17,
+      "losses": 3,
+      "sign_p_two_sided": 0.25,
+      "sign_p_Holm_3": 0.75
+    },
+    "L1_normal_minus_ungated_128_active": {
+      "n": 20,
+      "mean_delta": 0.0,
+      "CI95": [
+        0.0,
+        0.0
+      ],
+      "wins": 0,
+      "ties": 20,
+      "losses": 0,
+      "sign_p_two_sided": 1.0,
+      "sign_p_Holm_3": 1.0
+    },
+    "L2_normal_minus_ungated_128_active": {
+      "n": 20,
+      "mean_delta": -9.765625e-05,
+      "CI95": [
+        -0.00029296875,
+        0.0
+      ],
+      "wins": 0,
+      "ties": 19,
+      "losses": 1,
+      "sign_p_two_sided": 1.0,
+      "sign_p_Holm_3": 1.0
+    }
+  }
+}

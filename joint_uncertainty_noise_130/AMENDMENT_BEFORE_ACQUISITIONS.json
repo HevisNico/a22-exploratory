@@ -1,0 +1,6 @@
+{
+  "reason": "User explicitly fixed sampling, paired noise, stage separation, outcomes and failure classification before acquisitions.",
+  "prior_protocol_sha256": "53cd01a0df28805632d134e9385112a15c97a8da2ec9f99e6f3ab92c737ec74a",
+  "new_protocol_sha256": "9356af690422cd0ac1105ed405550efe3f90e851678ca9bfdf818142b8cd95d9",
+  "acquisitions_started": 0
+}

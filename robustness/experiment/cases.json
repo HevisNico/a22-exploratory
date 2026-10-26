@@ -1,0 +1,10 @@
+[
+  {
+    "name": "baseline",
+    "save_training": true
+  },
+  {
+    "name": "baseline_delay",
+    "delay": 0.1
+  }
+]

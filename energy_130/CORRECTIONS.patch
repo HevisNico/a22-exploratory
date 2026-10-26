@@ -1,0 +1,66 @@
+--- previous/src/energy_budget.hpp
++++ corrected/src/energy_budget.hpp
+@@ -10,7 +10,7 @@
+ struct EnergyBudget{
+  std::array<double,9> work{};
+  double E=100.,min_event=100.,lower_bound=100.,max_power=0.,pump=0.,elapsed=0.,segments=0.;
+- double oldD=0.,decay=0.,pending=0.,step=0.,stepwork=0.,power_start=0.;
++ double oldD=0.,decay=0.,pending=0.,step=0.,stepwork=0.,power_start=0.,step_pump=0.;
+  std::vector<EnergyTerm> terms;
+  static double convolution(double coefficient,double rate,double duration,double horizon){
+   if(coefficient==0||duration<=0)return 0.;
+@@ -18,17 +18,28 @@
+   double v=diff>1e-12?std::exp(-slow*duration)*(-std::expm1(-diff*duration))/diff:duration*std::exp(-10.*duration);
+   return coefficient*v*std::exp(-10.*std::max(0.,horizon-duration));
+  }
+- void begin(double dt){oldD=100.-E;step=dt;pending=oldD*std::exp(-10.*dt);stepwork=0.;power_start=0.;if(ENERGY_TRACE)terms.clear();}
++ // Integral of 10*D(t), D=100-E, due to a truncated exponential forcing.
++ // Calculated from the pump trajectory, never assigned from the balance residual.
++ static double pump_term(double c,double rate,double length,double horizon){
++  double live;
++  if(rate==0.) live=c*(length+std::expm1(-10.*length)/10.);
++  else if(std::abs(rate-10.)<1e-10) live=c/10.*(-std::expm1(-10.*length)-10.*length*std::exp(-10.*length));
++  else live=c/(10.-rate)*(10.*(-std::expm1(-rate*length))/rate+std::expm1(-10.*length));
++  double endD=convolution(c,rate,length,length);
++  return live+endD*(-std::expm1(-10.*std::max(0.,horizon-length)));
++ }
++ void begin(double dt){oldD=100.-E;step=dt;pending=oldD*std::exp(-10.*dt);stepwork=0.;power_start=0.;step_pump=oldD*(-std::expm1(-10.*dt));if(ENERGY_TRACE)terms.clear();}
+  void add(int component,double coefficient,double rate,double duration){
+   duration=std::max(0.,std::min(step,duration));if(coefficient<=0||duration<=0)return;
+   double w=rate>0?coefficient*(-std::expm1(-rate*duration))/rate:coefficient*duration;
+   power_start+=coefficient;work[component]+=w;stepwork+=w;pending+=convolution(coefficient,rate,duration,step);
++  step_pump+=pump_term(coefficient,rate,duration,step);
+   if(ENERGY_TRACE)terms.push_back({component,coefficient,rate,duration});
+  }
+  void finish(){
+   max_power=std::max(max_power,power_start);
+   double previous=E;E=100.-pending;min_event=std::min(min_event,E);elapsed+=step;segments++;
+-  pump+=stepwork+E-previous;
++  pump+=step_pump;
+   if(!(E>0&&E<=100.+1e-9&&E>=lower_bound-1e-8))throw std::runtime_error("reserve invariant failed");
+   if(ENERGY_TRACE&&step>0){auto& o=*ENERGY_TRACE;o<<"{\"time\":"<<elapsed-step<<",\"dt\":"<<step<<",\"E0\":"<<previous<<",\"E1\":"<<E<<",\"terms\":[";for(int i=0;i<int(terms.size());i++){if(i)o<<",";auto x=terms[i];o<<"["<<x.component<<","<<x.coefficient<<","<<x.rate<<","<<x.duration<<"]";}o<<"]}\n";}
+  }
+--- previous/src/experiment.cpp
++++ corrected/src/experiment.cpp
+@@ -12,10 +12,12 @@
+ int main(int argc,char** argv){try{
+  if(argc!=8)throw std::runtime_error("mode seed level condition checkpoint output enabled");
+  std::string mode=argv[1],condition=argv[4],checkpoint=argv[5],destination=argv[6];int seed=std::stoi(argv[2]),level=std::stoi(argv[3]);ENERGY_ENABLED=std::stoi(argv[7]);double sigma=level<0?0:.05*(level+1),jitter=level<0?0:.015*(level+1);
+- bool training=mode=="train",uniform=condition.rfind("uniform4",0)==0,ungated=condition.rfind("ungated",0)==0,frozen=!training&&condition.find("active")==std::string::npos;FREEZE_GAINS=frozen;
++ bool training=mode=="train",uniform=condition=="uniform4_frozen";
++ bool ungated=condition=="gate_off"||condition=="trained_off";
++ bool frozen=condition=="normal_frozen"||condition=="uniform4_frozen";FREEZE_GAINS=frozen;
+  States states;if(!training&&checkpoint!="-")states=load(checkpoint);
+  else for(auto& s:states)s={{std::log(uniform?4.:.3),std::log(uniform?4.:1.2),std::log(uniform?4.:.3)},.08,.1,0.,0};
+- if(!training)for(auto& s:states){s.q=R+(s.q-R)*std::exp(-K*3080.);if(uniform)for(double& z:s.z)z=std::log(4.);if(condition=="uniform4_high_b"||condition=="normal_g_high_b")s.b=1.1;}
++ if(!training)for(auto& s:states){s.q=R+(s.q-R)*std::exp(-K*3080.);if(uniform)for(double& z:s.z)z=std::log(4.);}
+  int count=training?2048:128,label0=training?0:3000000,stage=training?0:8001;Row row;std::vector<double> dates={0};double gaps[]={1,1.1,1.05,1.2,1,1.15};for(int i=1;i<count;i++)dates.push_back(training?8.*i:dates.back()+20*gaps[(i-1)%6]);for(int i=0;i<count;i++)row[0].push_back({dates[i],label0+i});
+  std::ostringstream o;o<<std::setprecision(17)<<"{\"mode\":\""<<mode<<"\",\"seed\":"<<seed<<",\"level\":"<<level<<",\"condition\":\""<<condition<<"\",\"energy_enabled\":"<<(ENERGY_ENABLED?"true":"false")<<",\"layers\":[";NetworkEnergy total;
+  for(int layer=1;layer<=130;layer++){
+@@ -30,5 +32,5 @@
+  }
+  o<<"],\"energy\":";json_energy(o,total);o<<",\"output_events\":[";for(int lane=0;lane<12;lane++){if(lane)o<<",";o<<"[";for(int i=0;i<int(row[lane].size());i++){if(i)o<<",";o<<"["<<row[lane][i].time<<","<<row[lane][i].label<<"]";}o<<"]";}o<<"],\"status\":\"OK_POINT_NOT_CERTIFIED\"}";
+  std::string tmp=destination+".tmp";std::ofstream f(tmp);f<<o.str();f.close();if(!f)throw std::runtime_error("write failed");if(std::rename(tmp.c_str(),destination.c_str()))throw std::runtime_error("rename failed");
+- if(training)save(destination+".states",states);
++ save(destination+".states",states);
+ }catch(const std::exception& e){std::cerr<<e.what()<<"\n";return 1;}}

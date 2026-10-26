@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "cases": 18,
+  "label_mismatches": [],
+  "max_time_difference": 3.6415315207705135e-13,
+  "max_log_gain_difference": 0.0,
+  "max_b_difference": 1.2045919817182948e-13
+}

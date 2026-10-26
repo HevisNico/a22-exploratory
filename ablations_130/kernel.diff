@@ -1,0 +1,71 @@
+--- reference_kernel.py
++++ kernel.py
+@@ -9,16 +9,16 @@
+ def h(t):return A/(A-K)*(math.exp(-K*t)-math.exp(-A*t))
+ M0=.975/h(.02);PROBES=[4096.+20*k for k in range(4)]
+ ROOT=Path(__file__).resolve().parent
++from scipy.optimize import brentq
+ def root(f,hi):
+-    lo=0.
+-    if not(f(lo)<=1e-10 and f(hi)>=-1e-10):raise ArithmeticError(('root',f(lo),f(hi),hi))
+-    for _ in range(48):
+-        m=(lo+hi)*.5
+-        if f(m)>=0:hi=m
+-        else:lo=m
+-    return (lo+hi)*.5
++    flo=f(0.);fhi=f(hi)
++    if flo>1e-10 or fhi < -1e-10:raise ArithmeticError(('root',flo,fhi,hi))
++    if flo>=0:return 0.
++    if fhi<=0:return hi
++    return brentq(f,0.,hi,xtol=5e-14,rtol=1e-14)
+ 
+-def cell(trains,params,initial,charge_kicks=None):
++def cell(trains,params,initial,charge_kicks=None,rule="normal",freeze_at=float("inf")):
++    assert rule in ("normal","none","ungated","gain_frozen")
+     N=len(trains)
+     charge_kicks=charge_kicks or {}
+     caps,LM,LS,LE,M=([p[k] for p in params] for k in range(5))
+@@ -59,12 +59,13 @@
+             target=t+20
+         dt=max(0.,target-t)
+         Bs=[.5*math.exp(-LM[p]*(t-s)) if s is not None else 0. for p,s in enumerate(marks)]
+-        if b>=1.1:Bs=[0.]*N
+-        def db(u):return sum(Bs[p]*(-math.expm1(-LM[p]*u)) for p in range(N))
++        if b>=1.1 or rule=="none" or t>=freeze_at:Bs=[0.]*N
++        activeB=[(B,LM[p]) for p,B in enumerate(Bs) if B]
++        def db(u):return sum(B*(-math.expm1(-rate*u)) for B,rate in activeB)
+         captime=root(lambda u:db(u)-(1.1-b),dt) if b<1.1 and b+db(dt)>1.1 else math.inf
+         def intb(u):
+             v=min(u,captime)
+-            return b*v+sum(Bs[p]*(v+math.expm1(-LM[p]*v)/LM[p]) for p in range(N))+1.1*max(0.,u-v)
++            return b*v+sum(B*(v+math.expm1(-rate*v)/rate) for B,rate in activeB)+1.1*max(0.,u-v)
+         internal=None
+         terms=[(math.exp(z[p])*pulses[p,s][0]*pulses[p,s][1]*math.exp(-pulses[p,s][1]*(t-s)),pulses[p,s][1]) for p,s in enumerate(raw) if s is not None]
+         def charge(u):
+@@ -76,6 +77,7 @@
+                 C=q-R+J/(A-K);D=J/(A-K)
+                 peak=math.log(A*D/(K*C))/(A-K) if C>0 and D>0 else 0.
+                 upto=min(dt,max(0.,peak))
++                def charge(u):return R+C*math.exp(-K*u)-D*math.exp(-A*u)
+             else:
+                 # derivative times exp(K*u) is strictly decreasing for positive inputs.
+                 def derivative_scaled(u):
+@@ -89,6 +91,9 @@
+         oldphase=phase
+         if phase==0:
+             q=charge(dt)
++        elif phase==1:q*=math.exp(-A*dt)
++        else:q*=math.exp(-intb(dt))
++        if rule not in ("none","gain_frozen") and t<freeze_at and (oldphase==0 or rule=="ungated"):
+             for p,s in enumerate(errors):
+                 if s is None:continue
+                 if raw[p] is not None:raise ArithmeticError('own raw/error overlap')
+@@ -100,8 +105,6 @@
+                         contact=t-math.log1p(-(logcaps[p]-z[p])/amp)/LE[p]
+                         cap_hits.append({'port':p,'time':contact})
+                 z[p]=min(logcaps[p],z[p]+inc)
+-        elif phase==1:q*=math.exp(-A*dt)
+-        else:q*=math.exp(-intb(dt))
+         if oldphase!=0:
+             if captime<=dt and b_hit is None:b_hit=t+captime
+             b=min(1.1,b+db(dt))

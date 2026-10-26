@@ -1,0 +1,6 @@
+{
+  "verified_permutations": 366,
+  "all_are_exact_permutations": true,
+  "all_layer_and_mode_constraints_pass": true,
+  "all_reconstructed_gain_hashes_match": true
+}

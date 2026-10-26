@@ -1,0 +1,50 @@
+{
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "protocol": {
+    "depth": 130,
+    "width": 12,
+    "parents": 3,
+    "sigma_log_amplitude": 0.1,
+    "jitter_standard_deviation": 0.03,
+    "mean_edge_delay": 0.1,
+    "training_pulses": 128,
+    "training_spacing": 8,
+    "test_pulses": 24,
+    "test_start": 4096
+  },
+  "scripts_sha256": {
+    "analyze.py": "c3ea667b94e6eb108520e8be9be8ab56fe9611c6dcdba2b237412317512a4bd3",
+    "kernel.py": "19b608a681a0f729850003a00e86d45b9cd9104396ff07ed785f4e3f8fdd8225",
+    "run.py": "fc068e8899b98a4a38a9e6d74250556e5103e04233f0adf660c623709fbe4fff",
+    "reference_recheck.py": "54f1531228432d87ff6cf4167b9639563f324fe158e6a5ce24987425d36d72e8",
+    "build_kernel.py": "bdfe522d034bb1fb5f7119c98644186cdd5e587a180f7ffbce461429fcfa24fa",
+    "validate.py": "ddac7bb5d474775ca0e830e237951751d1f33c06f31fe6bd6bfd4326558bbdb6",
+    "report.py": "6f4eb5c56a4bc7188197a0181d4308af13535f4d159ccdd7d15b096d4cf3bfe5",
+    "reference_kernel.py": "f05650d24a54b940cfa66515eb2905f6bb6e06f7fee841c1b8c5087a3fcef129"
+  },
+  "source_kit_sha256": "d436f80672542fff38c392f8dd1a6846a8d03a19853b2b1b733eb22fdd8c4a71",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "status": "POINT_NOT_CERTIFIED"
+}

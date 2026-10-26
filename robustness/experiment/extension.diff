@@ -1,0 +1,197 @@
+--- original_simulate.py
++++ extended_simulate.py
+@@ -18,21 +18,34 @@
+         else:lo=m
+     return (lo+hi)*.5
+ 
+-def cell(trains,params,initial):
++def cell(trains,params,initial,charge_kicks=None):
++    N=len(trains)
++    charge_kicks=charge_kicks or {}
+     caps,LM,LS,LE,M=([p[k] for p in params] for k in range(5))
+     logcaps=list(map(math.log,caps))
+-    d=[root(lambda u,p=p:RM+M[p]*h(u)-1,.1) for p in range(3)]
+     dm=[math.log(1.25)/x for x in LM];ds=[math.log(8)/x for x in LS];de=[A/x for x in LE]
+-    if min(d[p]+dm[p]+ds[p] for p in range(3))<=1:raise ArithmeticError('ERROR overlaps own raw pulse: unsupported analytic segment')
+-    external=[]
++    external=[];pulses={};delays={};delay_cache={}
+     for p,train in enumerate(trains):
+-        if any(y[0]-x[0]<1.8329 for x,y in zip(train,train[1:])):raise ArithmeticError('parent gap')
+-        cycle=d[p]+dm[p]+ds[p]+de[p]
+-        if any(y[0]-x[0]<=cycle for x,y in zip(train,train[1:])):raise ArithmeticError('auxiliary not regenerated')
+-        for s,label in train:
+-            for age,kind in [(0.,0),(d[p],1),(d[p]+dm[p],2),(1.,3),(d[p]+dm[p]+ds[p],4),(cycle,5)]:external.append((s+age,kind,p,s,label))
++        previous_end=-math.inf
++        for s,label,amplitude,decay,width in train:
++            assert amplitude>0 and decay>K and width>0
++            def response(u):
++                return amplitude*decay/(decay-K)*(math.exp(-K*u)-math.exp(-decay*u))
++            peak=min(width,math.log(decay/K)/(decay-K))
++            if RM+M[p]*response(peak)<1:
++                raise ArithmeticError('auxiliary subthreshold: residual memory needs full auxiliary solver')
++            cache_key=(p,amplitude,decay,width)
++            if cache_key not in delay_cache:delay_cache[cache_key]=root(lambda u:RM+M[p]*response(u)-1,peak)
++            d=delay_cache[cache_key]
++            cycle=d+dm[p]+ds[p]+de[p]
++            if s<=previous_end:raise ArithmeticError('auxiliary not regenerated')
++            if d+dm[p]+ds[p]<=width:raise ArithmeticError('ERROR overlaps own raw pulse')
++            previous_end=s+max(cycle,width)
++            pulses[p,s]=(amplitude,decay,width);delays[p,s]=d
++            for age,kind in [(0.,0),(d,1),(d+dm[p],2),(width,3),(d+dm[p]+ds[p],4),(cycle,5)]:
++                external.append((s+age,kind,p,s,label))
+     external.sort();z=initial['z'][:];q=initial['q'];b=initial['b'];t=0.;phase=0;fast_end=math.inf
+-    raw=[None]*3;labels=[None]*3;marks=[None]*3;errors=[None]*3;out=[];idx=0
++    raw=[None]*N;labels=[None]*N;marks=[None]*N;errors=[None]*N;out=[];idx=0
+     trainstate=None;cap_hits=[];b_hit=None;gate_events=0;mix=[];near=math.inf;probe_gain_moves=0
+     def snapshot():return {'z':z[:],'g':[math.exp(x) for x in z],'b':b,'q':q,'phase':phase,'time':t}
+     while idx<len(external) or phase!=0:
+@@ -46,25 +59,36 @@
+             target=t+20
+         dt=max(0.,target-t)
+         Bs=[.5*math.exp(-LM[p]*(t-s)) if s is not None else 0. for p,s in enumerate(marks)]
+-        if b>=1.1:Bs=[0.]*3
+-        def db(u):return sum(Bs[p]*(-math.expm1(-LM[p]*u)) for p in range(3))
++        if b>=1.1:Bs=[0.]*N
++        def db(u):return sum(Bs[p]*(-math.expm1(-LM[p]*u)) for p in range(N))
+         captime=root(lambda u:db(u)-(1.1-b),dt) if b<1.1 and b+db(dt)>1.1 else math.inf
+         def intb(u):
+             v=min(u,captime)
+-            return b*v+sum(Bs[p]*(v+math.expm1(-LM[p]*v)/LM[p]) for p in range(3))+1.1*max(0.,u-v)
++            return b*v+sum(Bs[p]*(v+math.expm1(-LM[p]*v)/LM[p]) for p in range(N))+1.1*max(0.,u-v)
+         internal=None
++        terms=[(math.exp(z[p])*pulses[p,s][0]*pulses[p,s][1]*math.exp(-pulses[p,s][1]*(t-s)),pulses[p,s][1]) for p,s in enumerate(raw) if s is not None]
++        def charge(u):
++            ek=math.exp(-K*u)
++            return R+(q-R)*ek+sum(J*(ek-math.exp(-decay*u))/(decay-K) for J,decay in terms)
+         if phase==0 and dt>0:
+-            J=sum(math.exp(z[p])*A*math.exp(-A*(t-s)) for p,s in enumerate(raw) if s is not None)
+-            C=q-R+J/(A-K);D=J/(A-K)
+-            peak=math.log(A*D/(K*C))/(A-K) if C>0 and D>0 else 0.;upto=min(dt,max(0.,peak))
+-            def charge(u):return R+C*math.exp(-K*u)-D*math.exp(-A*u)
++            if all(decay==A for J,decay in terms):
++                J=sum(J for J,decay in terms)
++                C=q-R+J/(A-K);D=J/(A-K)
++                peak=math.log(A*D/(K*C))/(A-K) if C>0 and D>0 else 0.
++                upto=min(dt,max(0.,peak))
++            else:
++                # derivative times exp(K*u) is strictly decreasing for positive inputs.
++                def derivative_scaled(u):
++                    return -K*(q-R)+sum(J*(-K+decay*math.exp(-(decay-K)*u))/(decay-K) for J,decay in terms)
++                if derivative_scaled(0)<=0:upto=0.
++                elif derivative_scaled(dt)>=0:upto=dt
++                else:upto=root(lambda u:-derivative_scaled(u),dt)
+             if upto>0 and charge(upto)>=1:dt=root(lambda u:charge(u)-1,upto);internal='fire'
+         elif phase==2 and intb(dt)>=math.log(q/R):
+             needed=math.log(q/R);dt=root(lambda u:intb(u)-needed,dt);internal='ready'
+         oldphase=phase
+         if phase==0:
+-            J=sum(math.exp(z[p])*A*math.exp(-A*(t-s)) for p,s in enumerate(raw) if s is not None)
+-            q=R+(q-R)*math.exp(-K*dt)+J*(math.exp(-K*dt)-math.exp(-A*dt))/(A-K)
++            q=charge(dt)
+             for p,s in enumerate(errors):
+                 if s is None:continue
+                 if raw[p] is not None:raise ArithmeticError('own raw/error overlap')
+@@ -85,7 +109,7 @@
+         if internal:
+             if math.isfinite(ext):near=min(near,abs(ext-t))
+             if internal=='fire':
+-                live=[labels[p] for p in range(3) if raw[p] is not None]
++                live=[labels[p] for p in range(N) if raw[p] is not None]
+                 unique=set(live)
+                 label=next(iter(unique)) if len(unique)==1 and None not in unique else None
+                 if label is None:mix.append({'time':t,'parent_labels':live})
+@@ -98,85 +122,18 @@
+             if kind==0:
+                 if raw[p] is not None:raise ArithmeticError('overlapping raw pulses')
+                 raw[p]=s;labels[p]=label
+-            elif kind==1:marks[p]=s+d[p]
++                if phase==0:q=max(0.,q+charge_kicks.get((p,label),0.))
++            elif kind==1:marks[p]=s+delays[p,s]
+             elif kind==2:marks[p]=None
+             elif kind==3:raw[p]=None;labels[p]=None
+-            elif kind==4:errors[p]=s+d[p]+dm[p]+ds[p]
++            elif kind==4:errors[p]=s+delays[p,s]+dm[p]+ds[p]
+             else:errors[p]=None
+             idx+=1
++        if phase==0 and q>=1:
++            live=[labels[p] for p in range(N) if raw[p] is not None]
++            unique=set(live)
++            label=next(iter(unique)) if len(unique)==1 and None not in unique else None
++            if label is None:mix.append({'time':t,'parent_labels':live})
++            q=1.;phase=1;fast_end=t+1.;out.append((t,label))
+     if trainstate is None:trainstate=snapshot()
+     return out,{'after_training':trainstate,'after_probes':snapshot(),'gain_cap_hits':cap_hits,'b_cap_hit':b_hit,'ready_error_subintervals':gate_events,'probe_gain_moves':probe_gain_moves,'mixed_label_firings':mix,'closest_event_gap':near if math.isfinite(near) else None}
+-
+-def parameters(case,n,j,rng,eta_override=None):
+-    eps=case['eps'];style=case['style'];values=[]
+-    for p in range(3):
+-        if style=='uniform':ss=[rng.uniform(-1,1) for _ in range(5)]
+-        elif style=='corners':ss=[rng.choice([-1,1]) for _ in range(5)]
+-        elif style=='checker':ss=[(-1)**(n+j+p+k) for k in range(5)]
+-        elif style=='split':ss=[(1 if j<6 else -1)*(-1)**k for k in range(5)]
+-        else:ss=case.get('signs',[0]*5)
+-        values.append([x*(1+eps*s) for x,s in zip([4,LM0,LS0,LE0,M0],ss)])
+-    radius=case.get('initial_alpha',1e-5)
+-    shifts=[rng.uniform(-radius,radius) for _ in range(3)] if case.get('vary_initial') else [0.]*3
+-    if eta_override is not None:shifts=[eta_override]*3
+-    elif 'fixed_gain_shift' in case:shifts=[case['fixed_gain_shift']]*3
+-    initial={'z':[math.log(g)+v for g,v in zip([.3,1.2,.3],shifts)],'q':R+(rng.uniform(-1e-5,1e-5) if case.get('vary_initial') else 0),'b':.08+(rng.uniform(-1e-5,1e-5) if case.get('vary_initial') else 0),'auxiliary':'READY exactly rm'}
+-    return values,initial
+-
+-def widths(cells):
+-    by={};mixed=0;duplicates=[]
+-    for j,c in enumerate(cells):
+-        for t,k in c['training_events']:
+-            if k is None:mixed+=1;continue
+-            if j in by.setdefault(k,{}):duplicates.append((k,j))
+-            by[k][j]=t
+-    complete={k:p for k,p in by.items() if len(p)==12 and not any(z[0]==k for z in duplicates)}
+-    cohorts=[];ordered=sorted(complete)
+-    for pos,k in enumerate(ordered):
+-        p=complete[k];D=max(p.values())-min(p.values());W=max(max(p[i%12] for i in [j-1,j,j+1])-min(p[i%12] for i in [j-1,j,j+1]) for j in range(12))
+-        # A dense pair is identified by actual same-lane next-cohort gaps <15.5,
+-        # not by assigning the kth emission to an assumed pulse index.
+-        gaps=[complete[ordered[pos+1]][j]-p[j] for j in range(12)] if pos+1<len(ordered) else []
+-        cohorts.append({'source_label':k,'D':D,'local_triplet_spread':W,'gap_to_next_min':min(gaps) if gaps else None,'gap_to_next_max':max(gaps) if gaps else None,'dense_pair_start':bool(gaps and min(gaps)<15.5)})
+-    dense=[c for c in cohorts if c['dense_pair_start']]
+-    return {'complete_cohorts':len(cohorts),'partial_labels':len(by)-len(complete),'mixed_label_firings':mixed,'duplicate_labels':duplicates,'max_D':max((c['D'] for c in cohorts),default=None),'max_local_spread':max((c['local_triplet_spread'] for c in cohorts),default=None),'dense_pair_count':len(dense),'max_dense_D':max((c['D'] for c in dense),default=None),'max_dense_local_spread':max((c['local_triplet_spread'] for c in dense),default=None),'cohorts':cohorts}
+-
+-def run(case):
+-    start=time.monotonic();rng=random.Random(case['seed']);source=[(8.*k,k) for k in range(128)]+[(s,128+i) for i,s in enumerate(PROBES)]
+-    parents=[source]+[[] for _ in range(11)];records=[];layers=[]
+-    for n in range(1,case['depth']+1):
+-        row=[];cells=[]
+-        for j in range(12):
+-            pars,initial=parameters(case,n,j,rng);events,info=cell([parents[(j-1)%12],parents[j],parents[(j+1)%12]],pars,initial)
+-            row.append(events);c={'layer':n,'lane':j,'parameters':pars,'initial':initial,'training_events':[x for x in events if x[0]<4096],'probe_events':[x for x in events if x[0]>=4096],**info};records.append(c);cells.append(c)
+-        layers.append({'layer':n,**widths(cells)});parents=row
+-    result={'status':'EXPLORATORY_POINT_SIMULATION_NOT_CERTIFIED','case':case,'cells':records,'layers':layers,'seconds':time.monotonic()-start}
+-    (ROOT/'results').mkdir(exist_ok=True);(ROOT/'results'/f"{case['name']}.json").write_text(json.dumps(result,separators=(',',':'))+'\n')
+-    print(case['name'],round(result['seconds'],2),'D18',layers[17]['max_D'],'denseD18',layers[17]['max_dense_D'],'mixed',sum(x['mixed_label_firings'] for x in layers),flush=True)
+-    return {'case':case,'seconds':result['seconds'],'layers':layers}
+-
+-def regression():
+-    c={'name':'nominal','eps':0.,'style':'fixed','seed':0,'depth':24};r=run(c)
+-    data=json.loads((ROOT/'results/nominal.json').read_text());ref=json.loads((ROOT/'sources/historical_nominal_events.json').read_text());by={}
+-    for n,j,t in ref:by.setdefault((int(n),int(j)),[]).append(t)
+-    errors=[];mismatches=[]
+-    for cellrow in data['cells']:
+-        if cellrow['layer']>18:continue
+-        aa=[t for t,k in cellrow['training_events']];bb=by.get((cellrow['layer'],cellrow['lane']),[])
+-        if len(aa)!=len(bb):mismatches.append([cellrow['layer'],cellrow['lane'],len(aa),len(bb)])
+-        else:errors.extend(abs(a-b) for a,b in zip(aa,bb))
+-    v={'mismatches':mismatches,'max_date_error':max(errors),'events_compared':len(errors),'status':'PASS_NOMINAL_REGRESSION' if not mismatches and max(errors)<1e-5 else 'FAIL'}
+-    (ROOT/'REGRESSION.json').write_text(json.dumps(v,indent=2)+'\n')
+-    if v['status']=='FAIL':raise ArithmeticError(v)
+-    return r
+-
+-def main():
+-    start=time.monotonic();rows=[regression()];cases=[]
+-    for i,signs in enumerate([[1]*5,[-1]*5,[1,-1,1,-1,1],[-1,1,-1,1,-1]]):cases.append({'name':f'coherent_{i}','eps':.01,'style':'fixed','signs':signs,'seed':i,'depth':24})
+-    for style in ['checker','split']:cases.append({'name':style,'eps':.01,'style':style,'seed':42,'depth':24})
+-    for style in ['uniform','corners']:
+-        for seed in range(8):cases.append({'name':f'{style}_{seed}','eps':.01,'style':style,'seed':seed+1024,'depth':24,'vary_initial':True})
+-    with concurrent.futures.ProcessPoolExecutor(max_workers=4) as ex:
+-        for r in ex.map(run,cases):rows.append(r)
+-    (ROOT/'CAMPAIGN.json').write_text(json.dumps({'status':'EXPLORATORY_NOT_CERTIFIED','cases':rows,'wall_seconds':time.monotonic()-start},indent=2)+'\n')
+-if __name__=='__main__':main()

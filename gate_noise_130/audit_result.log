@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "datasets_including_clean_training": 181,
+  "test_instances_including_controls": 846,
+  "minimum_quiet_time": 3025.10336473566,
+  "frozen_max_log_gain_change": 0.0,
+  "frozen_max_b_change": 0.0,
+  "independent_final_output_recounts": "all matched",
+  "problems": []
+}

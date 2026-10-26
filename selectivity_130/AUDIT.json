@@ -1,0 +1,12 @@
+{
+  "errors": [],
+  "datasets": 2562,
+  "raw_output_recounts": 2562,
+  "max_energy_relative_residual": 4.0530011534956023e-13,
+  "minimum_E_bound": 57.789291594120186,
+  "minimum_sampled_E": 96.5733511601141,
+  "injection_brackets_checked": 30640,
+  "injection_bracket_violations": 0,
+  "unattributed_events": 0,
+  "historical_clean_regressions": 183
+}

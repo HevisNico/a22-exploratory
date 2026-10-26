@@ -1,0 +1,59 @@
+{
+  "fixed_before_new_results": true,
+  "date": "2026-10-25",
+  "layers": 130,
+  "lanes": 12,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "levels": {
+    "faible": {
+      "sigma": 0.05,
+      "jitter": 0.015
+    },
+    "moyen": {
+      "sigma": 0.1,
+      "jitter": 0.03
+    },
+    "fort": {
+      "sigma": 0.15,
+      "jitter": 0.045
+    }
+  },
+  "training_pulses": 2048,
+  "training_gap": 8,
+  "tail_pulses": 128,
+  "delay": 0.1,
+  "rules": [
+    "normal",
+    "ungated"
+  ],
+  "ablation": "Remove only READY gate of gain learning. Keep b rule and caps.",
+  "training_duration": "Fixed for every seed, rule and noise level; no filtering by preparation.",
+  "tests": "Independent held-out 24 and 128 pulse trains; matched noise; active and frozen copies; same initial learned state.",
+  "additional_controls": "Deterministic clean normal training of same length, matched held-out noisy tests for all levels and seeds; frozen normal transfer tests across all three levels.",
+  "primary_endpoint": "At layer 130, fraction of source labels occurring exactly once; complete ordered word on all 12 lanes separately.",
+  "statistics": "Paired seed bootstrap 95% CI (20000 resamples); exact paired sign tests, Holm correction for 3 noise-level comparisons. Seeds, not lanes or pulses, are replicate units.",
+  "cessation": "Report tail128 gains and b increments, cap fractions; finite observation only, no theorem of permanent stopping under unbounded noise.",
+  "randomness": "New SplitMix64 counter field, Box-Muller normal, keyed by seed/layer/lane/port/stage/label/occurrence. Same standardized perturbations between compared conditions; train stage=0, test stages=24 and 128. Not a replay of previous seeds.",
+  "cross_level_tests": "Only frozen normal at 128 pulses; matched primary 128 active."
+}

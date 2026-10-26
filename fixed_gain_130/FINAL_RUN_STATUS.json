@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "new_datasets": 480,
+  "matched_test_instances": 1920,
+  "reference_datasets": 120,
+  "note": "All planned results complete and independently audited. One secondary test was rerun after exact recovery of an incomplete preceding text checkpoint from complete JSON states. No seed excluded."
+}

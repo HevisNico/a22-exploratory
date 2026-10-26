@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "binary_sha256": "6d2e5c653b20e01152093d4a5eca39722ec8532c794115b86e69e23b47c8ffe5",
+  "unit_output": "PASS: analytic single-pulse thresholds, lineage unions, contamination scoring and pure truth recovery\n",
+  "regressions": [
+    {
+      "condition": "learned",
+      "exact_event_regression": true,
+      "relative_energy_error": 0.0
+    },
+    {
+      "condition": "uniform4",
+      "exact_event_regression": true,
+      "relative_energy_error": 0.0
+    }
+  ],
+  "pilot_datasets": 5,
+  "scope": "Same physical kernel as corrected energy campaign, with passive ancestry metadata; previous independent 25-case state-equation validation retained in reference/. Not a new independent general hybrid proof."
+}

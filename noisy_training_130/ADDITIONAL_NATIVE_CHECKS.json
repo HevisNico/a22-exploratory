@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "seed": 3,
+      "mismatches": [],
+      "max_date_error": 5.848659156981739e-08,
+      "max_gain_error": 5.869084709342332e-07
+    },
+    {
+      "seed": 2,
+      "mismatches": [],
+      "max_date_error": 5.903245892113773e-09,
+      "max_gain_error": 1.7311889366489197e-07
+    },
+    {
+      "seed": 8,
+      "mismatches": [],
+      "max_date_error": 5.487663656822406e-10,
+      "max_gain_error": 5.34740918212151e-09
+    }
+  ]
+}

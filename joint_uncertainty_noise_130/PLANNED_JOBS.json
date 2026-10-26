@@ -1,0 +1,98 @@
+[
+  {
+    "seed": 3000,
+    "arm": "nominal_quiet"
+  },
+  {
+    "seed": 3000,
+    "arm": "nominal_noisy"
+  },
+  {
+    "seed": 3000,
+    "arm": "uncertain_quiet"
+  },
+  {
+    "seed": 3000,
+    "arm": "uncertain_noisy"
+  },
+  {
+    "seed": 3001,
+    "arm": "nominal_quiet"
+  },
+  {
+    "seed": 3001,
+    "arm": "nominal_noisy"
+  },
+  {
+    "seed": 3001,
+    "arm": "uncertain_quiet"
+  },
+  {
+    "seed": 3001,
+    "arm": "uncertain_noisy"
+  },
+  {
+    "seed": 3002,
+    "arm": "nominal_quiet"
+  },
+  {
+    "seed": 3002,
+    "arm": "nominal_noisy"
+  },
+  {
+    "seed": 3002,
+    "arm": "uncertain_quiet"
+  },
+  {
+    "seed": 3002,
+    "arm": "uncertain_noisy"
+  },
+  {
+    "seed": 3003,
+    "arm": "nominal_quiet"
+  },
+  {
+    "seed": 3003,
+    "arm": "nominal_noisy"
+  },
+  {
+    "seed": 3003,
+    "arm": "uncertain_quiet"
+  },
+  {
+    "seed": 3003,
+    "arm": "uncertain_noisy"
+  },
+  {
+    "seed": 3004,
+    "arm": "nominal_quiet"
+  },
+  {
+    "seed": 3004,
+    "arm": "nominal_noisy"
+  },
+  {
+    "seed": 3004,
+    "arm": "uncertain_quiet"
+  },
+  {
+    "seed": 3004,
+    "arm": "uncertain_noisy"
+  },
+  {
+    "seed": 3005,
+    "arm": "nominal_quiet"
+  },
+  {
+    "seed": 3005,
+    "arm": "nominal_noisy"
+  },
+  {
+    "seed": 3005,
+    "arm": "uncertain_quiet"
+  },
+  {
+    "seed": 3005,
+    "arm": "uncertain_noisy"
+  }
+]

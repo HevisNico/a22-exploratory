@@ -1,0 +1,50 @@
+cff-version: 1.2.0
+message: "If you use this computation, its proof or its results, please cite it as below."
+title: "A22: enclosure and proof of every learning trajectory of a 216-cell spiking network"
+type: software
+authors:
+  - family-names: "Breuillaud"
+    given-names: "Nicolas"
+version: "4.3"
+date-released: "2026-10-25"
+license:
+  - MIT
+  - CC-BY-4.0
+abstract: >-
+  End-to-end propagation of the A22 spiking-network realization (18 layers x 12 lanes,
+  128 input pulses, horizon 1116) with outward-rounded affine interval arithmetic over a box of
+  device parameters, independent for each input port of each cell, and initial states. All 18
+  layers complete with no forced decision; the independent A14 reference gains lie inside the
+  computed enclosures for 648 of 648 boxes. A manual proof, under explicit execution assumptions,
+  shows that the computation covers every admissible training trajectory and that the learned
+  state is invariant for every future pulse sequence with gaps of at least 20, with exact
+  transmission of the pulse word. Release 4.0-depth extends this to arbitrary depth for six
+  prescribed realizations: the full training transient is certified through 68 layers (128 for a
+  connected two-region case), the learned state enters a tail contract, and every lane of a medium
+  has one common limiting duration per layer, identical for different upstream preparations of the
+  same medium. Release 4.1 extends the tail to the full independent parameter box, proves a
+  deterministic limiting speed for stationary ergodic random media (Kingman's subadditive ergodic
+  theorem), and gives speed ceilings for tail cohorts and for first activation during learning.
+  Release 4.2 widens the tail contract and gives partial results, certified obstructions and a
+  precise open problem for entry from every preparation of the original source.
+  Release 4.3 adds a conditional relative-gain-domain future-invariance theorem, with 35 of 40
+  declared decimal states passing directed membership checks; universal training entry remains open.
+  The proof is not yet independently reviewed or machine-checked.
+  The code, diagnostics and proof were produced with the AI assistants Claude (Anthropic) and
+  ChatGPT (OpenAI) under the author's direction. The physical kernel is inspired by the author's
+  Reset Operator.
+keywords:
+  - interval arithmetic
+  - affine arithmetic
+  - hybrid systems
+  - validated numerics
+  - spiking networks
+  - computer-assisted proof
+references:
+  - type: unpublished
+    title: "The Reset Operator: A Structural Constraint on Recursivity"
+    authors:
+      - family-names: "Breuillaud"
+        given-names: "Nicolas"
+    year: 2026
+    notes: "Manuscript."

@@ -1,0 +1,43 @@
+{
+  "version": "directional-selectivity-v1",
+  "fixed_before_probe_results": true,
+  "network": [130,12],
+  "training_source": "Reused corrected 2048-pulse training checkpoints; no new learning and no tuning on probe outcomes.",
+  "fields": "20 paired seeds at each of low/medium/high noise; one deterministic quiet case.",
+  "true_input": {"source_lane":0,"pulse_count":128,"interval_pattern":[20,22,21,24,20,23],"noise_stage":8001,"expected_output":"All128 true identities exactly once, in order, on all12 output lanes."},
+  "freeze": "Both gains and b frozen throughout every test. q relaxed to0.1, E initially100. Original physical cost law retained.",
+  "conditions": {
+    "learned":"Normally trained gains and b.",
+    "ungated":"Gains AND b trained without the READY gate; frozen. Whole learned-policy comparator, not a gain-only intervention.",
+    "uniform4":"All gains4; normally learned b matched cell by cell.",
+    "uniform2":"All gains2; normally learned b matched cell by cell.",
+    "directional":"One central and one lateral gain from pooled training medians in CALIBRATION.json, applied everywhere; normally learned b.",
+    "directional_tail":"Same median rule in layers7–130; retain normally learned gains in layers1–6 to control initial broadcast formation; normally learned b. Hybrid static comparator, not a fully homogeneous network."
+  },
+  "static_selection":"One pooled central median and one pooled lateral median from reachable ports of60 noisy normal training checkpoints; quiet excluded; chosen before tests. This specified rule is not claimed to be a globally optimal static design.",
+  "scenarios": ["clean","lateral_050","lateral_100","central_050","noise_only","noise_mixed","wrong_lane"],
+  "probes": {
+    "count":24,
+    "selected_true_gap_indices":"3+5*j, j=0..23",
+    "layer7_time":"Midpoint of the selected source gap +3 time units, plus the declared link jitter. No retiming after observing test outputs.",
+    "lateral":"Single input into layer7, lane j mod12, left port for j<12 and right port otherwise. Base amplitude0.5 or1.0; multiply by the same declared lognormal link field.",
+    "central":"Same schedule, layer7 central port, base amplitude0.5.",
+    "noise":"24 sparse pulses at layer7, uniformly selected lane and port, base amplitude uniform[0.3,1.0], time offset uniform[-1,1] around scheduled midpoint+3; apply declared link amplitude/jitter field. Identical realization with and without true source. This is sparse pulse noise, not Gaussian continuous-current noise or a Poisson stream.",
+    "wrong_lane":"24 canonical pulses on external source lane6 instead of lane0, at exact source-gap midpoints; amplitude1 before normal link noise.",
+    "geometry":"Layer7 targets structurally trained ports. Wrong-lane input separately probes the learned entrance geometry.",
+    "timing_audit":"Record whether each layer7 injection lies after the previous target true cohort ended and before the next began, when both cohorts exist. Never retime or silently discard violations.",
+    "paired_randomness":"Exactly the same source times, probe list and counter-based link noise field across conditions within each seed/level/scenario."
+  },
+  "primary_endpoints": {
+    "false_probe_reach_rate":"Fraction of24 injected probe identities appearing in at least one output event at layer130. Mixed true/probe provenance counts as contamination, not as rejection.",
+    "true_recall":"Fraction of128*12 expected true lane/identity pairs recovered exactly once in a pure true event, with no additional mixed/duplicate occurrence of that identity. Also report full_true_word and ordering."
+  },
+  "provenance":"Metadata only, not available to physical dynamics. At each firing, union the identities of currently active raw inputs. Retain unions through mixed events. This operational pulse-provenance measure is not a full counterfactual attribution of subthreshold charge memory. Report pure false and mixed event counts separately.",
+  "comparisons":"Compare false reach and true recall jointly, paired by network seed; subtract each condition's clean recall to measure added damage. Never treat absence of statistical significance as equivalence.",
+  "exploratory_decision_rule":"For a selective advantage over a comparator: paired95% interval for false-reach difference lies below0 AND lower endpoint for true-recall difference is above-0.001 (0.1 percentage point tolerance). Report full-word success separately. This is an explicitly chosen practical tolerance, not exact equality or a multiple-testing-adjusted confirmatory test.",
+  "statistics":"Network-seed bootstrap,20000 paired resamples, deterministic RNG20261026;20 independent network seeds per noisy group. Do not treat individual probes or output lanes as independent seeds. Quiet is one example. Zero observed events does not prove zero population risk.",
+  "secondary_endpoints":["false lane spread","pure false output count","mixed output count","truth loss relative to clean","modeled work","continuous positive E bound","first layer where each false identity appears or disappears"],
+  "solver_scope":"Existing nonoverlapping-auxiliary point solver, extended only with passive provenance sets. Any unsupported input overlap or other solver error stops certification of the dataset; no failing cases are dropped or counted as rejected probes.",
+  "planned_datasets":2562,
+  "scope":"Functional selectivity test under this source geometry, sparse contamination and current cost law. No universal necessity, biological selectivity or hardware-energy claim."
+}

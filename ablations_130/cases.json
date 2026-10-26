@@ -1,0 +1,646 @@
+[
+  {
+    "name": "all_normal_0",
+    "rule": "normal",
+    "noise_phase": "all",
+    "seed": 0
+  },
+  {
+    "name": "all_none_0",
+    "rule": "none",
+    "noise_phase": "all",
+    "seed": 0
+  },
+  {
+    "name": "all_ungated_0",
+    "rule": "ungated",
+    "noise_phase": "all",
+    "seed": 0
+  },
+  {
+    "name": "probe_normal_0",
+    "rule": "normal",
+    "noise_phase": "probes",
+    "seed": 0
+  },
+  {
+    "name": "all_normal_1",
+    "rule": "normal",
+    "noise_phase": "all",
+    "seed": 1
+  },
+  {
+    "name": "all_none_1",
+    "rule": "none",
+    "noise_phase": "all",
+    "seed": 1
+  },
+  {
+    "name": "all_ungated_1",
+    "rule": "ungated",
+    "noise_phase": "all",
+    "seed": 1
+  },
+  {
+    "name": "probe_normal_1",
+    "rule": "normal",
+    "noise_phase": "probes",
+    "seed": 1
+  },
+  {
+    "name": "all_normal_2",
+    "rule": "normal",
+    "noise_phase": "all",
+    "seed": 2
+  },
+  {
+    "name": "all_none_2",
+    "rule": "none",
+    "noise_phase": "all",
+    "seed": 2
+  },
+  {
+    "name": "all_ungated_2",
+    "rule": "ungated",
+    "noise_phase": "all",
+    "seed": 2
+  },
+  {
+    "name": "probe_normal_2",
+    "rule": "normal",
+    "noise_phase": "probes",
+    "seed": 2
+  },
+  {
+    "name": "all_normal_3",
+    "rule": "normal",
+    "noise_phase": "all",
+    "seed": 3
+  },
+  {
+    "name": "all_none_3",
+    "rule": "none",
+    "noise_phase": "all",
+    "seed": 3
+  },
+  {
+    "name": "all_ungated_3",
+    "rule": "ungated",
+    "noise_phase": "all",
+    "seed": 3
+  },
+  {
+    "name": "probe_normal_3",
+    "rule": "normal",
+    "noise_phase": "probes",
+    "seed": 3
+  },
+  {
+    "name": "all_normal_4",
+    "rule": "normal",
+    "noise_phase": "all",
+    "seed": 4
+  },
+  {
+    "name": "all_none_4",
+    "rule": "none",
+    "noise_phase": "all",
+    "seed": 4
+  },
+  {
+    "name": "all_ungated_4",
+    "rule": "ungated",
+    "noise_phase": "all",
+    "seed": 4
+  },
+  {
+    "name": "probe_normal_4",
+    "rule": "normal",
+    "noise_phase": "probes",
+    "seed": 4
+  },
+  {
+    "name": "all_normal_5",
+    "rule": "normal",
+    "noise_phase": "all",
+    "seed": 5
+  },
+  {
+    "name": "all_none_5",
+    "rule": "none",
+    "noise_phase": "all",
+    "seed": 5
+  },
+  {
+    "name": "all_ungated_5",
+    "rule": "ungated",
+    "noise_phase": "all",
+    "seed": 5
+  },
+  {
+    "name": "probe_normal_5",
+    "rule": "normal",
+    "noise_phase": "probes",
+    "seed": 5
+  },
+  {
+    "name": "all_normal_6",
+    "rule": "normal",
+    "noise_phase": "all",
+    "seed": 6
+  },
+  {
+    "name": "all_none_6",
+    "rule": "none",
+    "noise_phase": "all",
+    "seed": 6
+  },
+  {
+    "name": "all_ungated_6",
+    "rule": "ungated",
+    "noise_phase": "all",
+    "seed": 6
+  },
+  {
+    "name": "probe_normal_6",
+    "rule": "normal",
+    "noise_phase": "probes",
+    "seed": 6
+  },
+  {
+    "name": "all_normal_7",
+    "rule": "normal",
+    "noise_phase": "all",
+    "seed": 7
+  },
+  {
+    "name": "all_none_7",
+    "rule": "none",
+    "noise_phase": "all",
+    "seed": 7
+  },
+  {
+    "name": "all_ungated_7",
+    "rule": "ungated",
+    "noise_phase": "all",
+    "seed": 7
+  },
+  {
+    "name": "probe_normal_7",
+    "rule": "normal",
+    "noise_phase": "probes",
+    "seed": 7
+  },
+  {
+    "name": "all_normal_8",
+    "rule": "normal",
+    "noise_phase": "all",
+    "seed": 8
+  },
+  {
+    "name": "all_none_8",
+    "rule": "none",
+    "noise_phase": "all",
+    "seed": 8
+  },
+  {
+    "name": "all_ungated_8",
+    "rule": "ungated",
+    "noise_phase": "all",
+    "seed": 8
+  },
+  {
+    "name": "probe_normal_8",
+    "rule": "normal",
+    "noise_phase": "probes",
+    "seed": 8
+  },
+  {
+    "name": "all_normal_9",
+    "rule": "normal",
+    "noise_phase": "all",
+    "seed": 9
+  },
+  {
+    "name": "all_none_9",
+    "rule": "none",
+    "noise_phase": "all",
+    "seed": 9
+  },
+  {
+    "name": "all_ungated_9",
+    "rule": "ungated",
+    "noise_phase": "all",
+    "seed": 9
+  },
+  {
+    "name": "probe_normal_9",
+    "rule": "normal",
+    "noise_phase": "probes",
+    "seed": 9
+  },
+  {
+    "name": "all_normal_10",
+    "rule": "normal",
+    "noise_phase": "all",
+    "seed": 10
+  },
+  {
+    "name": "all_none_10",
+    "rule": "none",
+    "noise_phase": "all",
+    "seed": 10
+  },
+  {
+    "name": "all_ungated_10",
+    "rule": "ungated",
+    "noise_phase": "all",
+    "seed": 10
+  },
+  {
+    "name": "probe_normal_10",
+    "rule": "normal",
+    "noise_phase": "probes",
+    "seed": 10
+  },
+  {
+    "name": "all_normal_11",
+    "rule": "normal",
+    "noise_phase": "all",
+    "seed": 11
+  },
+  {
+    "name": "all_none_11",
+    "rule": "none",
+    "noise_phase": "all",
+    "seed": 11
+  },
+  {
+    "name": "all_ungated_11",
+    "rule": "ungated",
+    "noise_phase": "all",
+    "seed": 11
+  },
+  {
+    "name": "probe_normal_11",
+    "rule": "normal",
+    "noise_phase": "probes",
+    "seed": 11
+  },
+  {
+    "name": "all_normal_12",
+    "rule": "normal",
+    "noise_phase": "all",
+    "seed": 12
+  },
+  {
+    "name": "all_none_12",
+    "rule": "none",
+    "noise_phase": "all",
+    "seed": 12
+  },
+  {
+    "name": "all_ungated_12",
+    "rule": "ungated",
+    "noise_phase": "all",
+    "seed": 12
+  },
+  {
+    "name": "probe_normal_12",
+    "rule": "normal",
+    "noise_phase": "probes",
+    "seed": 12
+  },
+  {
+    "name": "all_normal_13",
+    "rule": "normal",
+    "noise_phase": "all",
+    "seed": 13
+  },
+  {
+    "name": "all_none_13",
+    "rule": "none",
+    "noise_phase": "all",
+    "seed": 13
+  },
+  {
+    "name": "all_ungated_13",
+    "rule": "ungated",
+    "noise_phase": "all",
+    "seed": 13
+  },
+  {
+    "name": "probe_normal_13",
+    "rule": "normal",
+    "noise_phase": "probes",
+    "seed": 13
+  },
+  {
+    "name": "all_normal_14",
+    "rule": "normal",
+    "noise_phase": "all",
+    "seed": 14
+  },
+  {
+    "name": "all_none_14",
+    "rule": "none",
+    "noise_phase": "all",
+    "seed": 14
+  },
+  {
+    "name": "all_ungated_14",
+    "rule": "ungated",
+    "noise_phase": "all",
+    "seed": 14
+  },
+  {
+    "name": "probe_normal_14",
+    "rule": "normal",
+    "noise_phase": "probes",
+    "seed": 14
+  },
+  {
+    "name": "all_normal_15",
+    "rule": "normal",
+    "noise_phase": "all",
+    "seed": 15
+  },
+  {
+    "name": "all_none_15",
+    "rule": "none",
+    "noise_phase": "all",
+    "seed": 15
+  },
+  {
+    "name": "all_ungated_15",
+    "rule": "ungated",
+    "noise_phase": "all",
+    "seed": 15
+  },
+  {
+    "name": "probe_normal_15",
+    "rule": "normal",
+    "noise_phase": "probes",
+    "seed": 15
+  },
+  {
+    "name": "all_normal_16",
+    "rule": "normal",
+    "noise_phase": "all",
+    "seed": 16
+  },
+  {
+    "name": "all_none_16",
+    "rule": "none",
+    "noise_phase": "all",
+    "seed": 16
+  },
+  {
+    "name": "all_ungated_16",
+    "rule": "ungated",
+    "noise_phase": "all",
+    "seed": 16
+  },
+  {
+    "name": "probe_normal_16",
+    "rule": "normal",
+    "noise_phase": "probes",
+    "seed": 16
+  },
+  {
+    "name": "all_normal_17",
+    "rule": "normal",
+    "noise_phase": "all",
+    "seed": 17
+  },
+  {
+    "name": "all_none_17",
+    "rule": "none",
+    "noise_phase": "all",
+    "seed": 17
+  },
+  {
+    "name": "all_ungated_17",
+    "rule": "ungated",
+    "noise_phase": "all",
+    "seed": 17
+  },
+  {
+    "name": "probe_normal_17",
+    "rule": "normal",
+    "noise_phase": "probes",
+    "seed": 17
+  },
+  {
+    "name": "all_normal_18",
+    "rule": "normal",
+    "noise_phase": "all",
+    "seed": 18
+  },
+  {
+    "name": "all_none_18",
+    "rule": "none",
+    "noise_phase": "all",
+    "seed": 18
+  },
+  {
+    "name": "all_ungated_18",
+    "rule": "ungated",
+    "noise_phase": "all",
+    "seed": 18
+  },
+  {
+    "name": "probe_normal_18",
+    "rule": "normal",
+    "noise_phase": "probes",
+    "seed": 18
+  },
+  {
+    "name": "all_normal_19",
+    "rule": "normal",
+    "noise_phase": "all",
+    "seed": 19
+  },
+  {
+    "name": "all_none_19",
+    "rule": "none",
+    "noise_phase": "all",
+    "seed": 19
+  },
+  {
+    "name": "all_ungated_19",
+    "rule": "ungated",
+    "noise_phase": "all",
+    "seed": 19
+  },
+  {
+    "name": "probe_normal_19",
+    "rule": "normal",
+    "noise_phase": "probes",
+    "seed": 19
+  },
+  {
+    "name": "quiet_normal",
+    "rule": "normal",
+    "noise_phase": "all",
+    "seed": 0,
+    "sigma": 0.0,
+    "jitter": 0.0
+  },
+  {
+    "name": "quiet_none",
+    "rule": "none",
+    "noise_phase": "all",
+    "seed": 0,
+    "sigma": 0.0,
+    "jitter": 0.0
+  },
+  {
+    "name": "quiet_ungated",
+    "rule": "ungated",
+    "noise_phase": "all",
+    "seed": 0,
+    "sigma": 0.0,
+    "jitter": 0.0
+  },
+  {
+    "name": "frozen_learned_0",
+    "rule": "normal",
+    "noise_phase": "all",
+    "seed": 0,
+    "freeze_after_training": true
+  },
+  {
+    "name": "frozen_learned_1",
+    "rule": "normal",
+    "noise_phase": "all",
+    "seed": 1,
+    "freeze_after_training": true
+  },
+  {
+    "name": "frozen_learned_2",
+    "rule": "normal",
+    "noise_phase": "all",
+    "seed": 2,
+    "freeze_after_training": true
+  },
+  {
+    "name": "frozen_learned_3",
+    "rule": "normal",
+    "noise_phase": "all",
+    "seed": 3,
+    "freeze_after_training": true
+  },
+  {
+    "name": "frozen_learned_4",
+    "rule": "normal",
+    "noise_phase": "all",
+    "seed": 4,
+    "freeze_after_training": true
+  },
+  {
+    "name": "frozen_learned_5",
+    "rule": "normal",
+    "noise_phase": "all",
+    "seed": 5,
+    "freeze_after_training": true
+  },
+  {
+    "name": "frozen_learned_6",
+    "rule": "normal",
+    "noise_phase": "all",
+    "seed": 6,
+    "freeze_after_training": true
+  },
+  {
+    "name": "frozen_learned_7",
+    "rule": "normal",
+    "noise_phase": "all",
+    "seed": 7,
+    "freeze_after_training": true
+  },
+  {
+    "name": "frozen_learned_8",
+    "rule": "normal",
+    "noise_phase": "all",
+    "seed": 8,
+    "freeze_after_training": true
+  },
+  {
+    "name": "frozen_learned_9",
+    "rule": "normal",
+    "noise_phase": "all",
+    "seed": 9,
+    "freeze_after_training": true
+  },
+  {
+    "name": "frozen_learned_10",
+    "rule": "normal",
+    "noise_phase": "all",
+    "seed": 10,
+    "freeze_after_training": true
+  },
+  {
+    "name": "frozen_learned_11",
+    "rule": "normal",
+    "noise_phase": "all",
+    "seed": 11,
+    "freeze_after_training": true
+  },
+  {
+    "name": "frozen_learned_12",
+    "rule": "normal",
+    "noise_phase": "all",
+    "seed": 12,
+    "freeze_after_training": true
+  },
+  {
+    "name": "frozen_learned_13",
+    "rule": "normal",
+    "noise_phase": "all",
+    "seed": 13,
+    "freeze_after_training": true
+  },
+  {
+    "name": "frozen_learned_14",
+    "rule": "normal",
+    "noise_phase": "all",
+    "seed": 14,
+    "freeze_after_training": true
+  },
+  {
+    "name": "frozen_learned_15",
+    "rule": "normal",
+    "noise_phase": "all",
+    "seed": 15,
+    "freeze_after_training": true
+  },
+  {
+    "name": "frozen_learned_16",
+    "rule": "normal",
+    "noise_phase": "all",
+    "seed": 16,
+    "freeze_after_training": true
+  },
+  {
+    "name": "frozen_learned_17",
+    "rule": "normal",
+    "noise_phase": "all",
+    "seed": 17,
+    "freeze_after_training": true
+  },
+  {
+    "name": "frozen_learned_18",
+    "rule": "normal",
+    "noise_phase": "all",
+    "seed": 18,
+    "freeze_after_training": true
+  },
+  {
+    "name": "frozen_learned_19",
+    "rule": "normal",
+    "noise_phase": "all",
+    "seed": 19,
+    "freeze_after_training": true
+  }
+]

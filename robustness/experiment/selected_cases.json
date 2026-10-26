@@ -1,0 +1,1012 @@
+[
+  {
+    "name": "baseline",
+    "save_training": true
+  },
+  {
+    "name": "baseline_delay",
+    "delay": 0.1
+  },
+  {
+    "name": "amp_0.001_0",
+    "sigma_amplitude": 0.001,
+    "seed": 0
+  },
+  {
+    "name": "amp_0.01_0",
+    "sigma_amplitude": 0.01,
+    "seed": 0
+  },
+  {
+    "name": "amp_0.03_0",
+    "sigma_amplitude": 0.03,
+    "seed": 0
+  },
+  {
+    "name": "amp_0.1_0",
+    "sigma_amplitude": 0.1,
+    "seed": 0
+  },
+  {
+    "name": "amp_0.2_0",
+    "sigma_amplitude": 0.2,
+    "seed": 0
+  },
+  {
+    "name": "jitter_0.001_0",
+    "jitter": 0.001,
+    "delay": 0.1,
+    "seed": 0
+  },
+  {
+    "name": "jitter_0.01_0",
+    "jitter": 0.01,
+    "delay": 0.1,
+    "seed": 0
+  },
+  {
+    "name": "jitter_0.05_0",
+    "jitter": 0.05,
+    "delay": 0.1,
+    "seed": 0
+  },
+  {
+    "name": "q_0.001_0",
+    "sigma_q": 0.001,
+    "seed": 0
+  },
+  {
+    "name": "q_0.03_0",
+    "sigma_q": 0.03,
+    "seed": 0
+  },
+  {
+    "name": "joint_0.01_0",
+    "sigma_amplitude": 0.01,
+    "jitter": 0.003,
+    "delay": 0.1,
+    "seed": 0
+  },
+  {
+    "name": "joint_0.03_0",
+    "sigma_amplitude": 0.03,
+    "jitter": 0.01,
+    "delay": 0.1,
+    "seed": 0
+  },
+  {
+    "name": "joint_0.1_0",
+    "sigma_amplitude": 0.1,
+    "jitter": 0.03,
+    "delay": 0.1,
+    "seed": 0
+  },
+  {
+    "name": "amp_0.001_1",
+    "sigma_amplitude": 0.001,
+    "seed": 1
+  },
+  {
+    "name": "amp_0.01_1",
+    "sigma_amplitude": 0.01,
+    "seed": 1
+  },
+  {
+    "name": "amp_0.03_1",
+    "sigma_amplitude": 0.03,
+    "seed": 1
+  },
+  {
+    "name": "amp_0.1_1",
+    "sigma_amplitude": 0.1,
+    "seed": 1
+  },
+  {
+    "name": "amp_0.2_1",
+    "sigma_amplitude": 0.2,
+    "seed": 1
+  },
+  {
+    "name": "jitter_0.001_1",
+    "jitter": 0.001,
+    "delay": 0.1,
+    "seed": 1
+  },
+  {
+    "name": "jitter_0.01_1",
+    "jitter": 0.01,
+    "delay": 0.1,
+    "seed": 1
+  },
+  {
+    "name": "jitter_0.05_1",
+    "jitter": 0.05,
+    "delay": 0.1,
+    "seed": 1
+  },
+  {
+    "name": "q_0.001_1",
+    "sigma_q": 0.001,
+    "seed": 1
+  },
+  {
+    "name": "q_0.03_1",
+    "sigma_q": 0.03,
+    "seed": 1
+  },
+  {
+    "name": "joint_0.01_1",
+    "sigma_amplitude": 0.01,
+    "jitter": 0.003,
+    "delay": 0.1,
+    "seed": 1
+  },
+  {
+    "name": "joint_0.03_1",
+    "sigma_amplitude": 0.03,
+    "jitter": 0.01,
+    "delay": 0.1,
+    "seed": 1
+  },
+  {
+    "name": "joint_0.1_1",
+    "sigma_amplitude": 0.1,
+    "jitter": 0.03,
+    "delay": 0.1,
+    "seed": 1
+  },
+  {
+    "name": "amp_0.001_2",
+    "sigma_amplitude": 0.001,
+    "seed": 2
+  },
+  {
+    "name": "amp_0.01_2",
+    "sigma_amplitude": 0.01,
+    "seed": 2
+  },
+  {
+    "name": "amp_0.03_2",
+    "sigma_amplitude": 0.03,
+    "seed": 2
+  },
+  {
+    "name": "amp_0.1_2",
+    "sigma_amplitude": 0.1,
+    "seed": 2
+  },
+  {
+    "name": "amp_0.2_2",
+    "sigma_amplitude": 0.2,
+    "seed": 2
+  },
+  {
+    "name": "jitter_0.001_2",
+    "jitter": 0.001,
+    "delay": 0.1,
+    "seed": 2
+  },
+  {
+    "name": "jitter_0.01_2",
+    "jitter": 0.01,
+    "delay": 0.1,
+    "seed": 2
+  },
+  {
+    "name": "jitter_0.05_2",
+    "jitter": 0.05,
+    "delay": 0.1,
+    "seed": 2
+  },
+  {
+    "name": "q_0.001_2",
+    "sigma_q": 0.001,
+    "seed": 2
+  },
+  {
+    "name": "q_0.03_2",
+    "sigma_q": 0.03,
+    "seed": 2
+  },
+  {
+    "name": "joint_0.01_2",
+    "sigma_amplitude": 0.01,
+    "jitter": 0.003,
+    "delay": 0.1,
+    "seed": 2
+  },
+  {
+    "name": "joint_0.03_2",
+    "sigma_amplitude": 0.03,
+    "jitter": 0.01,
+    "delay": 0.1,
+    "seed": 2
+  },
+  {
+    "name": "joint_0.1_2",
+    "sigma_amplitude": 0.1,
+    "jitter": 0.03,
+    "delay": 0.1,
+    "seed": 2
+  },
+  {
+    "name": "amp_0.001_3",
+    "sigma_amplitude": 0.001,
+    "seed": 3
+  },
+  {
+    "name": "amp_0.01_3",
+    "sigma_amplitude": 0.01,
+    "seed": 3
+  },
+  {
+    "name": "amp_0.03_3",
+    "sigma_amplitude": 0.03,
+    "seed": 3
+  },
+  {
+    "name": "amp_0.1_3",
+    "sigma_amplitude": 0.1,
+    "seed": 3
+  },
+  {
+    "name": "amp_0.2_3",
+    "sigma_amplitude": 0.2,
+    "seed": 3
+  },
+  {
+    "name": "jitter_0.001_3",
+    "jitter": 0.001,
+    "delay": 0.1,
+    "seed": 3
+  },
+  {
+    "name": "jitter_0.01_3",
+    "jitter": 0.01,
+    "delay": 0.1,
+    "seed": 3
+  },
+  {
+    "name": "jitter_0.05_3",
+    "jitter": 0.05,
+    "delay": 0.1,
+    "seed": 3
+  },
+  {
+    "name": "q_0.001_3",
+    "sigma_q": 0.001,
+    "seed": 3
+  },
+  {
+    "name": "q_0.03_3",
+    "sigma_q": 0.03,
+    "seed": 3
+  },
+  {
+    "name": "joint_0.01_3",
+    "sigma_amplitude": 0.01,
+    "jitter": 0.003,
+    "delay": 0.1,
+    "seed": 3
+  },
+  {
+    "name": "joint_0.03_3",
+    "sigma_amplitude": 0.03,
+    "jitter": 0.01,
+    "delay": 0.1,
+    "seed": 3
+  },
+  {
+    "name": "joint_0.1_3",
+    "sigma_amplitude": 0.1,
+    "jitter": 0.03,
+    "delay": 0.1,
+    "seed": 3
+  },
+  {
+    "name": "amp_0.001_4",
+    "sigma_amplitude": 0.001,
+    "seed": 4
+  },
+  {
+    "name": "amp_0.01_4",
+    "sigma_amplitude": 0.01,
+    "seed": 4
+  },
+  {
+    "name": "amp_0.03_4",
+    "sigma_amplitude": 0.03,
+    "seed": 4
+  },
+  {
+    "name": "amp_0.1_4",
+    "sigma_amplitude": 0.1,
+    "seed": 4
+  },
+  {
+    "name": "amp_0.2_4",
+    "sigma_amplitude": 0.2,
+    "seed": 4
+  },
+  {
+    "name": "jitter_0.001_4",
+    "jitter": 0.001,
+    "delay": 0.1,
+    "seed": 4
+  },
+  {
+    "name": "jitter_0.01_4",
+    "jitter": 0.01,
+    "delay": 0.1,
+    "seed": 4
+  },
+  {
+    "name": "jitter_0.05_4",
+    "jitter": 0.05,
+    "delay": 0.1,
+    "seed": 4
+  },
+  {
+    "name": "q_0.001_4",
+    "sigma_q": 0.001,
+    "seed": 4
+  },
+  {
+    "name": "q_0.03_4",
+    "sigma_q": 0.03,
+    "seed": 4
+  },
+  {
+    "name": "joint_0.01_4",
+    "sigma_amplitude": 0.01,
+    "jitter": 0.003,
+    "delay": 0.1,
+    "seed": 4
+  },
+  {
+    "name": "joint_0.03_4",
+    "sigma_amplitude": 0.03,
+    "jitter": 0.01,
+    "delay": 0.1,
+    "seed": 4
+  },
+  {
+    "name": "joint_0.1_4",
+    "sigma_amplitude": 0.1,
+    "jitter": 0.03,
+    "delay": 0.1,
+    "seed": 4
+  },
+  {
+    "name": "amp_0.001_5",
+    "sigma_amplitude": 0.001,
+    "seed": 5
+  },
+  {
+    "name": "amp_0.01_5",
+    "sigma_amplitude": 0.01,
+    "seed": 5
+  },
+  {
+    "name": "amp_0.03_5",
+    "sigma_amplitude": 0.03,
+    "seed": 5
+  },
+  {
+    "name": "amp_0.1_5",
+    "sigma_amplitude": 0.1,
+    "seed": 5
+  },
+  {
+    "name": "amp_0.2_5",
+    "sigma_amplitude": 0.2,
+    "seed": 5
+  },
+  {
+    "name": "jitter_0.001_5",
+    "jitter": 0.001,
+    "delay": 0.1,
+    "seed": 5
+  },
+  {
+    "name": "jitter_0.01_5",
+    "jitter": 0.01,
+    "delay": 0.1,
+    "seed": 5
+  },
+  {
+    "name": "jitter_0.05_5",
+    "jitter": 0.05,
+    "delay": 0.1,
+    "seed": 5
+  },
+  {
+    "name": "q_0.001_5",
+    "sigma_q": 0.001,
+    "seed": 5
+  },
+  {
+    "name": "q_0.03_5",
+    "sigma_q": 0.03,
+    "seed": 5
+  },
+  {
+    "name": "joint_0.01_5",
+    "sigma_amplitude": 0.01,
+    "jitter": 0.003,
+    "delay": 0.1,
+    "seed": 5
+  },
+  {
+    "name": "joint_0.03_5",
+    "sigma_amplitude": 0.03,
+    "jitter": 0.01,
+    "delay": 0.1,
+    "seed": 5
+  },
+  {
+    "name": "joint_0.1_5",
+    "sigma_amplitude": 0.1,
+    "jitter": 0.03,
+    "delay": 0.1,
+    "seed": 5
+  },
+  {
+    "name": "allnoise_0.01_0",
+    "sigma_amplitude": 0.01,
+    "jitter": 0.003,
+    "delay": 0.1,
+    "noise_phase": "all",
+    "seed": 0
+  },
+  {
+    "name": "allnoise_0.03_0",
+    "sigma_amplitude": 0.03,
+    "jitter": 0.009,
+    "delay": 0.1,
+    "noise_phase": "all",
+    "seed": 0
+  },
+  {
+    "name": "allnoise_0.1_0",
+    "sigma_amplitude": 0.1,
+    "jitter": 0.03,
+    "delay": 0.1,
+    "noise_phase": "all",
+    "seed": 0
+  },
+  {
+    "name": "allnoise_0.01_1",
+    "sigma_amplitude": 0.01,
+    "jitter": 0.003,
+    "delay": 0.1,
+    "noise_phase": "all",
+    "seed": 1
+  },
+  {
+    "name": "allnoise_0.03_1",
+    "sigma_amplitude": 0.03,
+    "jitter": 0.009,
+    "delay": 0.1,
+    "noise_phase": "all",
+    "seed": 1
+  },
+  {
+    "name": "allnoise_0.1_1",
+    "sigma_amplitude": 0.1,
+    "jitter": 0.03,
+    "delay": 0.1,
+    "noise_phase": "all",
+    "seed": 1
+  },
+  {
+    "name": "allnoise_0.01_2",
+    "sigma_amplitude": 0.01,
+    "jitter": 0.003,
+    "delay": 0.1,
+    "noise_phase": "all",
+    "seed": 2
+  },
+  {
+    "name": "allnoise_0.03_2",
+    "sigma_amplitude": 0.03,
+    "jitter": 0.009,
+    "delay": 0.1,
+    "noise_phase": "all",
+    "seed": 2
+  },
+  {
+    "name": "allnoise_0.1_2",
+    "sigma_amplitude": 0.1,
+    "jitter": 0.03,
+    "delay": 0.1,
+    "noise_phase": "all",
+    "seed": 2
+  },
+  {
+    "name": "ring24",
+    "width": 24
+  },
+  {
+    "name": "ring24_noisy_0",
+    "width": 24,
+    "sigma_amplitude": 0.03,
+    "seed": 0
+  },
+  {
+    "name": "ring24_noisy_1",
+    "width": 24,
+    "sigma_amplitude": 0.03,
+    "seed": 1
+  },
+  {
+    "name": "ring48",
+    "width": 48
+  },
+  {
+    "name": "ring48_noisy_0",
+    "width": 48,
+    "sigma_amplitude": 0.03,
+    "seed": 0
+  },
+  {
+    "name": "ring48_noisy_1",
+    "width": 48,
+    "sigma_amplitude": 0.03,
+    "seed": 1
+  },
+  {
+    "name": "parents5",
+    "parents": 5
+  },
+  {
+    "name": "parents5_noisy_0",
+    "parents": 5,
+    "sigma_amplitude": 0.03,
+    "seed": 0
+  },
+  {
+    "name": "parents5_noisy_1",
+    "parents": 5,
+    "sigma_amplitude": 0.03,
+    "seed": 1
+  },
+  {
+    "name": "parents7",
+    "parents": 7
+  },
+  {
+    "name": "parents7_noisy_0",
+    "parents": 7,
+    "sigma_amplitude": 0.03,
+    "seed": 0
+  },
+  {
+    "name": "parents7_noisy_1",
+    "parents": 7,
+    "sigma_amplitude": 0.03,
+    "seed": 1
+  },
+  {
+    "name": "parents5_added",
+    "parents": 5,
+    "gain_policy": "added"
+  },
+  {
+    "name": "parents5_added_noisy_0",
+    "parents": 5,
+    "gain_policy": "added",
+    "sigma_amplitude": 0.03,
+    "seed": 0
+  },
+  {
+    "name": "parents5_added_noisy_1",
+    "parents": 5,
+    "gain_policy": "added",
+    "sigma_amplitude": 0.03,
+    "seed": 1
+  },
+  {
+    "name": "parents7_added",
+    "parents": 7,
+    "gain_policy": "added"
+  },
+  {
+    "name": "parents7_added_noisy_0",
+    "parents": 7,
+    "gain_policy": "added",
+    "sigma_amplitude": 0.03,
+    "seed": 0
+  },
+  {
+    "name": "parents7_added_noisy_1",
+    "parents": 7,
+    "gain_policy": "added",
+    "sigma_amplitude": 0.03,
+    "seed": 1
+  },
+  {
+    "name": "random3_0",
+    "topology": "random",
+    "topology_seed": 200
+  },
+  {
+    "name": "random3_0_noisy_0",
+    "topology": "random",
+    "topology_seed": 200,
+    "sigma_amplitude": 0.03,
+    "seed": 0
+  },
+  {
+    "name": "random3_0_noisy_1",
+    "topology": "random",
+    "topology_seed": 200,
+    "sigma_amplitude": 0.03,
+    "seed": 1
+  },
+  {
+    "name": "random3_1",
+    "topology": "random",
+    "topology_seed": 201
+  },
+  {
+    "name": "random3_1_noisy_0",
+    "topology": "random",
+    "topology_seed": 201,
+    "sigma_amplitude": 0.03,
+    "seed": 0
+  },
+  {
+    "name": "random3_1_noisy_1",
+    "topology": "random",
+    "topology_seed": 201,
+    "sigma_amplitude": 0.03,
+    "seed": 1
+  },
+  {
+    "name": "random3_2",
+    "topology": "random",
+    "topology_seed": 202
+  },
+  {
+    "name": "random3_2_noisy_0",
+    "topology": "random",
+    "topology_seed": 202,
+    "sigma_amplitude": 0.03,
+    "seed": 0
+  },
+  {
+    "name": "random3_2_noisy_1",
+    "topology": "random",
+    "topology_seed": 202,
+    "sigma_amplitude": 0.03,
+    "seed": 1
+  },
+  {
+    "name": "random5_0",
+    "topology": "random",
+    "parents": 5,
+    "topology_seed": 200
+  },
+  {
+    "name": "random5_0_noisy_0",
+    "topology": "random",
+    "parents": 5,
+    "topology_seed": 200,
+    "sigma_amplitude": 0.03,
+    "seed": 0
+  },
+  {
+    "name": "random5_0_noisy_1",
+    "topology": "random",
+    "parents": 5,
+    "topology_seed": 200,
+    "sigma_amplitude": 0.03,
+    "seed": 1
+  },
+  {
+    "name": "random5_1",
+    "topology": "random",
+    "parents": 5,
+    "topology_seed": 201
+  },
+  {
+    "name": "random5_1_noisy_0",
+    "topology": "random",
+    "parents": 5,
+    "topology_seed": 201,
+    "sigma_amplitude": 0.03,
+    "seed": 0
+  },
+  {
+    "name": "random5_1_noisy_1",
+    "topology": "random",
+    "parents": 5,
+    "topology_seed": 201,
+    "sigma_amplitude": 0.03,
+    "seed": 1
+  },
+  {
+    "name": "random5_2",
+    "topology": "random",
+    "parents": 5,
+    "topology_seed": 202
+  },
+  {
+    "name": "random5_2_noisy_0",
+    "topology": "random",
+    "parents": 5,
+    "topology_seed": 202,
+    "sigma_amplitude": 0.03,
+    "seed": 0
+  },
+  {
+    "name": "random5_2_noisy_1",
+    "topology": "random",
+    "parents": 5,
+    "topology_seed": 202,
+    "sigma_amplitude": 0.03,
+    "seed": 1
+  },
+  {
+    "name": "gap_16",
+    "gap": 16
+  },
+  {
+    "name": "gap_16_noisy_0",
+    "gap": 16,
+    "sigma_amplitude": 0.03,
+    "seed": 0
+  },
+  {
+    "name": "gap_16_noisy_1",
+    "gap": 16,
+    "sigma_amplitude": 0.03,
+    "seed": 1
+  },
+  {
+    "name": "gap_12",
+    "gap": 12
+  },
+  {
+    "name": "gap_12_noisy_0",
+    "gap": 12,
+    "sigma_amplitude": 0.03,
+    "seed": 0
+  },
+  {
+    "name": "gap_12_noisy_1",
+    "gap": 12,
+    "sigma_amplitude": 0.03,
+    "seed": 1
+  },
+  {
+    "name": "gap_8",
+    "gap": 8
+  },
+  {
+    "name": "gap_8_noisy_0",
+    "gap": 8,
+    "sigma_amplitude": 0.03,
+    "seed": 0
+  },
+  {
+    "name": "gap_8_noisy_1",
+    "gap": 8,
+    "sigma_amplitude": 0.03,
+    "seed": 1
+  },
+  {
+    "name": "gap_7",
+    "gap": 7
+  },
+  {
+    "name": "gap_7_noisy_0",
+    "gap": 7,
+    "sigma_amplitude": 0.03,
+    "seed": 0
+  },
+  {
+    "name": "gap_7_noisy_1",
+    "gap": 7,
+    "sigma_amplitude": 0.03,
+    "seed": 1
+  },
+  {
+    "name": "gap_6",
+    "gap": 6
+  },
+  {
+    "name": "gap_6_noisy_0",
+    "gap": 6,
+    "sigma_amplitude": 0.03,
+    "seed": 0
+  },
+  {
+    "name": "gap_6_noisy_1",
+    "gap": 6,
+    "sigma_amplitude": 0.03,
+    "seed": 1
+  },
+  {
+    "name": "gap_5",
+    "gap": 5
+  },
+  {
+    "name": "gap_5_noisy_0",
+    "gap": 5,
+    "sigma_amplitude": 0.03,
+    "seed": 0
+  },
+  {
+    "name": "gap_5_noisy_1",
+    "gap": 5,
+    "sigma_amplitude": 0.03,
+    "seed": 1
+  },
+  {
+    "name": "gap_4",
+    "gap": 4
+  },
+  {
+    "name": "gap_4_noisy_0",
+    "gap": 4,
+    "sigma_amplitude": 0.03,
+    "seed": 0
+  },
+  {
+    "name": "gap_4_noisy_1",
+    "gap": 4,
+    "sigma_amplitude": 0.03,
+    "seed": 1
+  },
+  {
+    "name": "gap_3",
+    "gap": 3
+  },
+  {
+    "name": "gap_3_noisy_0",
+    "gap": 3,
+    "sigma_amplitude": 0.03,
+    "seed": 0
+  },
+  {
+    "name": "gap_3_noisy_1",
+    "gap": 3,
+    "sigma_amplitude": 0.03,
+    "seed": 1
+  },
+  {
+    "name": "gap_2",
+    "gap": 2
+  },
+  {
+    "name": "gap_2_noisy_0",
+    "gap": 2,
+    "sigma_amplitude": 0.03,
+    "seed": 0
+  },
+  {
+    "name": "gap_2_noisy_1",
+    "gap": 2,
+    "sigma_amplitude": 0.03,
+    "seed": 1
+  },
+  {
+    "name": "gap_1.5",
+    "gap": 1.5
+  },
+  {
+    "name": "gap_1.5_noisy_0",
+    "gap": 1.5,
+    "sigma_amplitude": 0.03,
+    "seed": 0
+  },
+  {
+    "name": "gap_1.5_noisy_1",
+    "gap": 1.5,
+    "sigma_amplitude": 0.03,
+    "seed": 1
+  },
+  {
+    "name": "shape_fixed_0.9",
+    "shape_factor": 0.9,
+    "shape_mode": "fixed"
+  },
+  {
+    "name": "shape_alternating_0.9",
+    "shape_factor": 0.9,
+    "shape_mode": "alternating"
+  },
+  {
+    "name": "shape_fixed_0.95",
+    "shape_factor": 0.95,
+    "shape_mode": "fixed"
+  },
+  {
+    "name": "shape_alternating_0.95",
+    "shape_factor": 0.95,
+    "shape_mode": "alternating"
+  },
+  {
+    "name": "shape_fixed_1.05",
+    "shape_factor": 1.05,
+    "shape_mode": "fixed"
+  },
+  {
+    "name": "shape_alternating_1.05",
+    "shape_factor": 1.05,
+    "shape_mode": "alternating"
+  },
+  {
+    "name": "shape_fixed_1.1",
+    "shape_factor": 1.1,
+    "shape_mode": "fixed"
+  },
+  {
+    "name": "shape_alternating_1.1",
+    "shape_factor": 1.1,
+    "shape_mode": "alternating"
+  },
+  {
+    "name": "width_0.9",
+    "pulse_width": 0.9
+  },
+  {
+    "name": "width_1.1",
+    "pulse_width": 1.1
+  },
+  {
+    "name": "depth130",
+    "depth": 130
+  },
+  {
+    "name": "depth130_delay",
+    "depth": 130,
+    "delay": 0.1
+  },
+  {
+    "name": "depth130_amp_0.01_0",
+    "depth": 130,
+    "sigma_amplitude": 0.01,
+    "seed": 0
+  },
+  {
+    "name": "depth130_amp_0.1_0",
+    "depth": 130,
+    "sigma_amplitude": 0.1,
+    "seed": 0
+  },
+  {
+    "name": "depth130_joint_0",
+    "depth": 130,
+    "sigma_amplitude": 0.03,
+    "jitter": 0.01,
+    "delay": 0.1,
+    "seed": 0
+  },
+  {
+    "name": "depth130_amp_0.01_1",
+    "depth": 130,
+    "sigma_amplitude": 0.01,
+    "seed": 1
+  },
+  {
+    "name": "depth130_amp_0.1_1",
+    "depth": 130,
+    "sigma_amplitude": 0.1,
+    "seed": 1
+  },
+  {
+    "name": "depth130_joint_1",
+    "depth": 130,
+    "sigma_amplitude": 0.03,
+    "jitter": 0.01,
+    "delay": 0.1,
+    "seed": 1
+  },
+  {
+    "name": "width_1.05",
+    "pulse_width": 1.05
+  }
+]

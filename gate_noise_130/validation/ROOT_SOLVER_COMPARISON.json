@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "discrete_mismatches": [],
+  "max_absolute_numeric_difference": [
+    1.1229406254864571e-07,
+    "/training/116/cells/0/state/z/2"
+  ],
+  "scope": "full 512 training and 6 independent tests; Illinois versus original bisection"
+}

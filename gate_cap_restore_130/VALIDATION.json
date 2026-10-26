@@ -1,0 +1,30 @@
+[
+  {
+    "seed": 0,
+    "normal_cap4_archived_128": "EXACT_EVENTS_AND_ALL_LAYER_METRICS"
+  },
+  {
+    "seed": 1,
+    "normal_cap4_archived_128": "EXACT_EVENTS_AND_ALL_LAYER_METRICS"
+  },
+  {
+    "seed": 0,
+    "rule": "normal",
+    "original_kernel_cap4": "EXACT"
+  },
+  {
+    "seed": 0,
+    "rule": "ungated",
+    "original_kernel_cap4": "EXACT"
+  },
+  {
+    "seed": 1,
+    "rule": "normal",
+    "original_kernel_cap4": "EXACT"
+  },
+  {
+    "seed": 1,
+    "rule": "ungated",
+    "original_kernel_cap4": "EXACT"
+  }
+]

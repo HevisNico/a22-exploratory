@@ -1,0 +1,22 @@
+{
+  "status": "FAIL",
+  "discrete_mismatches": [],
+  "max_absolute_numeric_difference": [
+    0.0005427668656921014,
+    "/training/122/cells/11/state/time"
+  ],
+  "scope": "Complete 2048-pulse weak-noise seed0 normal training plus six tests; bisection versus Illinois",
+  "training_state_max_errors": {
+    "z": 7.93342550519105e-05,
+    "b": 0.0005117074300801105,
+    "q": 7.642861343803986e-11,
+    "time": 0.0005427668656921014
+  },
+  "test_max_errors": {
+    "recall": 0.0,
+    "relative_rms": 1.1216162942861985e-08,
+    "max_relative_error": 7.000069218027205e-08,
+    "event_time": 0.00013751969413533516
+  },
+  "interpretation": "All discrete scores and output labels identical. Absolute 1e-5 state tolerance failed; continuous sensitivity reported, no certification."
+}

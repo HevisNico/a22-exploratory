@@ -1,0 +1,71 @@
+{
+  "status": "fixed_after_pilot_seed0_L1_cap16_ungated_before_campaign",
+  "model": "numeric point simulator; E not integrated",
+  "layers": 130,
+  "lanes": 12,
+  "initial_states": "provided normal training 2048 pulses, no seed exclusion",
+  "levels": {
+    "quiet": [
+      0,
+      0
+    ],
+    "L0": [
+      0.05,
+      0.015
+    ],
+    "L1": [
+      0.1,
+      0.03
+    ],
+    "L2": [
+      0.15,
+      0.045
+    ]
+  },
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "quiet_replicates": 1,
+  "caps": [
+    4,
+    8,
+    16
+  ],
+  "rules": [
+    "normal",
+    "ungated"
+  ],
+  "restoration": "cap16: same ungated first pulse, restore READY gate for subsequent blocks",
+  "block_counts": [
+    1,
+    127,
+    128,
+    256
+  ],
+  "silence_between_blocks": 3080,
+  "source_gaps": "20 times [1,1.1,1.05,1.2,1,1.15]",
+  "random_field": "existing SplitMix64, stages 5000+block independent of training and old tests; same noise between branches",
+  "primary": "sum log-gain increments, cap fraction, requested increments before gate and cap; seed replication",
+  "secondary": "exact ordered full word, recall, duplicates, relative interval RMS per block at layer130",
+  "finite_horizon": "512 continuation pulses, does not establish permanent stopping",
+  "pilot": "seed0 medium ungated cap16 run before protocol; cannot call preregistered study"
+}

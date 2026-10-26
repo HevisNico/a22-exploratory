@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "independent_ode_cases": 12,
+  "max_error": 1.056932319443149e-13,
+  "nominal_full_network_regressions": [
+    1000,
+    1002
+  ],
+  "scope": "Local independent ODE state/event checks and two exact nominal network replays; not global interval certification."
+}

@@ -1,0 +1,93 @@
+import collections,hashlib,html,json,platform,zipfile
+from pathlib import Path
+import numpy as np
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+from analyze import main
+P=Path(__file__).parent
+def fmt(x,m=1):return '—' if x is None else f'{x*m:.4g}'
+def report():
+    result,data=main();g=result['groups'];rows=result['runs']
+    assert result['completed_noisy_seeds']==20 and not result['unsupported']
+    assert all(v['n']==20 for v in g.values()) and len(g)==6
+    assert json.loads((P/'SPLIT_VALIDATION.json').read_text())['status']=='PASS'
+    assert json.loads((P/'NATIVE_VALIDATION.json').read_text())['status']=='PASS'
+    # Audit observed training preparation, including chronological order.
+    preparation=[]
+    for d in data:
+        if d['quiet'] or d.get('condition')=='clean_training':continue
+        train=json.loads((P/'output_native'/f"{d['name']}_training_{d['training_N']}.json").read_text())
+        expected=list(range(d['training_N']-64,d['training_N']))
+        complete=sum([label for t,label in c['tail64_events']]==expected for c in train['cells'] if c['layer']==130)
+        preparation.append({'seed':d['seed'],'training_N':d['training_N'],'prepared_flag':d['prepared_observed'],'ordered_complete_output_lanes':complete,'tail64':train['layers'][-1]['tail64']})
+        assert not d['prepared_observed'] or complete==12
+    (P/'PREPARATION_AUDIT.json').write_text(json.dumps(preparation,indent=2))
+    fig,axes=plt.subplots(2,2,figsize=(13,8.5));fig.patch.set_facecolor('#faf9f5')
+    def curves(condition,stage,freeze):
+        return np.array([[m['recall']*100 for m in t['layers']] for d in data if not d['quiet'] and d.get('condition','noisy_training')==condition for t in d['tests'] if t['stage']==stage and t['freeze']==freeze])
+    x=np.arange(1,131)
+    for condition,freeze,label,color in [('noisy_training',False,'Entraînement bruité, adaptation active','#176b87'),('noisy_training',True,'Entraînement bruité, paramètres figés','#3f805c'),('clean_training',False,'Même durée, entraînement sans bruit','#c25832')]:
+        v=curves(condition,'primary',freeze);axes[0,0].plot(x,v.mean(axis=0),label=label,color=color);axes[0,0].fill_between(x,v.min(axis=0),v.max(axis=0),color=color,alpha=.1)
+    axes[0,0].set(title='Test de 24 impulsions — effet de la profondeur',xlabel='Couche',ylabel='Impulsions retrouvées (%)',ylim=(0,103));axes[0,0].legend(fontsize=8,loc='lower left')
+    labels=['Apprentissage bruité\nadaptation active','Apprentissage bruité\nparamètres figés','Apprentissage sans bruit\nmême durée']
+    for pos,stage in enumerate(['primary','long']):
+        keys=[f'{stage}_adaptive',f'{stage}_frozen',f'clean_{stage}']
+        axes[0,1].bar(np.arange(3)+(pos-.5)*.32,[g[k]['full_network_word_seeds'] for k in keys],width=.31,label='24 impulsions' if stage=='primary' else '128 impulsions')
+    axes[0,1].set_xticks(range(3),labels,fontsize=8);axes[0,1].set(title='Mot intégral dans les 12 voies de sortie',ylabel='Graines avec toutes les impulsions dans l’ordre',ylim=(0,21));axes[0,1].legend(fontsize=8)
+    for i,(cond,freeze,color) in enumerate([('noisy_training',False,'#176b87'),('noisy_training',True,'#3f805c'),('clean_training',False,'#c25832')]):
+        v=[r['recall']*100 for r in rows if not r['quiet'] and r['condition']==cond and r['stage']=='primary' and r['freeze']==freeze]
+        axes[1,0].scatter(i+np.linspace(-.15,.15,len(v)),v,color=color,s=22);axes[1,0].plot([i-.2,i+.2],[np.mean(v)]*2,color='black',lw=2)
+    axes[1,0].set_xticks(range(3),labels,fontsize=8);axes[1,0].set(title='Couche 130 — vingt graines appariées',ylabel='Impulsions retrouvées (%)',ylim=(0,103))
+    for pos,stage in enumerate(['primary','long']):
+        keys=[f'{stage}_adaptive',f'{stage}_frozen',f'clean_{stage}'];vv=[g[k]['mean_relative_rms'] for k in keys]
+        axes[1,1].bar(np.arange(3)+(pos-.5)*.32,[v*100 if v is not None else 0 for v in vv],width=.31,label='24 impulsions' if stage=='primary' else '128 impulsions')
+    axes[1,1].set_xticks(range(3),labels,fontsize=8);axes[1,1].set(title='Le timing reste bruité',ylabel='Erreur relative RMS des intervalles (%)');axes[1,1].legend(fontsize=8)
+    for a in axes.ravel():a.grid(axis='y',alpha=.2);a.set_axisbelow(True)
+    fig.suptitle('A22 — entraînement prolongé, tests indépendants, 130 couches, 20 graines',fontsize=15)
+    fig.text(.5,.005,'Bandes : min–max observés. Erreurs de timing calculées sur les paires retrouvées. Bruit log-charge σ=0,10 ; gigue σ=0,03.',ha='center',fontsize=9)
+    fig.tight_layout(rect=[0,.025,1,.96]);fig.savefig(P/'resultats.png',dpi=170);plt.close(fig)
+    def table(stage):
+        out='<table><tr><th>Entraînement / test</th><th>Impulsions retrouvées à 130</th><th>Mot intégral sur 12 voies</th><th>IC exact à 95 % de cette probabilité</th><th>Erreur RMS relative moyenne*</th></tr>'
+        for key,label in [(f'{stage}_adaptive','Bruité ; adaptation active au test'),(f'{stage}_frozen','Bruité ; gains et récupération figés au test'),(f'clean_{stage}','Sans bruit ; durée appariée ; adaptation active au test')]:
+            a=g[key];ci=a['full_word_probability_exact_CI95'];out+=f"<tr><td>{label}</td><td>{fmt(a['mean_recall'],100)} % (min {fmt(a['min_recall'],100)}, max {fmt(a['max_recall'],100)})</td><td>{a['full_network_word_seeds']} / 20</td><td>[{fmt(ci[0],100)} %, {fmt(ci[1],100)} %]</td><td>{fmt(a['mean_relative_rms'],100)} %</td></tr>"
+        return out+'</table>'
+    individual='<table><tr><th>Graine</th><th>Impulsions d’entraînement</th><th>Préparation observée</th><th>24 pulses, actif / figé</th><th>128 pulses, actif / figé</th><th>Sans bruit à l’entraînement : 24 / 128</th></tr>'
+    for seed in range(20):
+        rr=[r for r in rows if r['seed']==seed and not r['quiet']];index={(r['condition'],r['stage'],r['freeze']):r for r in rr};d=next(d for d in data if d['name']==f'seed_{seed}')
+        def value(cond,stage,freeze=False):return fmt(index[cond,stage,freeze]['recall'],100)+' %'
+        individual+=f"<tr><td>{seed}</td><td>{d['training_N']}</td><td>{'Oui' if d['prepared_observed'] else 'Non'}</td><td>{value('noisy_training','primary')} / {value('noisy_training','primary',True)}</td><td>{value('noisy_training','long')} / {value('noisy_training','long',True)}</td><td>{value('clean_training','primary')} / {value('clean_training','long')}</td></tr>"
+    individual+='</table>'
+    dist=', '.join(f'{v} graines à {k} impulsions' for k,v in sorted(result['training_length_distribution'].items(),key=lambda kv:int(kv[0])))
+    split=json.loads((P/'SPLIT_VALIDATION.json').read_text());native=json.loads((P/'NATIVE_VALIDATION.json').read_text())
+    conclusions=f"<p>La préparation observée est obtenue pour {result['prepared_seeds']} graines sur 20 : {dist}. Après cette préparation, {g['primary_adaptive']['full_network_word_seeds']} graines sur 20 retrouvent toutes les 24 impulsions dans l’ordre sur les douze voies de sortie avec adaptation active ; {g['primary_frozen']['full_network_word_seeds']} sur 20 avec paramètres figés. Pour le mot indépendant de 128 impulsions, ces nombres sont {g['long_adaptive']['full_network_word_seeds']} et {g['long_frozen']['full_network_word_seeds']} sur 20.</p>"
+    old=json.loads((P/'comparison_128.json').read_text());oldmean=old['groups']['all_normal']['mean_recall']
+    body=f'''<!doctype html><html lang="fr"><meta charset="utf-8"><title>A22 — entraînement prolongé à 130 couches</title><style>body{{max-width:1150px;margin:35px auto;padding:0 25px;font:16px/1.55 system-ui;background:#faf9f5;color:#172e39}}h1,h2{{color:#13546c}}table{{border-collapse:collapse;width:100%;font-size:13px;margin:20px 0}}th,td{{padding:8px;border-bottom:1px solid #ccd5d7;text-align:left}}th{{background:#e5eef0}}img{{width:100%}}code{{background:#e5eef0;padding:2px 4px}}.box{{border-left:4px solid #176b87;padding:15px 20px;background:white}}pre{{white-space:pre-wrap;font-size:12px}}</style>
+<h1>A22 — entraînement bruité prolongé et tests indépendants</h1><div class="box">{conclusions}<p>Une transmission sans perte ne signifie pas une conservation exacte des intervalles : les erreurs de timing sont mesurées séparément. Ces résultats sont ponctuels, pour vingt graines et un protocole précis.</p></div>
+<h2>Comparaison principale : 24 impulsions</h2>{table('primary')}<p>* Moyenne entre graines de la RMS relative des intervalles entre labels source consécutifs retrouvés une fois ; les pertes restent comptées séparément. Même la transmission intégrale des labels n’impose pas une erreur temporelle nulle.</p><p>Avec 128 impulsions d’entraînement bruité, la campagne précédente retrouvait en moyenne {fmt(oldmean,100)} % des impulsions à la couche 130. Les mêmes vingt graines et le même champ de bruit des pulses de test identifiables sont réutilisés dans la comparaison principale. L’entraînement prolongé est une intervention différente, dont la durée est choisie sur les données d’entraînement uniquement.</p>
+<h2>Mot indépendant plus long : 128 impulsions</h2>{table('long')}<p>Sur les 30 720 réponses attendues dans les vingt graines, le test long avec adaptation active présente {g['long_adaptive']['missing_labels']} labels absents et {g['long_adaptive']['duplicated_labels']} labels dupliqués ({g['long_adaptive']['duplicate_events']} émissions supplémentaires de duplication). Avec paramètres figés : {g['long_frozen']['missing_labels']} labels absents et {g['long_frozen']['duplicated_labels']} labels dupliqués. La fraction retrouvée exige une réponse unique ; elle pénalise donc à la fois les absences et les duplications. Les étiquettes ambiguës, les violations d’ordre et les doublons sont conservés dans summary.csv.</p><img src="resultats.png" alt="Courbes de robustesse après entraînement prolongé"><p>Aux premières couches, seules certaines voies sont accessibles depuis la source ; la montée initiale reflète l’élargissement spatial du front.</p>
+<h2>Ce que le test permet de distinguer</h2><p>Le contrôle entraîné sans bruit utilise exactement la même durée que son partenaire bruité, puis les mêmes perturbations de test. Une différence entre ces groupes isole l’effet de l’exposition au bruit pendant l’apprentissage, pour cette durée et ces réalisations. Le contrôle figé repart de l’état appris sous bruit, puis bloque ż et ḃ : il distingue la tenue de cet état d’une réparation en ligne pendant le test. Chaque évaluation repart d’une copie indépendante du même état appris ; le test de 128 pulses ne prolonge pas celui de 24 et n’hérite pas de son adaptation.</p>
+<p>Cette campagne ne répète pas les ablations de la garde d’apprentissage sous protection avec un entraînement prolongé. Elle ne suffit donc pas à établir la nécessité de cette garde. Elle n’est pas non plus une preuve d’invariance pour toute entrée future ni pour toute réalisation physique.</p>
+<h2>Protocole d’entraînement et critère d’arrêt</h2><p>Anneau de douze voies, trois parents, 130 couches. Paramètres physiques nominaux et équations du simulateur ponctuel fourni ; gains initiaux (0,3 ; 1,2 ; 0,3), q=0,1, b=0,08. Source extérieure sur la seule voie 0, impulsions canoniques espacées de 8. Bruit indépendant par connexion et impulsion : amplitude exp(0,1 Z − 0,005), Z gaussien standard ; gigue uniforme centrée d’écart-type 0,03 ; délai moyen 0,1, donc délais toujours positifs. Le coefficient de variation de l’amplitude vaut 10,025 %.</p>
+<p>La politique d’entraînement est fixée avant l’évaluation : essayer 512 pulses, puis 1 024 et 2 048 si nécessaire. On s’arrête lorsque les 64 derniers labels source sont retrouvés exactement une fois sur chacune des douze voies de sortie, sans émission ambiguë supplémentaire dans la fenêtre terminale observée. Le contrôle conservateur des ambiguïtés inclut les événements non étiquetés postérieurs au début source de cette fenêtre. L’ordre des labels est audité dans PREPARATION_AUDIT.json. Les décisions ne consultent aucun test ; une graine non préparée à la limite serait conservée et évaluée, jamais exclue.</p>
+<p>Il s’agit d’une <b>préparation observée sur une fenêtre finie</b>, sans preuve de gains invariants ni garantie sur l’avenir. Les tentatives infructueuses sont conservées dans output_native/. Le contrôle sans bruit a une durée appariée par graine ; sa trajectoire d’entraînement est déterministe et peut être partagée entre graines pour une même durée.</p>
+<h2>Séparation de l’entraînement et des tests</h2><p>Après le dernier pulse source, on conserve le silence de 3 080 unités utilisé dans l’expérience à 128 pulses. Chaque cellule termine ses événements d’entraînement et conserve ses gains et b. Sa charge prête est propagée analytiquement pendant l’attente par q=r+(q_fin−r) exp(−κ Δt), sans remplacement des gains ni de b. Les auxiliaires ont achevé leur cycle et la principale est READY. La séparation est contrôlée contre une simulation continue ; elle ne sert pas à réinitialiser artificiellement l’apprentissage.</p>
+<p>Les tests sont des mots irréguliers aux intervalles 20 × (1 ; 1,1 ; 1,05 ; 1,2 ; 1 ; 1,15), répétés. Les lois du bruit sont les mêmes qu’à l’entraînement. Les tirages utilisent des champs indexés par graine, couche, cellule, port, étiquette et occurrence. Les 128 premiers pulses d’entraînement et les 24 pulses du test principal reprennent les clés de la campagne précédente. Les pulses supplémentaires d’entraînement et le test long utilisent des espaces de clés distincts, sans réutiliser les perturbations d’entraînement pour le test. Les pulses non étiquetés sont indexés par ordinal ; un appariement de cohorte identifiable ne leur est pas attribué.</p>
+<h2>Mesures, échantillonnage et limites</h2><p>La fraction retrouvée utilise le dénominateur 12 × longueur du mot. Un mot intégral exige les labels attendus une fois, dans le bon ordre, sans émission supplémentaire, sur les douze voies. La graine est l’unité statistique : les voies et les impulsions d’un même réseau ne sont pas des répétitions indépendantes. Les intervalles exacts à 95 % de la probabilité de mot intégral sont de Clopper–Pearson ; les intervalles bootstrap des moyennes et différences appariées figurent dans summary.json. Vingt succès sur vingt donnent encore une borne inférieure de probabilité d’environ 83,2 % à 95 %, pas une garantie universelle.</p>
+<p>Les deux mots d’évaluation et les deux règles au test réutilisent les mêmes états appris ; ils ne constituent pas quatre ensembles indépendants de vingt réseaux. La sélection de durée définit une politique adaptative ; un résultat après cette politique ne prouve pas que 512 pulses suffisent à toute graine. Aucun bruit de charge interne q additionnel, aucune autre topologie, aucun autre niveau de bruit et aucune incertitude sur les paramètres physiques ne sont explorés ici. La réserve E n’est pas intégrée, conformément au kit ponctuel. Le moteur certifié A22 n’est jamais importé.</p>
+<h2>Vérifications de l’implémentation ponctuelle</h2><p>La version Python provient du simulateur fourni, avec le noyau des ablations déjà contrôlé sur 21 302 événements historiques. Le seul changement de ce noyau est le paramétrage de la date d’observation. La séparation entraînement/test retrouve les nombres et étiquettes de la simulation continue sur la graine 0 à 128 pulses, adaptation active et paramètres figés : erreur maximale de date {split['max_probe_date_error']:.3g}, erreur maximale de gain {split['max_gain_error']:.3g}.</p>
+<p>Une traduction C++ accélère uniquement la boucle ponctuelle, pour trois ports nominaux et des impulsions exponentielles canoniques avec amplitude bruitée. Elle utilise des racines par bissection et les mêmes priorités numériques d’événements que le simulateur Python ; ce n’est pas le moteur certifié. Douze tests locaux couvrent états frais/appris et gel actif/inactif. Sur l’entraînement complet de 512 pulses de la graine 0 et ses quatre tests, elle retrouve les mêmes nombres et étiquettes aux points contrôlés, avec un écart maximal de date de {native['full_512_training_and_four_tests']['max_date_error']:.3g} et de gain de {native['full_512_training_and_four_tests']['max_gain_error']:.3g}. Les états d’entraînement des 1 560 cellules et les profils des 130 couches sont comparés. Les sources C++, le code Python et les vérifications sont fournis ; aucune qualification ni validation par intervalles n’est revendiquée.</p>
+<h2>Résultats par graine</h2>{individual}<h2>Reproduction</h2><p>Python 3, NumPy, SciPy, Matplotlib et g++ (C++17). Depuis ce dossier : <code>python build_kernel.py</code>, <code>python build_native.py</code>, <code>python native_run.py --workers 8</code>, <code>python control.py</code>, <code>python validate.py</code>, <code>python validate_native.py</code>, puis <code>python report.py</code>. Les résultats présents sont réutilisés ; déplacer output_native/ pour recalculer. Le solveur Python reste disponible via <code>python run.py</code>. Le pilote Python archivé sert d’oracle et n’est pas compté comme une graine supplémentaire. Le ZIP source fourni, les références antérieures nécessaires et les résultats de validation sont inclus.</p>
+<p>Les listes d’émissions de test sont conservées aux couches 18, 68, 80, 100 et 130 ; les profils métriques et les états avant/après sont conservés pour toutes les couches. Les checkpoints d’entraînement contiennent les états finaux, les 64 dernières cohortes et les empreintes des listes complètes, qui sont reproductibles à partir du code. Tous les résultats sont exploratoires et ponctuels.</p></html>'''
+    (P/'rapport.html').write_text(body)
+    manifest={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for pattern in ['*.py','*.cpp','*.so'] for p in P.glob(pattern)}
+    (P/'PROVENANCE.json').write_text(json.dumps({'python':platform.python_version(),'numpy':np.__version__,'scripts_and_native_sha256':manifest,'source_kit_sha256':hashlib.sha256((P/'source_kit.zip').read_bytes()).hexdigest(),'seeds':list(range(20)),'training_policy':[512,1024,2048],'terminal_training_window':64,'sigma_log_charge':.1,'jitter_standard_deviation':.03,'mean_delay':.1,'test_lengths':[24,128],'status':'EXPLORATORY_POINT_NOT_CERTIFIED'},indent=2))
+    target=P.parent.parent/'A22_entrainement_long_130_20graines.zip';tmp=target.with_suffix('.tmp')
+    with zipfile.ZipFile(tmp,'w',zipfile.ZIP_DEFLATED) as z:
+        for p in P.rglob('*'):
+            if not p.is_file() or '__pycache__' in p.parts or p.suffix in ['.log','.tmp','.lock']:continue
+            rel=p.relative_to(P)
+            if rel.parts[0]=='output':continue
+            z.write(p,'A22_entrainement_long/'+str(rel))
+    tmp.replace(target);print('ARCHIVE',target,target.stat().st_size)
+if __name__=='__main__':report()

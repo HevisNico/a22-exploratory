@@ -1,0 +1,9 @@
+{
+  "errors": [],
+  "dataset_count": 427,
+  "matched_checkpoint_pairs": 61,
+  "max_section_relative_error": 9.039693826924544e-13,
+  "max_pump_balance_absolute_error": 8.405186235904694e-07,
+  "minimum_continuous_E_bound": 57.438902079254056,
+  "minimum_sampled_E": 96.54428074160987
+}

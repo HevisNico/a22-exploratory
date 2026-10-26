@@ -1,0 +1,10 @@
+{
+  "python": "3.12.14",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "matplotlib": "3.10.8",
+  "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0",
+  "source_commit": "22294781127aa47628bb8a3270d5c5a758c31729",
+  "build_flags": "-O3 -std=c++17 -ffp-contract=off"
+}

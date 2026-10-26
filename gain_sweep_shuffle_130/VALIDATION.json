@@ -1,0 +1,51 @@
+[
+  {
+    "case": 0,
+    "arguments": [
+      "-",
+      0,
+      -1,
+      "fixed_high",
+      1.6
+    ],
+    "comparison": "exact full JSON identity against reference kernel"
+  },
+  {
+    "case": 1,
+    "arguments": [
+      "-",
+      0,
+      0,
+      "fixed_high",
+      1.6
+    ],
+    "comparison": "exact full JSON identity against reference kernel"
+  },
+  {
+    "case": 2,
+    "arguments": [
+      "-",
+      0,
+      1,
+      "adaptive",
+      4
+    ],
+    "comparison": "exact full JSON identity against reference kernel"
+  },
+  {
+    "case": 3,
+    "arguments": [
+      "/workspace/scratch/6c4f3320e9a4/fixed_gain_controls/inputs/normal_1_0.states",
+      0,
+      1,
+      "learned_frozen",
+      0
+    ],
+    "comparison": "exact full JSON identity against reference kernel"
+  },
+  {
+    "case": "separate_freezes",
+    "max_log_gain_change": 0,
+    "max_b_change": 1.02
+  }
+]

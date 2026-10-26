@@ -1,0 +1,12 @@
+{
+  "release_tag": "exploratory-data-1",
+  "release_url": "https://github.com/HevisNico/a22-interval-replay/releases/tag/exploratory-data-1",
+  "asset_name": "A22_joint_parameter_uncertainty_and_noise_pilot_EN.zip",
+  "download_url": "https://github.com/HevisNico/a22-interval-replay/releases/download/exploratory-data-1/A22_joint_parameter_uncertainty_and_noise_pilot_EN.zip",
+  "bytes": 8557405,
+  "sha256": "6c7bf44e7b84c8f0486849bb177dfa20e7d2f17bf901e8e8c374bf44a6d97975",
+  "archive_root": "A22_joint_parameter_uncertainty_and_noise_pilot_EN",
+  "archive_manifest": "ARCHIVE_MANIFEST_SHA256.json",
+  "status": "PREPARED_FOR_UPLOAD; this file does not attest publication",
+  "preservation": "Original supplied ZIP bytes unchanged; only the external filename is normalized."
+}

@@ -1,0 +1,29 @@
+--- previous_kernel.py
++++ kernel.py
+@@ -17,7 +17,7 @@
+     if fhi<=0:return hi
+     return brentq(f,0.,hi,xtol=5e-14,rtol=1e-14)
+ 
+-def cell(trains,params,initial,charge_kicks=None,rule="normal",freeze_at=float("inf")):
++def cell(trains,params,initial,charge_kicks=None,rule="normal",freeze_at=float("inf"),probe_start=4096.):
+     assert rule in ("normal","none","ungated","gain_frozen")
+     N=len(trains)
+     charge_kicks=charge_kicks or {}
+@@ -50,7 +50,7 @@
+     def snapshot():return {'z':z[:],'g':[math.exp(x) for x in z],'b':b,'q':q,'phase':phase,'time':t}
+     while idx<len(external) or phase!=0:
+         ext=external[idx][0] if idx<len(external) else math.inf
+-        if trainstate is None and ext>=PROBES[0] and phase==0:
++        if trainstate is None and ext>=probe_start and phase==0:
+             if any(x is not None for x in raw+marks+errors):raise ArithmeticError('uncleared training state')
+             trainstate=snapshot()
+         target=min(ext,fast_end) if phase==1 else ext
+@@ -100,7 +100,7 @@
+                 amp=.8*math.exp(-LE[p]*(t-s));inc=amp*(-math.expm1(-LE[p]*dt))
+                 if inc>0 and z[p]<logcaps[p]:
+                     gate_events+=1
+-                    if t>=PROBES[0]:probe_gain_moves+=1
++                    if t>=probe_start:probe_gain_moves+=1
+                     if z[p]+inc>=logcaps[p]:
+                         contact=t-math.log1p(-(logcaps[p]-z[p])/amp)/LE[p]
+                         cap_hits.append({'port':p,'time':contact})

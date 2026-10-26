@@ -1,0 +1,146 @@
+[
+  {
+    "seed": 3000,
+    "arm": "nominal_quiet",
+    "added_events": 0,
+    "removed_events": 0
+  },
+  {
+    "seed": 3000,
+    "arm": "nominal_noisy",
+    "added_events": 3,
+    "removed_events": 9
+  },
+  {
+    "seed": 3000,
+    "arm": "uncertain_quiet",
+    "added_events": 0,
+    "removed_events": 0
+  },
+  {
+    "seed": 3000,
+    "arm": "uncertain_noisy",
+    "added_events": 5,
+    "removed_events": 3
+  },
+  {
+    "seed": 3001,
+    "arm": "nominal_quiet",
+    "added_events": 0,
+    "removed_events": 0
+  },
+  {
+    "seed": 3001,
+    "arm": "nominal_noisy",
+    "added_events": 12,
+    "removed_events": 0
+  },
+  {
+    "seed": 3001,
+    "arm": "uncertain_quiet",
+    "added_events": 0,
+    "removed_events": 0
+  },
+  {
+    "seed": 3001,
+    "arm": "uncertain_noisy",
+    "added_events": 12,
+    "removed_events": 0
+  },
+  {
+    "seed": 3002,
+    "arm": "nominal_quiet",
+    "added_events": 0,
+    "removed_events": 0
+  },
+  {
+    "seed": 3002,
+    "arm": "nominal_noisy",
+    "added_events": 36,
+    "removed_events": 0
+  },
+  {
+    "seed": 3002,
+    "arm": "uncertain_quiet",
+    "added_events": 0,
+    "removed_events": 0
+  },
+  {
+    "seed": 3002,
+    "arm": "uncertain_noisy",
+    "added_events": 36,
+    "removed_events": 0
+  },
+  {
+    "seed": 3003,
+    "arm": "nominal_quiet",
+    "added_events": 0,
+    "removed_events": 0
+  },
+  {
+    "seed": 3003,
+    "arm": "nominal_noisy",
+    "added_events": 0,
+    "removed_events": 0
+  },
+  {
+    "seed": 3003,
+    "arm": "uncertain_quiet",
+    "added_events": 0,
+    "removed_events": 0
+  },
+  {
+    "seed": 3003,
+    "arm": "uncertain_noisy",
+    "added_events": 0,
+    "removed_events": 0
+  },
+  {
+    "seed": 3004,
+    "arm": "nominal_quiet",
+    "added_events": 0,
+    "removed_events": 0
+  },
+  {
+    "seed": 3004,
+    "arm": "nominal_noisy",
+    "added_events": 0,
+    "removed_events": 0
+  },
+  {
+    "seed": 3004,
+    "arm": "uncertain_quiet",
+    "added_events": 0,
+    "removed_events": 0
+  },
+  {
+    "seed": 3004,
+    "arm": "uncertain_noisy",
+    "added_events": 0,
+    "removed_events": 0
+  },
+  {
+    "seed": 3005,
+    "arm": "nominal_quiet",
+    "added_events": 0,
+    "removed_events": 0
+  },
+  {
+    "seed": 3005,
+    "arm": "nominal_noisy",
+    "added_events": 0,
+    "removed_events": 0
+  },
+  {
+    "seed": 3005,
+    "arm": "uncertain_quiet",
+    "added_events": 0,
+    "removed_events": 0
+  },
+  {
+    "seed": 3005,
+    "arm": "uncertain_noisy",
+    "added_events": 0,
+    "removed_events": 0
+  }
+]

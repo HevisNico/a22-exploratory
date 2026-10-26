@@ -1,0 +1,10 @@
+{
+  "N": 128,
+  "rule": "ungated",
+  "seed": 0,
+  "status": "PASS",
+  "max_log_gain_error": 1.681099703887412e-12,
+  "max_b_error": 1.713185149299079e-12,
+  "max_terminal_time_error": 8.412825991399586e-12,
+  "bad_layers": []
+}

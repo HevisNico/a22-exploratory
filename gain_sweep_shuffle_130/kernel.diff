@@ -1,0 +1,19 @@
+--- reference_point_cell.cpp
++++ point_cell.cpp
+@@ -30,6 +30,7 @@
+     return (lo+hi)*.5;
+ }
+ static double GAIN_CAP=4.;
++static bool FREEZE_GAINS=false;
+ extern "C" int point_cell(const Pulse* input,int size,const State* initial,int frozen,int ungated,
+  double probe_start,Output* output,int capacity,State* terminal,State* before,
+  long long* gain_moves,double* diagnostic,long long tail_label,char* error,int error_capacity){
+@@ -95,7 +96,7 @@
+             double demand=.8*std::exp(-LE*(t-err[p]))*(-std::expm1(-LE*dt));
+             if(old==0)requested_ready+=demand;else requested_protected+=demand;
+         }
+-        if(!frozen&&(old==0||ungated))for(int p=0;p<3;p++)if(err[p]!=-INF){
++        if(!frozen&&!FREEZE_GAINS&&(old==0||ungated))for(int p=0;p<3;p++)if(err[p]!=-INF){
+             if(raw[p]!=-INF)throw std::runtime_error("own raw/error overlap");
+             double inc=.8*std::exp(-LE*(t-err[p]))*(-std::expm1(-LE*dt));
+             if(inc>0&&z[p]<cap&&t>=probe_start)moves++;

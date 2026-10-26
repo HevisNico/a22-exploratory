@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "cases": 25,
+  "max_errors": {
+    "event_time": 1.580957587066223e-13,
+    "work": 3.1796787425264483e-13,
+    "reserve": 1.5726442370578297e-09,
+    "pump": 1.572516339365393e-09,
+    "state": 1.2525314119216091e-11,
+    "terminal_time": 4.61213289781881e-11
+  },
+  "independence": "Raw input and initial state only shared. State ODE, event guards, work rates and pump ODE independently implemented in Python. No exported C++ work terms or switch times used.",
+  "scope": "Local nominal-parameter cases, not a global hybrid proof; no E=0 cases.",
+  "production_binary_sha256": "3719499954d669ee6447c43c98900f749b5e330ce9913abc4bb62e1fe5346246",
+  "tested_cpp_sources_sha256": {
+    "src/common.cpp": "a58f423cfc71698830ab87f3cbf3f4ad3db75b6d928ee19b36d3f73ea1074ab2",
+    "src/energy_budget.hpp": "264db8104f3e32a9fae6331ec16a62323cd7b10a475942d32cc6ff41f3dd453b",
+    "src/experiment.cpp": "c985f09b4fa1d451c01d4046b5e410a9408538c8801f9527bac8b572d81019ac",
+    "src/fixture_bridge.cpp": "96ede76b3876b5e5a46bce7c857e0c0c6b0b34dceee9cd88f51f9d167c5df5a8",
+    "src/point_cell.cpp": "dc41d2fdbf64a7cb3a7c5c7cefe0b59228ded0ca829277f0e0c715651dc22228"
+  }
+}

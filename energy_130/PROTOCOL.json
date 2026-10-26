@@ -1,0 +1,21 @@
+{
+  "version": "corrected-matched-energy-v2",
+  "fixed_before_campaign": true,
+  "source_commit": "22294781127aa47628bb8a3270d5c5a758c31729",
+  "physical_law_changes": "None. Same nine unit-cost terms, gain cap 4, dE/dt=10*(100-E)-W.",
+  "implementation_correction": "Pump is integrated from 10*(100-E), not assigned as work plus reserve change. Independent validation rebuilds physical states, event guards and W from raw inputs.",
+  "network": [130, 12],
+  "training": {"seeds_per_noise_level":20,"noise_levels":[0,1,2],"quiet_seeds":[0],"pulse_count":2048,"spacing":8,"stage":0,"initial_gains":[0.3,1.2,0.3],"initial_b":0.08,"initial_q":0.1,"initial_E":100,"conditions":["gate_on","gate_off"]},
+  "test": {"pulse_count":128,"interval_pattern":[20,22,21,24,20,23],"stage":8001,"first_label":3000000,"quiet_relaxation":3080,"conditions":["gate_on","gate_off","trained_off","normal_frozen","uniform4_frozen"]},
+  "primary_comparison": "gate_on versus gate_off in test: SAME normally trained checkpoint, identical initial g,b,q,E and external input/random field; only READY guard on dz is removed. b remains adaptive in both. Downstream traffic may diverge as a causal consequence.",
+  "acquisition_comparison": "gate_on versus gate_off training: identical nominal initial state and external input/random field; only dz guard differs. All 20 seeds at every noisy level, plus quiet seed0.",
+  "lifecycle_comparison": "normal training + gate_on test versus ungated training + trained_off test. One 2048-pulse acquisition plus one 128-pulse held-out test; includes preparation, not just use. Each test uses its own trained state.",
+  "secondary_comparison": "normal_frozen versus uniform4_frozen: normal learned b matched; both z and b frozen. Static gain-assignment comparison, NOT a direct gate-effect test. No fabrication cost invented for uniform assignment.",
+  "noise": {"amplitude_sigma":[0.05,0.10,0.15],"jitter_scale":[0.015,0.030,0.045],"mean_delay":0.1,"coupling":"same counter-based external random field indexed by seed, layer, lane, port, stage, label and occurrence"},
+  "cost_scope": "Integral of W for all cells until local main/auxiliary cycles finish; includes nine terms. Excludes external source, unspecified gain manufacturing/maintenance, and idle replenishment after W reaches zero. Model work units, not SI joules.",
+  "reserve_scope": "E initially100. Positive bound checked for each finite input path; refuse paths without a positive guarantee. No depletion/E=0 experiment, no general depleted-reserve solver claimed.",
+  "endpoints": ["total work","nine work components","gain/b movement","fraction of gains at cap","whole output word success","output label recall","interval distortion","event-sampled E minimum","continuous lower bound"],
+  "statistics": "Paired bootstrap95% over20 network seeds,20000 resamples, deterministic RNG20261025. Quiet is one deterministic example. Show both ratio of mean costs and paired absolute difference; no pooling lanes as independent replicates. Exploratory, no multiple-comparison correction.",
+  "validation_scope": "Independent Python hybrid ODE local cases, plus section identities, independently integrated pump balance, checkpoint matching, output-event recount and regressions. Not an interval proof of all trajectories.",
+  "planned_datasets": {"training":122,"tests":305,"total":427}
+}

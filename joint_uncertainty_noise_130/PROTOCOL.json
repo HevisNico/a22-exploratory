@@ -1,0 +1,82 @@
+{
+  "status": "FROZEN_BEFORE_NEW_OUTCOMES",
+  "scope": "Exploratory joint physical-parameter uncertainty and link-noise pilot, not certification.",
+  "seeds": [
+    3000,
+    3001,
+    3002,
+    3003,
+    3004,
+    3005
+  ],
+  "epsilon": 0.0001,
+  "parameter_distribution": "Independent uniform relative [-epsilon,+epsilon] per cell, per port and per parameter; fixed across acquisition and both evaluations.",
+  "parameters": [
+    "C",
+    "L_m",
+    "L_s",
+    "L_e",
+    "M"
+  ],
+  "not_perturbed": [
+    "a",
+    "kappa",
+    "r",
+    "r_m",
+    "actuation gains",
+    "b_max",
+    "pump",
+    "initial states"
+  ],
+  "noise": {
+    "sigma_log_amplitude": 0.05,
+    "jitter_sd": 0.015,
+    "mean_link_delay": 0.1
+  },
+  "arms": [
+    "nominal_quiet",
+    "nominal_noisy",
+    "uncertain_quiet",
+    "uncertain_noisy"
+  ],
+  "training_pulses": 2048,
+  "training_spacing": 8,
+  "test_pulses": 128,
+  "test_gaps": [
+    20,
+    22,
+    21,
+    24,
+    20,
+    23
+  ],
+  "test_modes": [
+    "baseline",
+    "lateral_100_mixed"
+  ],
+  "decoys": 24,
+  "conditions": "Gate-on model only. Same fixed physical field for a seed in its quiet and noisy uncertain arms. No claim about gate necessity or superiority to hybrid.",
+  "training_runs": 24,
+  "evaluations": 48,
+  "retention": "Freeze learned gains and b at test. Reset q=.1. All failed acquisitions retained.",
+  "comparisons": "Paired uncertainty effect at each noise regime, paired total noise effect at each uncertainty regime, interaction. Counts descriptive by independent network seed.",
+  "work": "Nine model-work integrals, positive finite-path reserve bound. No detailed E trajectory.",
+  "stop": "Fixed pilot only; stop on solver/audit failure. Never skip/replace seeds or automatically enlarge.",
+  "proof_limit": "Six random physical draws are not coverage of the parameter box. Unbounded Gaussian amplitude noise admits no deterministic all-noise guarantee. No initial-state box uncertainty is claimed.",
+  "source_commit": "22294781127aa47628bb8a3270d5c5a758c31729",
+  "source_archive_sha256": "837cadbb3f7b2c8502fbc3c203262d1de09904a023a04e23fd2f894c5017cf9b",
+  "randomness": {
+    "physical_field": "One independent uniform draw per parameter per cell per port, reused without change in both uncertain arms and throughout acquisition and test.",
+    "noise_pairing": "Same deterministic counter-based latent field for matched nominal and uncertain arms, indexed by network seed, layer, lane, port, stage, source/event label and occurrence. Divergent traffic can query different keys; realized downstream input trains need not be identical.",
+    "stage_separation": "Acquisition stage 0; test stage 8001. Disjoint stage keys. Baseline and decoy tests share stage 8001. No noise field is redrawn in response to outcomes.",
+    "independence": "Physical field uses Python random.Random(202610260000+seed); link field uses the preserved mix64/Box-Muller counter generator with separate stage keys. Independent sampling streams by construction, not a statistical independence theorem for the PRNG."
+  },
+  "fixed_outcome_definitions": {
+    "transmission_presence": "Fraction of 128 source identities present on 12 output lanes, based on passive tags; also report stricter once-only ordered pure-source coverage.",
+    "complete_word": "All 128 source identities occur exactly once in chronological order on every lane; exactly 128 outputs per lane and no extra or ambiguous event. Report complete lanes and complete networks.",
+    "extra_emissions": "Baseline pure-source duplicate occurrences and other outputs separately. Mixed versus matched baseline: ordered maximum-cardinality matching within tolerance 2, then minimize total absolute shifts; report additions AND removals. Additions may include displaced events and are not automatically proven false spikes.",
+    "timing_error": "Relative interval error (observed consecutive-source gap minus source gap)/source gap, using pairs of adjacent source identities each occurring once as a pure tag. Report RMS, maximum absolute error, and valid pair count. Invalid/missing pairs remain failures in transmission and are excluded from timing estimates, never assigned zero error. No acceptance threshold is invented after observing outcomes.",
+    "statistics": "Descriptive paired effects by independent network seed. No superiority/noninferiority threshold or significance test; six seeds cannot establish box-wide guarantees."
+  },
+  "failure_handling": "Every scheduled seed retained. Biological/model transmission failures are reported from successful solver outputs. Simulator refusal, overlap, regeneration failure, resource-bound failure, numeric failure, timeout or audit failure are recorded separately as SIMULATOR_FAILURE; preserve stderr/traceback and stop without replacing or excluding the seed."
+}

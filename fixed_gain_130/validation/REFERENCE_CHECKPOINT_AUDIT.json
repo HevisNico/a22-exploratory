@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "files_checked": 120,
+  "repaired": [
+    {
+      "file": "normal_2_9.states",
+      "original_rows": 1548,
+      "expected_rows": 1560,
+      "original_sha256": "1515d5a3e4716c0056ce4021cb201c47ef63913185fee3b5e3ae2d35890acf16",
+      "repaired_sha256": "2d0c2c1cc00a7a7b4b6d81cd64aa4d37ec5f1b9c6acf992918586efa9cba91cc",
+      "source": "Complete unmodified training-state records in the matching reference JSON; all restored values are exact floats from those records."
+    }
+  ],
+  "note": "No training state or outcome changed; this repairs an incomplete serialization. No seed was excluded."
+}

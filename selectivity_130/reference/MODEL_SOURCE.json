@@ -1,0 +1,7 @@
+{
+  "repository": "https://github.com/HevisNico/a22-interval-replay",
+  "commit": "22294781127aa47628bb8a3270d5c5a758c31729",
+  "model_definition": "engine/reference/full_model_reference.md sections2\u20134",
+  "definition_sha256": "6f8462431cd43714af99d2181d5d017b2de910381690665ba7875659c061fecf",
+  "note": "Model work units with unit coefficients; no SI calibration supplied."
+}

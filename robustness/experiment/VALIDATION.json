@@ -1,0 +1,173 @@
+{
+  "nominal": {
+    "events": 21302,
+    "mismatches": [],
+    "max_date_error": 2.7142732506035827e-11
+  },
+  "independent_ODE_checks": [
+    {
+      "decay": 1.2476649250079015,
+      "width": 0.9,
+      "parents": 3,
+      "first_spike_error_vs_solve_ivp": 1.1102230246251565e-16
+    },
+    {
+      "decay": 1.2476649250079015,
+      "width": 0.9,
+      "parents": 5,
+      "first_spike_error_vs_solve_ivp": 1.1102230246251565e-16
+    },
+    {
+      "decay": 1.2476649250079015,
+      "width": 0.9,
+      "parents": 7,
+      "first_spike_error_vs_solve_ivp": 1.1102230246251565e-16
+    },
+    {
+      "decay": 1.2476649250079015,
+      "width": 1.0,
+      "parents": 3,
+      "first_spike_error_vs_solve_ivp": 3.4416913763379853e-15
+    },
+    {
+      "decay": 1.2476649250079015,
+      "width": 1.0,
+      "parents": 5,
+      "first_spike_error_vs_solve_ivp": 3.4416913763379853e-15
+    },
+    {
+      "decay": 1.2476649250079015,
+      "width": 1.0,
+      "parents": 7,
+      "first_spike_error_vs_solve_ivp": 3.4416913763379853e-15
+    },
+    {
+      "decay": 1.2476649250079015,
+      "width": 1.05,
+      "parents": 3,
+      "first_spike_error_vs_solve_ivp": 1.6653345369377348e-15
+    },
+    {
+      "decay": 1.2476649250079015,
+      "width": 1.05,
+      "parents": 5,
+      "first_spike_error_vs_solve_ivp": 1.6653345369377348e-15
+    },
+    {
+      "decay": 1.2476649250079015,
+      "width": 1.05,
+      "parents": 7,
+      "first_spike_error_vs_solve_ivp": 1.6653345369377348e-15
+    },
+    {
+      "decay": 1.3862943611198906,
+      "width": 0.9,
+      "parents": 3,
+      "first_spike_error_vs_solve_ivp": 0.0
+    },
+    {
+      "decay": 1.3862943611198906,
+      "width": 0.9,
+      "parents": 5,
+      "first_spike_error_vs_solve_ivp": 0.0
+    },
+    {
+      "decay": 1.3862943611198906,
+      "width": 0.9,
+      "parents": 7,
+      "first_spike_error_vs_solve_ivp": 0.0
+    },
+    {
+      "decay": 1.3862943611198906,
+      "width": 1.0,
+      "parents": 3,
+      "first_spike_error_vs_solve_ivp": 3.3306690738754696e-16
+    },
+    {
+      "decay": 1.3862943611198906,
+      "width": 1.0,
+      "parents": 5,
+      "first_spike_error_vs_solve_ivp": 3.3306690738754696e-16
+    },
+    {
+      "decay": 1.3862943611198906,
+      "width": 1.0,
+      "parents": 7,
+      "first_spike_error_vs_solve_ivp": 3.3306690738754696e-16
+    },
+    {
+      "decay": 1.3862943611198906,
+      "width": 1.05,
+      "parents": 3,
+      "first_spike_error_vs_solve_ivp": 1.887379141862766e-15
+    },
+    {
+      "decay": 1.3862943611198906,
+      "width": 1.05,
+      "parents": 5,
+      "first_spike_error_vs_solve_ivp": 1.887379141862766e-15
+    },
+    {
+      "decay": 1.3862943611198906,
+      "width": 1.05,
+      "parents": 7,
+      "first_spike_error_vs_solve_ivp": 1.887379141862766e-15
+    },
+    {
+      "decay": 1.5249237972318797,
+      "width": 0.9,
+      "parents": 3,
+      "first_spike_error_vs_solve_ivp": 3.3306690738754696e-15
+    },
+    {
+      "decay": 1.5249237972318797,
+      "width": 0.9,
+      "parents": 5,
+      "first_spike_error_vs_solve_ivp": 3.3306690738754696e-15
+    },
+    {
+      "decay": 1.5249237972318797,
+      "width": 0.9,
+      "parents": 7,
+      "first_spike_error_vs_solve_ivp": 3.3306690738754696e-15
+    },
+    {
+      "decay": 1.5249237972318797,
+      "width": 1.0,
+      "parents": 3,
+      "first_spike_error_vs_solve_ivp": 6.661338147750939e-16
+    },
+    {
+      "decay": 1.5249237972318797,
+      "width": 1.0,
+      "parents": 5,
+      "first_spike_error_vs_solve_ivp": 6.661338147750939e-16
+    },
+    {
+      "decay": 1.5249237972318797,
+      "width": 1.0,
+      "parents": 7,
+      "first_spike_error_vs_solve_ivp": 6.661338147750939e-16
+    },
+    {
+      "decay": 1.5249237972318797,
+      "width": 1.05,
+      "parents": 3,
+      "first_spike_error_vs_solve_ivp": 2.220446049250313e-16
+    },
+    {
+      "decay": 1.5249237972318797,
+      "width": 1.05,
+      "parents": 5,
+      "first_spike_error_vs_solve_ivp": 2.220446049250313e-16
+    },
+    {
+      "decay": 1.5249237972318797,
+      "width": 1.05,
+      "parents": 7,
+      "first_spike_error_vs_solve_ivp": 2.220446049250313e-16
+    }
+  ],
+  "max_ODE_error": 3.4416913763379853e-15,
+  "status": "PASS"
+}

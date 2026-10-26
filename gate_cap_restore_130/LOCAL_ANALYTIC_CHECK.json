@@ -1,0 +1,16 @@
+[
+  {
+    "ungated": false,
+    "log_gain_increment": 0.0,
+    "demand_ready": 0.0,
+    "demand_protected": 0.5999999999999999,
+    "events": 1
+  },
+  {
+    "ungated": true,
+    "log_gain_increment": 0.5999999999999998,
+    "demand_ready": 0.0,
+    "demand_protected": 0.5999999999999999,
+    "events": 1
+  }
+]

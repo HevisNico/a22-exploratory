@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "new_datasets": 480,
+  "reference_datasets": 120,
+  "matched_test_instances_checked": 1920,
+  "checkpoint_files_checked": 300,
+  "independent_final_output_recounts": "all matched",
+  "fixed_gain_and_fixed_b_changes": "zero in every required phase",
+  "minimum_quiet_time": 3025.10336473566,
+  "problems": []
+}

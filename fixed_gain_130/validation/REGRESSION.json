@@ -1,0 +1,5 @@
+{
+  "status": "PASS",
+  "scope": "All four matched 24/128 active/frozen tests at 130 layers from previous normal level1 seed0 checkpoint",
+  "comparison": "Exact equality of full test records, including all layer metrics and final event times/labels."
+}

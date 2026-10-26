@@ -1,0 +1,25 @@
+{
+  "note": "Planned secondary low-noise seed0 jobs computed as soon as all conditioning checkpoints were available; reused by the main runner, not additional seeds.",
+  "jobs": [
+    {
+      "name": "fixed_all_L0_S0_gap8",
+      "seconds": 4.907
+    },
+    {
+      "name": "fixed_all_max_b_L0_S0_gap8",
+      "seconds": 11.573
+    },
+    {
+      "name": "fixed_gain_L0_S0_gap8",
+      "seconds": 9.383
+    },
+    {
+      "name": "normal_L0_S0_gap8",
+      "seconds": 17.755
+    },
+    {
+      "name": "ungated_L0_S0_gap8",
+      "seconds": 7.605
+    }
+  ]
+}

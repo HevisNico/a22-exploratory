@@ -1,0 +1,58 @@
+{
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scripts_and_native_sha256": {
+    "previous_kernel.py": "19b608a681a0f729850003a00e86d45b9cd9104396ff07ed785f4e3f8fdd8225",
+    "analyze.py": "3c3d0147228b75b7eeaafd2d45b7af25730ad3cb39b4db395ddff95b43a5c743",
+    "native_run.py": "80383aafcf063642ad23229a4cf2f7463aa01a35ef58aac24ae239a9af527989",
+    "control.py": "620ece077abbb4dee807a1f29a83505904fbd869196b1983f9142689a4eac6e8",
+    "build_native.py": "826076d473312bbf99c8c513bfac96fa87f193f41423a06aadfbb431d3c9da33",
+    "kernel.py": "b55c5636f8a0f0dc831dacba299d694bfb94c2b150e114fd1a056869e409625d",
+    "run.py": "fb2befe24076df9967f6b050eed4e3c11e22654c7a2a5340a980454dc27a8257",
+    "finalize_seed0.py": "5ba9c221a3df3a2796dee401b7308ba477044d7844a813a4b96bb866fd4ce5dc",
+    "build_kernel.py": "7fa2b31998447d39c1485ede50f6e0cc6aa56fc62d2afe003724e3252ad7e74f",
+    "validate_native.py": "ec3b8721464222b32204644214afb5ebf5952eb33de448c11a0602b46ab297d4",
+    "validate.py": "a2f798bf0af949f147392bb14d9e146f40ef6b2aad1bea2d8c62e1357409228e",
+    "native_kernel.py": "83c4c80bb432f8ea30c11ac8874d70b7ad0cf31b22263866af745a3118198cf5",
+    "report.py": "0959161ef950186dd29f648f919e68381a1ab4df0550e7730826bbbfae729246",
+    "point_cell.cpp": "d67dde426a77afa6cf99a0554ab4b142b25d0c383c4d9e151e940d8b9c40419d",
+    "point_cell.so": "86e6a523ae305d0e2f114e998feed447bdf7fd9e71524a2c7d19cdb8d2ceab37"
+  },
+  "source_kit_sha256": "d436f80672542fff38c392f8dd1a6846a8d03a19853b2b1b733eb22fdd8c4a71",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "training_policy": [
+    512,
+    1024,
+    2048
+  ],
+  "terminal_training_window": 64,
+  "sigma_log_charge": 0.1,
+  "jitter_standard_deviation": 0.03,
+  "mean_delay": 0.1,
+  "test_lengths": [
+    24,
+    128
+  ],
+  "status": "EXPLORATORY_POINT_NOT_CERTIFIED"
+}
