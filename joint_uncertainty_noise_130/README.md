@@ -1,5 +1,7 @@
 # Joint parameter uncertainty and link noise at 130 layers — exploratory pilot
 
+> **Follow-up qualification.** The six uncertain/noisy states were reused for probe18 recurrence, static-control and factorial studies. The static design outperforms learning on that challenge; the reserved evaluation changes test noise, not the device cohort. See [follow-up results and evidence status](../FOLLOWUP_RESULTS.md#1-static-directional-control-and-recurrence); publication of those archives is pending. The original pilot data below are unchanged.
+
 **Status: completed exploratory point simulations; six seeds, not certification.**
 The pilot combines fixed physical heterogeneity with temporally varying link noise
 during both learning and evaluation. All **24 acquisitions and 48 evaluations**

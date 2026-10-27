@@ -1,5 +1,7 @@
 # Uniform gain sweep and shuffled learned gains (exploratory)
 
+> **Follow-up qualification.** A fully static non-uniform control has since been tested on the separate probe18 challenge. It outperforms the learned networks there; a comparison at an equal gain budget remains open. See [follow-up results and evidence status](../FOLLOWUP_RESULTS.md#1-static-directional-control-and-recurrence); publication of those follow-up archives is pending.
+
 **Status: exploratory point simulations, not certified.** 1,471 network evaluations; 130 layers, 12
 lanes, 128 test pulses, 20 network seeds per noise level plus one deterministic noise-free control. The
 gain grid and shuffle definitions were fixed before the results (`PROTOCOL.json`). Full report:
@@ -69,8 +71,9 @@ Mean learned gain: 1.52 (low), 1.55 (medium), 1.52 (high); 1.06 without noise.
 - Mean gain is not an energy cost; the resource variable E is not integrated, and in this model E never
   limits the dynamics.
 - The grid is coarse (1.6 then 1.8); thresholds are grid observations, not exact values.
-- A hand-designed **non-uniform** allocation (for example, strong central and weak lateral ports) has not
-  been tested.
+- This uniform-gain/shuffle study did not test a hand-designed **non-uniform** allocation.
+  A later separate probe18 study does; its favorable static-control result does not settle a
+  comparison at an equal gain budget (see the follow-up qualification above).
 - Shuffling gains while keeping b in place can also break gain–b associations.
 - Two shuffle draws of one seed are correlated; analyses average them within seed before bootstrapping
   over the 20 seeds. 20/20 gives an exact 95 % lower bound of about 83 %.

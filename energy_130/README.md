@@ -1,5 +1,7 @@
 # Energy cost of the protection gate (exploratory)
 
+> **Follow-up qualification.** A separate six-device static-control challenge reports about 7.11% less mean model work without probes and 7.13% less with probes. Targeted interventions attribute most of that difference to b. These evaluation-time figures are distinct from the acquisition and lifecycle scopes below. See [follow-up results and evidence status](../FOLLOWUP_RESULTS.md#2-factorial-attribution-and-reserved-test-noise); publication of those archives is pending. Residual physical-coupling studies do not establish an energy advantage.
+
 **Status: exploratory point simulations, not certified.** 427 datasets: 130 layers, 12 lanes, 20 seeds
 per noise level plus one deterministic noise-free case. Full report: `report.html` (English).
 
