@@ -2,8 +2,8 @@
 
 These studies test the A22 physical kernel with a point simulator, outside the certified setting:
 noise, other inputs, other topologies, ablations of the learning rule and longer training. They are
-sampled simulations, not proofs. The certified engine is never used. Each claim below holds for the
-stated protocol and sample only.
+sampled simulations, without the certified engine; each finding holds for its stated protocol and
+sample.
 
 ## The main findings so far
 

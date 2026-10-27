@@ -25,6 +25,20 @@ coverage therefore coexists with imperfect rejection of spurious inputs.
 | Nominal / noisy | With 24 lateral decoys | 3/6 | 99.934896% | 0.594276% |
 | Uncertain / noisy | With 24 lateral decoys | **3/6** | **99.967448%** | **0.504225%** |
 
+**Effect of the decoys** (paired contrast, decoy test against baseline test of the same learned
+state, mean over six seeds; from [PAIRED_DECOY.json](PAIRED_DECOY.json)):
+
+| Physical parameters / link noise | Output events added by the decoys | Output events removed |
+| --- | ---: | ---: |
+| Nominal / quiet | 0 | 0 |
+| Uncertain / quiet | 0 | 0 |
+| Nominal / noisy | 8.500 | 1.500 |
+| Uncertain / noisy | 8.833 | 0.500 |
+
+These numbers describe the difference between the two tests, not errors of either test.
+`REPORT.txt` and `SUMMARY.json` (kept byte-identical to the release asset) print this per-regime
+contrast on both the baseline and the decoy row; read it as above.
+
 ¹ The nominal quiet network and its inputs are identical across seeds; these are
 repeated references for pairing, not six independent nominal quiet devices.
 Numerically negligible quiet timing errors are floating-point residuals, not an
