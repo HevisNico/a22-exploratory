@@ -5,6 +5,11 @@ noise, other inputs, other topologies, ablations of the learning rule and longer
 sampled simulations, without the certified engine; each finding holds for its stated protocol and
 sample.
 
+The model, the certified results and their proofs are in the main repository,
+[HevisNico/a22-interval-replay](https://github.com/HevisNico/a22-interval-replay). These studies were
+moved here from its `exploratory/` folder; the raw data stay attached to its release
+[`exploratory-data-1`](https://github.com/HevisNico/a22-interval-replay/releases/tag/exploratory-data-1).
+
 ## The main findings so far
 
 **1. The learning rule finds a structured gain allocation that transmits reliably under noise, with
