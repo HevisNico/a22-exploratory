@@ -86,7 +86,7 @@ affected secondary test was rerun (`validation/REFERENCE_CHECKPOINT_AUDIT.json`)
 | `PROTOCOL.json`, `PROVENANCE.json`, `ENVIRONMENT.json` | Protocol, SHA-256 identities, environment |
 | `VALIDATION.json`, `AUDIT.json`, `validation/` | Solver checks and audit |
 | `*.diff` | Source changes relative to the previous point simulator |
-| Raw outputs (`fixed_gain_130_output.zip`, 26 MB) | Asset of the [`exploratory-data-1` release](https://github.com/HevisNico/a22-interval-replay/releases/tag/exploratory-data-1); unzip here |
+| Raw outputs (`fixed_gain_130_output.zip`, 26 MB) | Asset of the [`exploratory-data-1` release](https://github.com/HevisNico/a22-exploratory/releases/tag/exploratory-data-1); unzip here |
 | `reference_campaign/output/` | The `gate_noise_130` raw outputs (same release, `gate_noise_130_output_part1.zip` and `_part2.zip`, unzipped into `reference_campaign/`) |
 
 With Python 3 and g++ C++17, from this folder:

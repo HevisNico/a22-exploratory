@@ -75,7 +75,7 @@ tolerance. `CORRECTIONS.patch` lists the changes from the earlier energy experim
 | `VALIDATION.json`, `validation/`, `validate_independent.py` | Independent oracle and its results |
 | `AUDIT.json`, `REGRESSION.json` | Campaign audit and optional regression |
 | `src/`, `reference/` | C++ solver with energy budget; pinned model reference and licenses |
-| Raw data (`energy_130_training.zip`, `energy_130_results.zip`, 54 MB) | Assets of the [`exploratory-data-1` release](https://github.com/HevisNico/a22-interval-replay/releases/tag/exploratory-data-1); unzip here |
+| Raw data (`energy_130_training.zip`, `energy_130_results.zip`, 54 MB) | Assets of the [`exploratory-data-1` release](https://github.com/HevisNico/a22-exploratory/releases/tag/exploratory-data-1); unzip here |
 
 With Linux, g++, Python 3, NumPy, SciPy and Matplotlib, from this folder:
 

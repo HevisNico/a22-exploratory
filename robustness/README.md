@@ -102,7 +102,7 @@ layer skipping were tested.
 | `A22_point_simulator_kit/` | The original point simulator, its regression reference and result |
 | `experiment/rapport.html`, `experiment/resultats.png` | Full report and figures (in French) |
 | `experiment/summary.csv`, `summary.json` | Metrics for every run |
-| Raw outputs (`robustness_output.zip`, 10 MB) | Emissions and states of every run: asset of the [`exploratory-data-1` release](https://github.com/HevisNico/a22-interval-replay/releases/tag/exploratory-data-1); unzip into `experiment/` |
+| Raw outputs (`robustness_output.zip`, 10 MB) | Emissions and states of every run: asset of the [`exploratory-data-1` release](https://github.com/HevisNico/a22-exploratory/releases/tag/exploratory-data-1); unzip into `experiment/` |
 | `experiment/extended_simulate.py`, `extension.diff` | Extended simulator and its changes to the original |
 | `experiment/cases.json`, `selected_cases.json` | Run definitions |
 | `experiment/PROVENANCE.json`, `VALIDATION.json` | Script hashes and validation results |

@@ -85,7 +85,7 @@ firing, not the exact counterfactual contribution of residual charge.
 | `PROTOCOL.json`, `CALIBRATION.json`, `MANIFEST_SHA256.json`, `ENVIRONMENT.json` | Protocol, frozen median values, checksums |
 | `VALIDATION.json`, `AUDIT.json` | Local checks, regressions and audit |
 | `src/`, `reference/` | Kernel with provenance instrumentation; pinned model reference and licenses |
-| Raw data (`selectivity_130_results.zip`, `selectivity_130_inputs.zip`, 40 MB) | Assets of the [`exploratory-data-1` release](https://github.com/HevisNico/a22-interval-replay/releases/tag/exploratory-data-1); unzip here |
+| Raw data (`selectivity_130_results.zip`, `selectivity_130_inputs.zip`, 40 MB) | Assets of the [`exploratory-data-1` release](https://github.com/HevisNico/a22-exploratory/releases/tag/exploratory-data-1); unzip here |
 
 With Linux, g++, Python 3, NumPy and Matplotlib, from this folder:
 

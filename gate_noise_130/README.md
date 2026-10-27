@@ -101,7 +101,7 @@ or b, and final outputs are recounted independently. Point simulator only; no ce
 | `training.csv`, `profiles.csv` | Preparation, gains, caps and late updates per seed; profiles by layer |
 | `PROTOCOL.json`, `PROVENANCE.json`, `ENVIRONMENT.json` | Protocol fixed in advance, SHA-256 identities, environment |
 | `AUDIT.json`, `VALIDATION.json`, `validation/` | Integrity audit and solver checks |
-| Raw outputs (`gate_noise_130_output_part1.zip`, `_part2.zip`, 23 MB) | Learned states and test results: assets of the [`exploratory-data-1` release](https://github.com/HevisNico/a22-interval-replay/releases/tag/exploratory-data-1); unzip both here |
+| Raw outputs (`gate_noise_130_output_part1.zip`, `_part2.zip`, 23 MB) | Learned states and test results: assets of the [`exploratory-data-1` release](https://github.com/HevisNico/a22-exploratory/releases/tag/exploratory-data-1); unzip both here |
 
 **Repaired checkpoint.** In the original archive, the learned-state file `output/normal_2_9.states` was
 truncated after 1,547 of its 1,560 rows. The analysis and the audit read only the JSON outputs, which are

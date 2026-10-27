@@ -67,7 +67,7 @@ gate, cap at 4, and effective freezing of gains and b (`VALIDATION.json`, `REFER
 |---|---|
 | `rapport.html`, `resultats.png` | Full report and figures (in French) |
 | `summary.csv`, `summary.json`, `by_layer.json` | Metrics per run, intervals and comparisons, profiles by layer |
-| Raw outputs (`ablations_130_output_part1.zip`, `_part2.zip`, 25 MB) | Emissions and states of every run: assets of the [`exploratory-data-1` release](https://github.com/HevisNico/a22-interval-replay/releases/tag/exploratory-data-1); unzip both here |
+| Raw outputs (`ablations_130_output_part1.zip`, `_part2.zip`, 25 MB) | Emissions and states of every run: assets of the [`exploratory-data-1` release](https://github.com/HevisNico/a22-exploratory/releases/tag/exploratory-data-1); unzip both here |
 | `kernel.py`, `kernel.diff`, `reference_kernel.py` | Simulator with the interventions, and its changes |
 | `sources/` | Earlier campaign sources and the point simulator kit |
 
