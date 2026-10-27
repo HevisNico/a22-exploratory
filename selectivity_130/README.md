@@ -1,5 +1,7 @@
 # Directional selectivity: what does the learned gain structure buy? (exploratory)
 
+> **Follow-up qualification.** The later predefined static control supplies its own entrance and outperforms the learned networks on the probe18 challenge. The historical results below compare different designs and remain protocol-specific. See [follow-up results and evidence status](../FOLLOWUP_RESULTS.md#1-static-directional-control-and-recurrence); publication of those follow-up archives is pending.
+
 **Status: exploratory point simulations, not certified.** 2,562 tests: 6 frozen configurations × 7 input
 scenarios × (3 noise levels × 20 seeds + 1 noise-free case). Protocol and primary endpoints fixed in
 advance (`PROTOCOL.json`). Full report: `report.html` (English).
@@ -63,8 +65,9 @@ with the true signal, and noise only. **Primary endpoints:** fraction of probe i
   for selectivity in layers 7 to 130. Together with the shuffle study (random rearrangements of the
   learned interior fail), this suggests that the interior needs a consistent central/lateral
   calibration rather than a specific learned pattern.
-- **The entrance is where the learned gains matter most**: a homogeneous rule cannot spread a
-  single-lane source to all 12 lanes.
+- **In this study, the homogeneous median rule fails at the entrance.** This does not show that
+  the entrance must be learned: the later static control uses (3,3,3) in layers 1–6 and (1,3,1)
+  thereafter and transmits without a learned entrance on its separate challenge.
 - **Directional bias was present before learning**: the initial gains (0.3, 1.2, 0.3) already favour the
   central port. This study shows adaptation and calibration of a biased architecture, not discovery of
   direction from an isotropic start.
