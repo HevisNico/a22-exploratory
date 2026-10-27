@@ -91,7 +91,7 @@ the previous kernel. The learned inputs include the documented reconstruction of
 | `PROTOCOL.json`, `PROVENANCE.json`, `INPUT_HASHES.json`, `ENVIRONMENT.json` | Protocol and identities |
 | `AUDIT.json`, `PERMUTATION_AUDIT.json`, `VALIDATION.json`, `validation/` | Audit and checks |
 | `src/`, `kernel.diff` | Sources and the minimal freeze-gain change |
-| Raw data (`gain_sweep_shuffle_130_results.zip`, `_inputs.zip`, `_permutations.zip`, 22 MB) | Assets of the [`exploratory-data-1` release](https://github.com/HevisNico/a22-interval-replay/releases/tag/exploratory-data-1); unzip here |
+| Raw data (`gain_sweep_shuffle_130_results.zip`, `_inputs.zip`, `_permutations.zip`, 22 MB) | Assets of the [`exploratory-data-1` release](https://github.com/HevisNico/a22-exploratory/releases/tag/exploratory-data-1); unzip here |
 
 With Python 3, NumPy, Matplotlib and g++ C++17, from this folder:
 

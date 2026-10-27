@@ -113,8 +113,8 @@ for the frozen completed pilot.
 
 The complete archive is a byte-identical copy of the supplied pilot package:
 
-- **[Download A22_joint_parameter_uncertainty_and_noise_pilot_EN.zip](https://github.com/HevisNico/a22-interval-replay/releases/download/exploratory-data-1/A22_joint_parameter_uncertainty_and_noise_pilot_EN.zip)** from
-  [Release `exploratory-data-1`](https://github.com/HevisNico/a22-interval-replay/releases/tag/exploratory-data-1).
+- **[Download A22_joint_parameter_uncertainty_and_noise_pilot_EN.zip](https://github.com/HevisNico/a22-exploratory/releases/download/exploratory-data-1/A22_joint_parameter_uncertainty_and_noise_pilot_EN.zip)** from
+  [Release `exploratory-data-1`](https://github.com/HevisNico/a22-exploratory/releases/tag/exploratory-data-1).
 - Size: **8,557,405 bytes**.
 - SHA-256: `6c7bf44e7b84c8f0486849bb177dfa20e7d2f17bf901e8e8c374bf44a6d97975`.
 - Internal directory: `A22_joint_parameter_uncertainty_and_noise_pilot_EN/`.

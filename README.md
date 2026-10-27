@@ -8,7 +8,7 @@ sample.
 The model, the certified results and their proofs are in the main repository,
 [HevisNico/a22-interval-replay](https://github.com/HevisNico/a22-interval-replay). These studies were
 moved here from its `exploratory/` folder; the raw data stay attached to its release
-[`exploratory-data-1`](https://github.com/HevisNico/a22-interval-replay/releases/tag/exploratory-data-1).
+[`exploratory-data-1`](https://github.com/HevisNico/a22-exploratory/releases/tag/exploratory-data-1).
 
 ## The main findings so far
 

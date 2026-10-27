@@ -90,7 +90,7 @@ does not require it in this protocol.
 | `summary.json`, `metrics.csv` | Groups and paired bootstrap intervals; metrics per seed, branch and block |
 | `PROTOCOL.json`, `PROVENANCE.json`, `ENVIRONMENT.json` | Protocol, SHA-256 identities, environment |
 | `src/`, `reference_src/`, `kernel.diff` | Modified kernel and the original sources |
-| Raw data (`gate_cap_restore_130_results.zip`, `gate_cap_restore_130_inputs.zip`, 8 MB) | Profiles of the 130 layers per run, and the learned input states: assets of the [`exploratory-data-1` release](https://github.com/HevisNico/a22-interval-replay/releases/tag/exploratory-data-1); unzip both here |
+| Raw data (`gate_cap_restore_130_results.zip`, `gate_cap_restore_130_inputs.zip`, 8 MB) | Profiles of the 130 layers per run, and the learned input states: assets of the [`exploratory-data-1` release](https://github.com/HevisNico/a22-exploratory/releases/tag/exploratory-data-1); unzip both here |
 
 With g++ C++17, Python 3, NumPy and Matplotlib, from this folder:
 

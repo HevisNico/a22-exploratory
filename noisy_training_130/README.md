@@ -79,7 +79,7 @@ duplicated; frozen: 12 missing, 0 duplicated.
 | `rapport.html`, `resultats.png` | Full report and figures (in French) |
 | `summary.csv`, `summary.json`, `comparison_128.json` | Metrics per run and paired comparisons |
 | `PREPARATION_AUDIT.json` | Check of the last 64 training pulses on the 12 output lanes |
-| Raw outputs (`noisy_training_130_output_native_part1.zip`, `_part2.zip`, 41 MB) | Main results, controls and all training checkpoints: assets of the [`exploratory-data-1` release](https://github.com/HevisNico/a22-interval-replay/releases/tag/exploratory-data-1); unzip both here |
+| Raw outputs (`noisy_training_130_output_native_part1.zip`, `_part2.zip`, 41 MB) | Main results, controls and all training checkpoints: assets of the [`exploratory-data-1` release](https://github.com/HevisNico/a22-exploratory/releases/tag/exploratory-data-1); unzip both here |
 | `oracle_128/`, `oracle_python_complete/`, `pilot_not_counted/` | Python reference runs used as oracles (not counted as seeds) |
 
 With Python 3, NumPy, SciPy, Matplotlib and g++ (C++17), from this folder:
