@@ -44,3 +44,17 @@ the attempt-3 orchestrator recorded the validation process as exited (code 0 aft
 `EXECUTION_RESULT.json`), its report records `completed_at` 02:52:30.80, and nothing under
 `validation/` or `runs/` may have changed since then (every validation file hash listed in the
 report and the two hashes above are checked again). Steps 2 and 3 are unchanged.
+
+## Addendum — change of executor
+
+The external execution sandbox lacks `/proc` and was restored to an earlier state between two
+sessions, which is what brought the lock back. The remaining phases (design, test, analysis) are
+therefore run by Claude in its own session for the author, from the exact registered state:
+main `b74c9bd6…`, source lock `c041e033…`, the registered binaries `driver` `60f2a7d6…` and
+`driver_reference` `67aff94f…` taken byte for byte from the published rebuild (not recompiled), and
+the attempt-3 `validation/` directory with all three reports unchanged. `RUNNING.lock` and the
+`runs/INCOMPLETE.json` of the refused attempt are not carried over; they stay in the old sandbox and
+in `archive/`. Each phase runs once, as the launcher enforces; the design selection is merged
+publicly before any held-out input is generated; all outputs and logs are published. Claude also
+wrote the implementation, so this execution is not independent of the author; the hashes are what
+make it checkable.
