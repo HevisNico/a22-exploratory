@@ -1,0 +1,4 @@
+{
+  "error": "STOP: study.py process check was not empty with grep exit 1",
+  "phase": "preflight"
+}
