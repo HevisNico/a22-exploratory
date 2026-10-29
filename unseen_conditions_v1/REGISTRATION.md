@@ -29,8 +29,22 @@ timestamp.
 None recorded yet. If a published deposit (for example Zenodo or OSF) is made, add its
 public URL, its service-recorded publication time and its DOI here through a pull request.
 
+## Implementation clarification, recorded before any calculation
+
+The implementation initializes every static setpoint at `min(template gain, the port's physical
+cap C)` (`driver.cpp`, `log(min(g, cap))`). Because C varies by ±1e-4 around 4, `uniform_4` is
+slightly below 4 on some ports. Learned gains are bounded by the same cap, and H then multiplies the
+control gain in every arm. The protocol text does not state this initialization; it is recorded
+here, with no numerical result available, as part of the implementation to be registered.
+
 ## Remaining gate before any calculation
 
-Item 4 of the launch gate is open: the implementation and its source hashes must be
-published, and their exact revision recorded here, before any numerical validation,
-candidate evaluation or study simulation.
+Item 4 of the launch gate: the implementation sources and their SHA-256 hashes
+(`SOURCE_SHA256.txt`) are published in this folder by pull request. Still required before any
+numerical validation, candidate evaluation or study simulation:
+
+1. the merge commit of that pull request, recorded here;
+2. the `SOURCE_LOCK.json` produced by `python study.py build` on the machine that will run the
+   study (it adds the compiled binaries and the compiler), published here by pull request, with its
+   SHA-256, since `registration.json` must cite it;
+3. `registration.json` filled from these public records.
