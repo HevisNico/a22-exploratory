@@ -48,3 +48,9 @@ here, with no numerical result available, as part of the implementation to be re
 
 The launch gate is complete once this record is merged. Validation, design and test follow the
 protocol's order; the design selection must be committed before any held-out device is generated.
+
+## Amendment 1 (validation fixture)
+
+Validation attempt 1 failed on the continuation fixture; its record is published unchanged and the
+correction is described in [`AMENDMENT_1.md`](AMENDMENT_1.md). A new build, its source lock and the
+updated `registration.json` will be recorded here before validation is retried.
