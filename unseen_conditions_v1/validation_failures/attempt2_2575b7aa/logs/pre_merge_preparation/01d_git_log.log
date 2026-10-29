@@ -1,0 +1,6 @@
+$ git log -1 --oneline
+working_directory=/workspace/scratch/1ebdaa405a5d/rebuild_amendment1_pr8/a22-exploratory/unseen_conditions_v1
+7bd4cb6 Merge pull request #8 from HevisNico/amendment-1-continuation
+
+exit_status=0
+elapsed_seconds=0.003075651

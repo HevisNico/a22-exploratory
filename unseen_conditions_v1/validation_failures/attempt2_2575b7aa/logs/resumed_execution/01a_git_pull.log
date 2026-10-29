@@ -1,0 +1,48 @@
+$ git pull origin main
+working_directory=/workspace/scratch/1ebdaa405a5d/rebuild_amendment1_pr8/a22-exploratory
+From https://github.com/HevisNico/a22-exploratory
+ * branch            main       -> FETCH_HEAD
+   7bd4cb6..6b0980a  main       -> origin/main
+Updating 7bd4cb6..6b0980a
+Fast-forward
+ unseen_conditions_v1/REGISTRATION.md               |  10 +-
+ unseen_conditions_v1/SOURCE_LOCK.json              |  10 +-
+ .../build_evidence/amendment1/COMMIT.txt           |   1 +
+ .../amendment1/REBUILD_ONLY_VERIFICATION.json      | 112 +++++++++++++++++
+ .../build_evidence/amendment1/logs/01_clone.log    |   4 +
+ .../build_evidence/amendment1/logs/02_git_log.log  |   6 +
+ .../amendment1/logs/03_commit_sha.log              |   6 +
+ .../amendment1/logs/04_source_checksums.log        |  29 +++++
+ .../amendment1/logs/05_environment.log             |   6 +
+ .../amendment1/logs/05b_execution_environment.log  |   5 +
+ .../logs/06a_save_previous_source_lock.log         |   5 +
+ .../amendment1/logs/06b_set_aside_registration.log |   5 +
+ .../build_evidence/amendment1/logs/07_build.log    |   6 +
+ .../amendment1/logs/08_test_gates.log              |  10 ++
+ .../build_evidence/amendment1/logs/09_plan.log     |  27 ++++
+ .../logs/10_restore_identical_registration.log     |   5 +
+ .../amendment1/logs/11_git_status_short.log        |   6 +
+ .../amendment1/logs/12_changed_tracked_paths.log   |   6 +
+ .../amendment1/logs/COMMAND_OUTPUTS_FULL.log       | 140 +++++++++++++++++++++
+ unseen_conditions_v1/registration.json             |  19 ++-
+ 20 files changed, 406 insertions(+), 12 deletions(-)
+ create mode 100644 unseen_conditions_v1/build_evidence/amendment1/COMMIT.txt
+ create mode 100644 unseen_conditions_v1/build_evidence/amendment1/REBUILD_ONLY_VERIFICATION.json
+ create mode 100644 unseen_conditions_v1/build_evidence/amendment1/logs/01_clone.log
+ create mode 100644 unseen_conditions_v1/build_evidence/amendment1/logs/02_git_log.log
+ create mode 100644 unseen_conditions_v1/build_evidence/amendment1/logs/03_commit_sha.log
+ create mode 100644 unseen_conditions_v1/build_evidence/amendment1/logs/04_source_checksums.log
+ create mode 100644 unseen_conditions_v1/build_evidence/amendment1/logs/05_environment.log
+ create mode 100644 unseen_conditions_v1/build_evidence/amendment1/logs/05b_execution_environment.log
+ create mode 100644 unseen_conditions_v1/build_evidence/amendment1/logs/06a_save_previous_source_lock.log
+ create mode 100644 unseen_conditions_v1/build_evidence/amendment1/logs/06b_set_aside_registration.log
+ create mode 100644 unseen_conditions_v1/build_evidence/amendment1/logs/07_build.log
+ create mode 100644 unseen_conditions_v1/build_evidence/amendment1/logs/08_test_gates.log
+ create mode 100644 unseen_conditions_v1/build_evidence/amendment1/logs/09_plan.log
+ create mode 100644 unseen_conditions_v1/build_evidence/amendment1/logs/10_restore_identical_registration.log
+ create mode 100644 unseen_conditions_v1/build_evidence/amendment1/logs/11_git_status_short.log
+ create mode 100644 unseen_conditions_v1/build_evidence/amendment1/logs/12_changed_tracked_paths.log
+ create mode 100644 unseen_conditions_v1/build_evidence/amendment1/logs/COMMAND_OUTPUTS_FULL.log
+
+exit_status=0
+elapsed_seconds=4.840430243

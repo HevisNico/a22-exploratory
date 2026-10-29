@@ -1,0 +1,6 @@
+$ sha256sum SOURCE_LOCK.json
+working_directory=/workspace/scratch/1ebdaa405a5d/rebuild_amendment1_pr8/a22-exploratory/unseen_conditions_v1
+2575b7aa8a76ca4c72f7d06a1f6c47b7e024ca07530a86ea057b06f76b3f87de  SOURCE_LOCK.json
+
+exit_status=0
+elapsed_seconds=0.002366401

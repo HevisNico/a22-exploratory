@@ -1,0 +1,48 @@
+{
+  "status": "AMENDMENT_1_VALIDATION_FAILED_NO_CORRECTION_NO_RETRY",
+  "commit": "6b0980a97b73b335c1d8bb94e472aea4bf60ad93",
+  "sandbox_path": "/workspace/scratch/1ebdaa405a5d/rebuild_amendment1_pr8/a22-exploratory",
+  "all_requested_preflight_hashes_match": true,
+  "initial_git_status_clean": true,
+  "tracked_files_unchanged_after_validation": true,
+  "logs_outside_repository": true,
+  "source_lock_sha256": "2575b7aa8a76ca4c72f7d06a1f6c47b7e024ca07530a86ea057b06f76b3f87de",
+  "binaries_sha256": {
+    "driver": "60f2a7d600ac5d4eb67bfd876c39f7a66dfe6184befbaf221dbb9830e071e4c3",
+    "driver_reference": "67aff94f68e93d3ec4478b9a1514e1b9e3d56a3476b224291a7d3bf17c7d4a74"
+  },
+  "build_intact": true,
+  "restored_failure1_sha256": "cecb05e623926408e7771444cbe6617262c44f8195cb337a5ca65d2ee3fdcbbd",
+  "new_validation_report_sha256": "face9d14a40195da726ba3bce727f7ecb6a2e59310bf67f9cf98ee366e952f9e",
+  "new_validation_report": "validation/2575b7aa8a76ca4c72f7d06a1f6c47b7e024ca07530a86ea057b06f76b3f87de/VALIDATION.json",
+  "failure": "Rested static shortcut is not exact: static_00",
+  "check_registration_seconds": 0.0508638220053399,
+  "validate_seconds": 2.460123326993198,
+  "numerical_validate_invocations_after_amendment1": 1,
+  "design_launched": false,
+  "held_out_test_launched": false,
+  "analyze_launched": false,
+  "earlier_pre_merge_preparation": "Stopped at merge-PR-8 mismatch without check-registration or validate. Its logs are included separately.",
+  "post_preservation_checks": [
+    {
+      "command": [
+        "git",
+        "diff",
+        "--exit-code",
+        "HEAD",
+        "--"
+      ],
+      "exit_status": 0,
+      "elapsed_seconds": 0.004427188003319316
+    },
+    {
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_status": 0,
+      "elapsed_seconds": 0.002757237001787871
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "status": "STOPPED_NO_CORRECTION_NO_RETRY",
+  "records": [
+    {
+      "command": [
+        "python",
+        "study.py",
+        "check-registration"
+      ],
+      "log": "03_check_registration.log",
+      "exit_status": 0,
+      "elapsed_seconds": 0.0508638220053399
+    },
+    {
+      "command": [
+        "python",
+        "study.py",
+        "validate"
+      ],
+      "log": "04_validate.log",
+      "exit_status": 1,
+      "elapsed_seconds": 2.460123326993198
+    }
+  ]
+}
