@@ -1,0 +1,1154 @@
+[
+  {
+    "device": 920100,
+    "condition": "source_shift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920100,
+    "condition": "broken_link",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920100,
+    "condition": "gain_heterogeneity",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920100,
+    "condition": "post_acquisition_drift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920101,
+    "condition": "source_shift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920101,
+    "condition": "broken_link",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920101,
+    "condition": "gain_heterogeneity",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920101,
+    "condition": "post_acquisition_drift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920102,
+    "condition": "source_shift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920102,
+    "condition": "broken_link",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920102,
+    "condition": "gain_heterogeneity",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920102,
+    "condition": "post_acquisition_drift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920103,
+    "condition": "source_shift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920103,
+    "condition": "broken_link",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920103,
+    "condition": "gain_heterogeneity",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920103,
+    "condition": "post_acquisition_drift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920104,
+    "condition": "source_shift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920104,
+    "condition": "broken_link",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920104,
+    "condition": "gain_heterogeneity",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920104,
+    "condition": "post_acquisition_drift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920105,
+    "condition": "source_shift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920105,
+    "condition": "broken_link",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920105,
+    "condition": "gain_heterogeneity",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920105,
+    "condition": "post_acquisition_drift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920106,
+    "condition": "source_shift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920106,
+    "condition": "broken_link",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920106,
+    "condition": "gain_heterogeneity",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920106,
+    "condition": "post_acquisition_drift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920107,
+    "condition": "source_shift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920107,
+    "condition": "broken_link",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920107,
+    "condition": "gain_heterogeneity",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920107,
+    "condition": "post_acquisition_drift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920108,
+    "condition": "source_shift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920108,
+    "condition": "broken_link",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920108,
+    "condition": "gain_heterogeneity",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920108,
+    "condition": "post_acquisition_drift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920109,
+    "condition": "source_shift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920109,
+    "condition": "broken_link",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920109,
+    "condition": "gain_heterogeneity",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920109,
+    "condition": "post_acquisition_drift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920110,
+    "condition": "source_shift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920110,
+    "condition": "broken_link",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920110,
+    "condition": "gain_heterogeneity",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920110,
+    "condition": "post_acquisition_drift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920111,
+    "condition": "source_shift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920111,
+    "condition": "broken_link",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920111,
+    "condition": "gain_heterogeneity",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920111,
+    "condition": "post_acquisition_drift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920112,
+    "condition": "source_shift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920112,
+    "condition": "broken_link",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920112,
+    "condition": "gain_heterogeneity",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920112,
+    "condition": "post_acquisition_drift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920113,
+    "condition": "source_shift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920113,
+    "condition": "broken_link",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920113,
+    "condition": "gain_heterogeneity",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920113,
+    "condition": "post_acquisition_drift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920114,
+    "condition": "source_shift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920114,
+    "condition": "broken_link",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920114,
+    "condition": "gain_heterogeneity",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920114,
+    "condition": "post_acquisition_drift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920115,
+    "condition": "source_shift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920115,
+    "condition": "broken_link",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920115,
+    "condition": "gain_heterogeneity",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920115,
+    "condition": "post_acquisition_drift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920116,
+    "condition": "source_shift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920116,
+    "condition": "broken_link",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920116,
+    "condition": "gain_heterogeneity",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920116,
+    "condition": "post_acquisition_drift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920117,
+    "condition": "source_shift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920117,
+    "condition": "broken_link",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920117,
+    "condition": "gain_heterogeneity",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920117,
+    "condition": "post_acquisition_drift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920118,
+    "condition": "source_shift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920118,
+    "condition": "broken_link",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920118,
+    "condition": "gain_heterogeneity",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920118,
+    "condition": "post_acquisition_drift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920119,
+    "condition": "source_shift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920119,
+    "condition": "broken_link",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920119,
+    "condition": "gain_heterogeneity",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920119,
+    "condition": "post_acquisition_drift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920120,
+    "condition": "source_shift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920120,
+    "condition": "broken_link",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920120,
+    "condition": "gain_heterogeneity",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920120,
+    "condition": "post_acquisition_drift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920121,
+    "condition": "source_shift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920121,
+    "condition": "broken_link",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920121,
+    "condition": "gain_heterogeneity",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920121,
+    "condition": "post_acquisition_drift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920122,
+    "condition": "source_shift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920122,
+    "condition": "broken_link",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920122,
+    "condition": "gain_heterogeneity",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920122,
+    "condition": "post_acquisition_drift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920123,
+    "condition": "source_shift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920123,
+    "condition": "broken_link",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920123,
+    "condition": "gain_heterogeneity",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920123,
+    "condition": "post_acquisition_drift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920124,
+    "condition": "source_shift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920124,
+    "condition": "broken_link",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920124,
+    "condition": "gain_heterogeneity",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920124,
+    "condition": "post_acquisition_drift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920125,
+    "condition": "source_shift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920125,
+    "condition": "broken_link",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920125,
+    "condition": "gain_heterogeneity",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920125,
+    "condition": "post_acquisition_drift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920126,
+    "condition": "source_shift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920126,
+    "condition": "broken_link",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920126,
+    "condition": "gain_heterogeneity",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920126,
+    "condition": "post_acquisition_drift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920127,
+    "condition": "source_shift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920127,
+    "condition": "broken_link",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920127,
+    "condition": "gain_heterogeneity",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920127,
+    "condition": "post_acquisition_drift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920128,
+    "condition": "source_shift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920128,
+    "condition": "broken_link",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920128,
+    "condition": "gain_heterogeneity",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920128,
+    "condition": "post_acquisition_drift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920129,
+    "condition": "source_shift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920129,
+    "condition": "broken_link",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920129,
+    "condition": "gain_heterogeneity",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920129,
+    "condition": "post_acquisition_drift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920130,
+    "condition": "source_shift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920130,
+    "condition": "broken_link",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920130,
+    "condition": "gain_heterogeneity",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920130,
+    "condition": "post_acquisition_drift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920131,
+    "condition": "source_shift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920131,
+    "condition": "broken_link",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920131,
+    "condition": "gain_heterogeneity",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  },
+  {
+    "device": 920131,
+    "condition": "post_acquisition_drift",
+    "selected_candidate": 1,
+    "observed_hindsight_word_count": 4,
+    "possible_upper_word_count": 4,
+    "numerically_unassessed_candidates": 0,
+    "diagnostic_only": true
+  }
+]

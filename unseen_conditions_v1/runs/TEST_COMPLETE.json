@@ -1,0 +1,8 @@
+{
+  "status": "COMPLETE",
+  "completed_at": "2026-10-29T04:03:33.637341+00:00",
+  "registration_sha256": "9cdfab3ec5df209593d5388f29188a2e5556c7c8dcd215245e89e4f0bf7875e1",
+  "source_lock_sha256": "c041e033e4e81ba589d6d02c490823aa5319cb9b66e1524c737e3b4820af705c",
+  "selection_sha256": "c56d797ce270b807dda81d64463a8bd9dfcc43f5230e599157e5c0a5775d7b5b",
+  "selection_evidence_sha256": "e7062d4a94964f44132071aa007bdfd3d2e6732a5b4ac7210efbaad80142f8f4"
+}

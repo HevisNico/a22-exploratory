@@ -1,0 +1,131 @@
+{
+  "status": "COMPLETED_POINT_STUDY_NOT_CERTIFIED",
+  "devices": 32,
+  "global_static_candidate": 1,
+  "expected_words_per_arm": 512,
+  "complete_words": {
+    "active": 488,
+    "frozen": 470,
+    "robust_static": 512,
+    "oracle_static": 512
+  },
+  "family_results": [
+    {
+      "condition": "source_shift",
+      "expected_words_per_arm": 128,
+      "complete_words": {
+        "active": 123,
+        "frozen": 123,
+        "robust_static": 128,
+        "oracle_static": 128
+      },
+      "assessable_scenarios": {
+        "active": 32,
+        "frozen": 32,
+        "robust_static": 32,
+        "oracle_static": 32
+      }
+    },
+    {
+      "condition": "broken_link",
+      "expected_words_per_arm": 128,
+      "complete_words": {
+        "active": 125,
+        "frozen": 123,
+        "robust_static": 128,
+        "oracle_static": 128
+      },
+      "assessable_scenarios": {
+        "active": 32,
+        "frozen": 32,
+        "robust_static": 32,
+        "oracle_static": 32
+      }
+    },
+    {
+      "condition": "gain_heterogeneity",
+      "expected_words_per_arm": 128,
+      "complete_words": {
+        "active": 122,
+        "frozen": 123,
+        "robust_static": 128,
+        "oracle_static": 128
+      },
+      "assessable_scenarios": {
+        "active": 32,
+        "frozen": 32,
+        "robust_static": 32,
+        "oracle_static": 32
+      }
+    },
+    {
+      "condition": "post_acquisition_drift",
+      "expected_words_per_arm": 128,
+      "complete_words": {
+        "active": 118,
+        "frozen": 101,
+        "robust_static": 128,
+        "oracle_static": 128
+      },
+      "assessable_scenarios": {
+        "active": 32,
+        "frozen": 32,
+        "robust_static": 32,
+        "oracle_static": 32
+      }
+    }
+  ],
+  "primary_statistics": {
+    "devices": 32,
+    "mean_difference": -0.046875,
+    "wins": 0,
+    "losses": 15,
+    "ties": 17,
+    "sign_test_p_one_sided": 1.0,
+    "sign_test_null": "P(win | non-tie) <= 0.5",
+    "bootstrap_mean_difference_ci95": [
+      -0.068359375,
+      -0.02734375
+    ],
+    "bootstrap_replicates": 50000,
+    "bootstrap_seed": 934771,
+    "bootstrap_unit": "whole paired device block",
+    "positive_by_registered_statistics": false
+  },
+  "pessimistic_refusal_statistics": {
+    "devices": 32,
+    "mean_difference": -0.046875,
+    "wins": 0,
+    "losses": 15,
+    "ties": 17,
+    "sign_test_p_one_sided": 1.0,
+    "sign_test_null": "P(win | non-tie) <= 0.5",
+    "bootstrap_mean_difference_ci95": [
+      -0.068359375,
+      -0.02734375
+    ],
+    "bootstrap_replicates": 50000,
+    "bootstrap_seed": 934771,
+    "bootstrap_unit": "whole paired device block",
+    "positive_by_registered_statistics": false
+  },
+  "conclusion": "NO_DEMONSTRATED_ADAPTIVE_ADVANTAGE",
+  "modeled_work": {
+    "expected_devices": 32,
+    "evaluable_device_pairs": 32,
+    "mean_active_total_work": 136609685.9102977,
+    "mean_static_total_work": 52986778.71680565,
+    "mean_paired_work_difference": 83622907.19349204,
+    "mean_paired_work_ratio": 2.5781843929902735,
+    "includes_acquisition": true,
+    "excluded": "offline design/oracle search and software compute",
+    "interpretation": "Modeled work over the declared deployment horizon; success may differ."
+  },
+  "total_saved_test_jobs": 1952,
+  "simulator_refusals": 0,
+  "acquisition_unavailable": 0,
+  "registration_sha256": "9cdfab3ec5df209593d5388f29188a2e5556c7c8dcd215245e89e4f0bf7875e1",
+  "source_lock_sha256": "c041e033e4e81ba589d6d02c490823aa5319cb9b66e1524c737e3b4820af705c",
+  "selection_sha256": "c56d797ce270b807dda81d64463a8bd9dfcc43f5230e599157e5c0a5775d7b5b",
+  "scope": "Finite static family, declared distribution shift; no hardware or universal robustness claim."
+}
