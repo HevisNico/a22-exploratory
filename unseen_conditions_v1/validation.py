@@ -66,8 +66,9 @@ def run(reg):
         def fixture(name, mode, n, start=0.0, offset=0, checkpoint=None, reference=False, H='H_unity.txt', schedule='train'):
             spec = dict(group='validation', device=930901, condition='dedicated_fixture', mode=mode,
                         purpose='fixture', source_lane=0, cut_layer=0, cut_lane=0, n=n, start=start,
-                        schedule=schedule, stage=101 if schedule == 'train' else 201,
-                        noise_seed=c.noise_seed('validation', 930901, 'dedicated_fixture', schedule),
+                        schedule=schedule, stage=201 if schedule == 'test' else 101,
+                        noise_seed=c.noise_seed('validation', 930901, 'dedicated_fixture',
+                                                'test' if schedule == 'test' else 'train'),
                         H_file=H, label_offset=offset)
             f = folder/(name+'.json')
             job = s.run_job(f, spec, inputs, reg, checkpoint,
@@ -83,11 +84,14 @@ def run(reg):
         if old_path.with_suffix('.states').read_bytes() != full_path.with_suffix('.states').read_bytes():
             raise ValueError('H=1 terminal checkpoint parity failed')
         result['unmodified_kernel_H1_parity'] = dict(all_outputs_bitwise_identical=True, work_and_states_identical=True)
+        # Amendment 1: split only at a quiet point, as the study does. The continuous reference has
+        # the same 512-unit quiet interval between pulses 63 and 64 (schedule 'trainquiet').
         prefix_path, _ = fixture('prefix_64', 'learn', 64)
-        suffix_path, suffix = fixture('suffix_64', 'active', 64, start=512.0, offset=64,
+        quiet_path, quiet = fixture('quiet_128', 'learn', 128, schedule='trainquiet')
+        suffix_path, suffix = fixture('suffix_64', 'active', 64, start=8.0*63+512.0, offset=64,
                                       checkpoint=prefix_path.with_suffix('.states'))
-        result['chronological_continuation'] = compare_events(full, suffix, minimum_label=64)
-        max_parameter = max(abs(a-b) for x, y in zip(state_rows(full_path.with_suffix('.states')),
+        result['chronological_continuation'] = compare_events(quiet, suffix, minimum_label=64)
+        max_parameter = max(abs(a-b) for x, y in zip(state_rows(quiet_path.with_suffix('.states')),
                             state_rows(suffix_path.with_suffix('.states'))) for a, b in zip(x[:4], y[:4]))
         if max_parameter > 1e-7:
             raise ValueError('Continued learned parameters differ')

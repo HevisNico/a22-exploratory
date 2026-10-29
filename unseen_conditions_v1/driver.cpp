@@ -114,13 +114,13 @@ int main(int argc,char** argv){
         if(source<0||source>=12||n<1||n>4096||start<0||cut_layer<0||cut_layer>130||cut_lane<0||cut_lane>=12||offset<0)
             throw std::runtime_error("invalid argument");
         if(mode!="learn"&&mode!="active"&&mode!="frozen"&&mode.rfind("static_",0)!=0)throw std::runtime_error("invalid mode");
-        if(schedule!="train"&&schedule!="test")throw std::runtime_error("invalid schedule");
+        if(schedule!="train"&&schedule!="test"&&schedule!="trainquiet")throw std::runtime_error("invalid schedule");
         auto field=load_field(argv[3]);auto h=load_actuation(argv[4]);States states=initial_states(mode,field);
         bool frozen=mode=="frozen"||mode.rfind("static_",0)==0;
         if(mode=="active"||mode=="frozen")states=load_states(argv[5]);
         ENERGY_ENABLED=true;FREEZE_GAINS=frozen;
         double gaps[]={20.,22.,21.,24.,20.,23.};std::vector<double> dates(n);Row row;
-        for(int i=0;i<n;i++){dates[i]=i?dates[i-1]+(schedule=="train"?8.:gaps[(i-1)%6]):start;row[source].push_back({dates[i],offset+i,{}});}
+        for(int i=0;i<n;i++){dates[i]=i?dates[i-1]+(schedule=="test"?gaps[(i-1)%6]:(schedule=="trainquiet"&&i==n/2?512.:8.)):start;row[source].push_back({dates[i],offset+i,{}});}
         std::array<double,9> work{};long long inputs=0,fires=0;double lower=100.,dz=0,db=0;
         std::vector<long long> layers;
         for(int layer=1;layer<=130;layer++){
