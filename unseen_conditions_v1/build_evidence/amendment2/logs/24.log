@@ -1,0 +1,8 @@
+	.file	"driver.cpp"
+	.text
+#APP
+	.globl _ZSt21ios_base_library_initv
+	.section	.rodata.str1.1,"aMS",@progbits,1
+.LC0:
+	.string	"stoi"
+#NO_APP

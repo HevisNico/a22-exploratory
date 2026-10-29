@@ -1,0 +1,123 @@
+"""Explicit, gated phases. Import, help, plan and build never run a simulation."""
+import argparse
+import concurrent.futures
+import contextlib
+import datetime as dt
+import gzip
+import hashlib
+import json
+import math
+import os
+from pathlib import Path
+import platform
+import re
+import subprocess
+import sys
+import threading
+import time
+
+import config as c
+import scoring
+
+OK = 'OK_POINT_NOT_CERTIFIED'
+REFUSED = 'SIMULATOR_REFUSAL_NUMERICALLY_UNASSESSED'
+UNAVAILABLE = 'ACQUISITION_UNAVAILABLE'
+ABORT = threading.Event()
+
+
+class StudyError(RuntimeError):
+    pass
+
+
+class GateError(StudyError):
+    pass
+
+
+def utcnow():
+    return dt.datetime.now(dt.timezone.utc).isoformat()
+
+
+def sha(path):
+    h = hashlib.sha256()
+    with Path(path).open('rb') as f:
+        for chunk in iter(lambda: f.read(1024*1024), b''):
+            h.update(chunk)
+    return h.hexdigest()
+
+
+def read(path):
+    return json.loads(Path(path).read_text())
+
+
+def write(path, value):
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = path.with_name(path.name+'.tmp')
+    temporary.write_text(json.dumps(value, indent=2, allow_nan=False)+'\n')
+    temporary.replace(path)
+
+
+def source_files():
+    names = ['PROTOCOL.md', 'README_EN.md', 'IMPLEMENTATION_NOTES.md', 'driver.cpp',
+             'config.py', 'study.py', 'scoring.py', 'inference.py', 'analysis.py',
+             'validation.py', 'requirements.txt', 'LICENSE', 'LICENSE-docs.md',
+             'registration.example.json', 'selection_evidence.example.json', 'test_gates.py']
+    files = [c.ROOT/name for name in names]
+    files += sorted((c.ROOT/'vendor').glob('*'))
+    files += sorted((c.ROOT/'reference_vendor').glob('*'))
+    missing = [str(f) for f in files if not f.is_file()]
+    if missing:
+        raise StudyError('Missing source files: '+', '.join(missing))
+    return files
+
+
+def build():
+    if (c.ROOT/'runs').exists() or (c.ROOT/'registration.json').exists():
+        raise GateError('Build in a fresh source copy; a run/registration already exists.')
+    output = c.ROOT/'build'
+    output.mkdir(exist_ok=True)
+    for name, flags in [('driver', []), ('driver_reference', ['-DREFERENCE_KERNEL'])]:
+        subprocess.run(['g++', '-std=c++17', '-O3', *flags, 'driver.cpp', '-o', str(output/name)],
+                       cwd=c.ROOT, check=True)
+    sources = {str(f.relative_to(c.ROOT)): sha(f) for f in source_files()}
+    write(c.ROOT/'SOURCE_LOCK.json', dict(sources=sources, binaries={name: sha(output/name)
+          for name in ('driver', 'driver_reference')}, protocol_basis=c.PROTOCOL_REVISION,
+          built_at=utcnow(), python=sys.version, platform=platform.platform(),
+          compiler=subprocess.check_output(['g++', '--version'], text=True).splitlines()[0]))
+    print('Compiled both drivers; no numerical fixture or simulation was run.')
+
+
+def check_sources():
+    lock = c.ROOT/'SOURCE_LOCK.json'
+    if not lock.is_file():
+        raise GateError('Run the compile-only build step first.')
+    d = read(lock)
+    for name, expected in d['sources'].items():
+        if sha(c.ROOT/name) != expected:
+            raise GateError('Source changed after build: '+name)
+    for name, expected in d['binaries'].items():
+        if sha(c.ROOT/'build'/name) != expected:
+            raise GateError('Binary changed after build: '+name)
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('command', choices=('plan', 'build', 'check-registration', 'validate', 'design', 'test', 'analyze'))
+    command = parser.parse_args().command
+    try:
+        if command == 'check-registration':
+            require_registration()
+            print('Evidence structure and local hashes are consistent; public evidence still requires human verification.')
+        else:
+            globals()[command]()
+    except GateError as exc:
+        print(str(exc), file=sys.stderr)
+        return 2
+    except StudyError as exc:
+        if command in ('design', 'test'):
+            write(c.ROOT/'runs'/'INCOMPLETE.json', dict(status='INCOMPLETE_NO_INFERENCE', phase=command, error=str(exc), stopped_at=utcnow()))
+        print(str(exc), file=sys.stderr)
+        return 2
+    return 0
+
+
+if __name__ == '__main__':
+    sys.exit(main())

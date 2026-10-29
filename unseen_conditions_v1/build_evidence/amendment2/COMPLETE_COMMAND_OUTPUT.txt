@@ -1,0 +1,666 @@
+{
+  "number": 1,
+  "argv": [
+    "git",
+    "clone",
+    "--branch",
+    "main",
+    "https://github.com/HevisNico/a22-exploratory"
+  ],
+  "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11",
+  "started_utc": "2026-10-29T02:39:40.173807+00:00",
+  "duration_seconds": 6.709296374989208,
+  "exit_code": 0,
+  "output": "01.log"
+}
+$ git clone --branch main https://github.com/HevisNico/a22-exploratory
+Cloning into 'a22-exploratory'...
+
+[exit_code=0]
+
+{
+  "number": 2,
+  "argv": [
+    "git",
+    "pull",
+    "origin",
+    "main"
+  ],
+  "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory",
+  "started_utc": "2026-10-29T02:39:46.883854+00:00",
+  "duration_seconds": 5.4582765310042305,
+  "exit_code": 0,
+  "output": "02.log"
+}
+$ git pull origin main
+From https://github.com/HevisNico/a22-exploratory
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+
+[exit_code=0]
+
+{
+  "number": 3,
+  "argv": [
+    "git",
+    "branch",
+    "--show-current"
+  ],
+  "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory",
+  "started_utc": "2026-10-29T02:39:52.342679+00:00",
+  "duration_seconds": 0.002436378999846056,
+  "exit_code": 0,
+  "output": "03.log"
+}
+$ git branch --show-current
+main
+
+[exit_code=0]
+
+{
+  "number": 4,
+  "argv": [
+    "git",
+    "log",
+    "-1",
+    "--oneline"
+  ],
+  "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory",
+  "started_utc": "2026-10-29T02:39:52.345440+00:00",
+  "duration_seconds": 0.002637348006828688,
+  "exit_code": 0,
+  "output": "04.log"
+}
+$ git log -1 --oneline
+2c48381 Merge pull request #11 from HevisNico/amendment-2-tolerances
+
+[exit_code=0]
+
+{
+  "number": 5,
+  "argv": [
+    "git",
+    "rev-parse",
+    "HEAD"
+  ],
+  "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory",
+  "started_utc": "2026-10-29T02:39:52.348492+00:00",
+  "duration_seconds": 0.004649027003324591,
+  "exit_code": 0,
+  "output": "05.log"
+}
+$ git rev-parse HEAD
+2c483817dcc751f0ee477db8b84d26de56071b6f
+
+[exit_code=0]
+
+{
+  "number": 6,
+  "argv": [
+    "git",
+    "log",
+    "--oneline",
+    "-3"
+  ],
+  "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory",
+  "started_utc": "2026-10-29T02:39:52.353505+00:00",
+  "duration_seconds": 0.0025965669919969514,
+  "exit_code": 0,
+  "output": "06.log"
+}
+$ git log --oneline -3
+2c48381 Merge pull request #11 from HevisNico/amendment-2-tolerances
+8f4343e Merge pull request #10 from HevisNico/validation-failure-2
+22a6002 Publish validation attempt 2 failure unchanged (source lock 2575b7aa)
+
+[exit_code=0]
+
+{
+  "number": 7,
+  "argv": [
+    "sha256sum",
+    "-c",
+    "SOURCE_SHA256.txt"
+  ],
+  "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory/unseen_conditions_v1",
+  "started_utc": "2026-10-29T02:39:52.356584+00:00",
+  "duration_seconds": 0.0028455980063881725,
+  "exit_code": 0,
+  "output": "07.log"
+}
+$ sha256sum -c SOURCE_SHA256.txt
+IMPLEMENTATION_NOTES.md: OK
+LICENSE: OK
+LICENSE-docs.md: OK
+PROTOCOL.md: OK
+README_EN.md: OK
+analysis.py: OK
+config.py: OK
+driver.cpp: OK
+inference.py: OK
+reference_vendor/field.hpp: OK
+reference_vendor/work_budget.hpp: OK
+reference_vendor/work_cell.cpp: OK
+reference_vendor/work_common.cpp: OK
+registration.example.json: OK
+requirements.txt: OK
+scoring.py: OK
+selection_evidence.example.json: OK
+study.py: OK
+test_gates.py: OK
+validation.py: OK
+vendor/field.hpp: OK
+vendor/work_budget.hpp: OK
+vendor/work_cell.cpp: OK
+vendor/work_common.cpp: OK
+
+[exit_code=0]
+
+{
+  "number": 8,
+  "argv": [
+    "git",
+    "status",
+    "--short"
+  ],
+  "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory",
+  "started_utc": "2026-10-29T02:39:52.359822+00:00",
+  "duration_seconds": 0.14996326999971643,
+  "exit_code": 0,
+  "output": "08.log"
+}
+$ git status --short
+
+[exit_code=0]
+
+{
+  "number": 9,
+  "argv": [
+    "git",
+    "ls-files",
+    "*AGENTS.md"
+  ],
+  "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory",
+  "started_utc": "2026-10-29T02:39:52.510543+00:00",
+  "duration_seconds": 0.003479578997939825,
+  "exit_code": 0,
+  "output": "09.log"
+}
+$ git ls-files '*AGENTS.md'
+
+[exit_code=0]
+
+{
+  "number": 10,
+  "argv": [
+    "sed",
+    "-n",
+    "1,100p;527,585p",
+    "study.py"
+  ],
+  "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory/unseen_conditions_v1",
+  "started_utc": "2026-10-29T02:40:28.347025+00:00",
+  "duration_seconds": 0.002620764003950171,
+  "exit_code": 0,
+  "output": "10.log"
+}
+$ sed -n '1,100p;527,585p' study.py
+"""Explicit, gated phases. Import, help, plan and build never run a simulation."""
+import argparse
+import concurrent.futures
+import contextlib
+import datetime as dt
+import gzip
+import hashlib
+import json
+import math
+import os
+from pathlib import Path
+import platform
+import re
+import subprocess
+import sys
+import threading
+import time
+
+import config as c
+import scoring
+
+OK = 'OK_POINT_NOT_CERTIFIED'
+REFUSED = 'SIMULATOR_REFUSAL_NUMERICALLY_UNASSESSED'
+UNAVAILABLE = 'ACQUISITION_UNAVAILABLE'
+ABORT = threading.Event()
+
+
+class StudyError(RuntimeError):
+    pass
+
+
+class GateError(StudyError):
+    pass
+
+
+def utcnow():
+    return dt.datetime.now(dt.timezone.utc).isoformat()
+
+
+def sha(path):
+    h = hashlib.sha256()
+    with Path(path).open('rb') as f:
+        for chunk in iter(lambda: f.read(1024*1024), b''):
+            h.update(chunk)
+    return h.hexdigest()
+
+
+def read(path):
+    return json.loads(Path(path).read_text())
+
+
+def write(path, value):
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = path.with_name(path.name+'.tmp')
+    temporary.write_text(json.dumps(value, indent=2, allow_nan=False)+'\n')
+    temporary.replace(path)
+
+
+def source_files():
+    names = ['PROTOCOL.md', 'README_EN.md', 'IMPLEMENTATION_NOTES.md', 'driver.cpp',
+             'config.py', 'study.py', 'scoring.py', 'inference.py', 'analysis.py',
+             'validation.py', 'requirements.txt', 'LICENSE', 'LICENSE-docs.md',
+             'registration.example.json', 'selection_evidence.example.json', 'test_gates.py']
+    files = [c.ROOT/name for name in names]
+    files += sorted((c.ROOT/'vendor').glob('*'))
+    files += sorted((c.ROOT/'reference_vendor').glob('*'))
+    missing = [str(f) for f in files if not f.is_file()]
+    if missing:
+        raise StudyError('Missing source files: '+', '.join(missing))
+    return files
+
+
+def build():
+    if (c.ROOT/'runs').exists() or (c.ROOT/'registration.json').exists():
+        raise GateError('Build in a fresh source copy; a run/registration already exists.')
+    output = c.ROOT/'build'
+    output.mkdir(exist_ok=True)
+    for name, flags in [('driver', []), ('driver_reference', ['-DREFERENCE_KERNEL'])]:
+        subprocess.run(['g++', '-std=c++17', '-O3', *flags, 'driver.cpp', '-o', str(output/name)],
+                       cwd=c.ROOT, check=True)
+    sources = {str(f.relative_to(c.ROOT)): sha(f) for f in source_files()}
+    write(c.ROOT/'SOURCE_LOCK.json', dict(sources=sources, binaries={name: sha(output/name)
+          for name in ('driver', 'driver_reference')}, protocol_basis=c.PROTOCOL_REVISION,
+          built_at=utcnow(), python=sys.version, platform=platform.platform(),
+          compiler=subprocess.check_output(['g++', '--version'], text=True).splitlines()[0]))
+    print('Compiled both drivers; no numerical fixture or simulation was run.')
+
+
+def check_sources():
+    lock = c.ROOT/'SOURCE_LOCK.json'
+    if not lock.is_file():
+        raise GateError('Run the compile-only build step first.')
+    d = read(lock)
+    for name, expected in d['sources'].items():
+        if sha(c.ROOT/name) != expected:
+            raise GateError('Source changed after build: '+name)
+    for name, expected in d['binaries'].items():
+        if sha(c.ROOT/'build'/name) != expected:
+            raise GateError('Binary changed after build: '+name)
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('command', choices=('plan', 'build', 'check-registration', 'validate', 'design', 'test', 'analyze'))
+    command = parser.parse_args().command
+    try:
+        if command == 'check-registration':
+            require_registration()
+            print('Evidence structure and local hashes are consistent; public evidence still requires human verification.')
+        else:
+            globals()[command]()
+    except GateError as exc:
+        print(str(exc), file=sys.stderr)
+        return 2
+    except StudyError as exc:
+        if command in ('design', 'test'):
+            write(c.ROOT/'runs'/'INCOMPLETE.json', dict(status='INCOMPLETE_NO_INFERENCE', phase=command, error=str(exc), stopped_at=utcnow()))
+        print(str(exc), file=sys.stderr)
+        return 2
+    return 0
+
+
+if __name__ == '__main__':
+    sys.exit(main())
+
+[exit_code=0]
+
+{
+  "number": 11,
+  "argv": [
+    "git",
+    "ls-files",
+    "--error-unmatch",
+    "SOURCE_LOCK.json",
+    "registration.json"
+  ],
+  "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory/unseen_conditions_v1",
+  "started_utc": "2026-10-29T02:40:28.350270+00:00",
+  "duration_seconds": 0.0031149269925663248,
+  "exit_code": 0,
+  "output": "11.log"
+}
+$ git ls-files --error-unmatch SOURCE_LOCK.json registration.json
+SOURCE_LOCK.json
+registration.json
+
+[exit_code=0]
+
+{
+  "number": 12,
+  "argv": [
+    "g++",
+    "--version"
+  ],
+  "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory/unseen_conditions_v1",
+  "started_utc": "2026-10-29T02:40:28.353774+00:00",
+  "duration_seconds": 0.002594880003016442,
+  "exit_code": 0,
+  "output": "12.log"
+}
+$ g++ --version
+g++ (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0
+Copyright (C) 2023 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+[exit_code=0]
+
+{
+  "number": 13,
+  "argv": [
+    "python",
+    "--version"
+  ],
+  "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory/unseen_conditions_v1",
+  "started_utc": "2026-10-29T02:40:28.356822+00:00",
+  "duration_seconds": 0.0028256730001885444,
+  "exit_code": 0,
+  "output": "13.log"
+}
+$ python --version
+Python 3.12.14
+
+[exit_code=0]
+
+{
+  "number": 14,
+  "argv": [
+    "python",
+    "-c",
+    "import numpy; print(numpy.__version__)"
+  ],
+  "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory/unseen_conditions_v1",
+  "started_utc": "2026-10-29T02:40:28.360024+00:00",
+  "duration_seconds": 0.08079749799799174,
+  "exit_code": 0,
+  "output": "14.log"
+}
+$ python -c 'import numpy; print(numpy.__version__)'
+2.3.5
+
+[exit_code=0]
+
+{
+  "number": 15,
+  "argv": [
+    "mkdir",
+    "set_aside"
+  ],
+  "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11",
+  "started_utc": "2026-10-29T02:40:28.441494+00:00",
+  "duration_seconds": 0.003297448987723328,
+  "exit_code": 0,
+  "output": "15.log"
+}
+$ mkdir set_aside
+
+[exit_code=0]
+
+{
+  "number": 16,
+  "argv": [
+    "sha256sum",
+    "SOURCE_LOCK.json",
+    "registration.json"
+  ],
+  "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory/unseen_conditions_v1",
+  "started_utc": "2026-10-29T02:40:28.445268+00:00",
+  "duration_seconds": 0.003929818005417474,
+  "exit_code": 0,
+  "output": "16.log"
+}
+$ sha256sum SOURCE_LOCK.json registration.json
+2575b7aa8a76ca4c72f7d06a1f6c47b7e024ca07530a86ea057b06f76b3f87de  SOURCE_LOCK.json
+aa4914f7b916a5168fc0eadb81a572e9b3c195085c0558835072265823ecab8d  registration.json
+
+[exit_code=0]
+
+{
+  "number": 17,
+  "argv": [
+    "mv",
+    "SOURCE_LOCK.json",
+    "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/set_aside/SOURCE_LOCK.json"
+  ],
+  "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory/unseen_conditions_v1",
+  "started_utc": "2026-10-29T02:40:28.449638+00:00",
+  "duration_seconds": 0.0028078210016246885,
+  "exit_code": 0,
+  "output": "17.log"
+}
+$ mv SOURCE_LOCK.json /workspace/scratch/1ebdaa405a5d/rebuild_pr11/set_aside/SOURCE_LOCK.json
+
+[exit_code=0]
+
+{
+  "number": 18,
+  "argv": [
+    "mv",
+    "registration.json",
+    "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/set_aside/registration.json"
+  ],
+  "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory/unseen_conditions_v1",
+  "started_utc": "2026-10-29T02:40:28.452863+00:00",
+  "duration_seconds": 0.0026434330065967515,
+  "exit_code": 0,
+  "output": "18.log"
+}
+$ mv registration.json /workspace/scratch/1ebdaa405a5d/rebuild_pr11/set_aside/registration.json
+
+[exit_code=0]
+
+{
+  "number": 19,
+  "argv": [
+    "python",
+    "study.py",
+    "build"
+  ],
+  "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory/unseen_conditions_v1",
+  "started_utc": "2026-10-29T02:40:28.455911+00:00",
+  "duration_seconds": 4.590966596006183,
+  "exit_code": 0,
+  "output": "19.log"
+}
+$ python study.py build
+Compiled both drivers; no numerical fixture or simulation was run.
+
+[exit_code=0]
+
+{
+  "number": 20,
+  "argv": [
+    "sha256sum",
+    "SOURCE_LOCK.json",
+    "build/driver",
+    "build/driver_reference"
+  ],
+  "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory/unseen_conditions_v1",
+  "started_utc": "2026-10-29T02:40:33.048720+00:00",
+  "duration_seconds": 0.0032510189921595156,
+  "exit_code": 0,
+  "output": "20.log"
+}
+$ sha256sum SOURCE_LOCK.json build/driver build/driver_reference
+c041e033e4e81ba589d6d02c490823aa5319cb9b66e1524c737e3b4820af705c  SOURCE_LOCK.json
+60f2a7d600ac5d4eb67bfd876c39f7a66dfe6184befbaf221dbb9830e071e4c3  build/driver
+67aff94f68e93d3ec4478b9a1514e1b9e3d56a3476b224291a7d3bf17c7d4a74  build/driver_reference
+
+[exit_code=0]
+
+{
+  "number": 21,
+  "argv": [
+    "sha256sum",
+    "-c",
+    "SOURCE_SHA256.txt"
+  ],
+  "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory/unseen_conditions_v1",
+  "started_utc": "2026-10-29T02:40:33.052535+00:00",
+  "duration_seconds": 0.0034184989926870912,
+  "exit_code": 0,
+  "output": "21.log"
+}
+$ sha256sum -c SOURCE_SHA256.txt
+IMPLEMENTATION_NOTES.md: OK
+LICENSE: OK
+LICENSE-docs.md: OK
+PROTOCOL.md: OK
+README_EN.md: OK
+analysis.py: OK
+config.py: OK
+driver.cpp: OK
+inference.py: OK
+reference_vendor/field.hpp: OK
+reference_vendor/work_budget.hpp: OK
+reference_vendor/work_cell.cpp: OK
+reference_vendor/work_common.cpp: OK
+registration.example.json: OK
+requirements.txt: OK
+scoring.py: OK
+selection_evidence.example.json: OK
+study.py: OK
+test_gates.py: OK
+validation.py: OK
+vendor/field.hpp: OK
+vendor/work_budget.hpp: OK
+vendor/work_cell.cpp: OK
+vendor/work_common.cpp: OK
+
+[exit_code=0]
+
+{
+  "number": 22,
+  "argv": [
+    "git",
+    "status",
+    "--short"
+  ],
+  "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory",
+  "started_utc": "2026-10-29T02:40:33.056621+00:00",
+  "duration_seconds": 0.0051681940094567835,
+  "exit_code": 0,
+  "output": "22.log"
+}
+$ git status --short
+ M unseen_conditions_v1/SOURCE_LOCK.json
+ D unseen_conditions_v1/registration.json
+?? unseen_conditions_v1/cc0xdGW0.s
+
+[exit_code=0]
+
+{
+  "number": 23,
+  "argv": [
+    "stat",
+    "cc0xdGW0.s"
+  ],
+  "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory/unseen_conditions_v1",
+  "started_utc": "2026-10-29T02:40:59.287281+00:00",
+  "duration_seconds": 0.003312752000056207,
+  "exit_code": 0,
+  "output": "23.log"
+}
+$ stat cc0xdGW0.s
+  File: cc0xdGW0.s
+  Size: 221184    	Blocks: 432        IO Block: 4096   regular file
+Device: 0,27	Inode: 1190329     Links: 1
+Access: (0600/-rw-------)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2026-10-28 19:40:32.615568188 -0700
+Modify: 2026-10-28 19:40:30.183572887 -0700
+Change: 2026-10-28 19:40:32.687568048 -0700
+ Birth: 2026-10-28 19:40:32.615568188 -0700
+
+[exit_code=0]
+
+{
+  "number": 24,
+  "argv": [
+    "head",
+    "-n",
+    "8",
+    "cc0xdGW0.s"
+  ],
+  "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory/unseen_conditions_v1",
+  "started_utc": "2026-10-29T02:40:59.291699+00:00",
+  "duration_seconds": 0.0023511230101576075,
+  "exit_code": 0,
+  "output": "24.log"
+}
+$ head -n 8 cc0xdGW0.s
+	.file	"driver.cpp"
+	.text
+#APP
+	.globl _ZSt21ios_base_library_initv
+	.section	.rodata.str1.1,"aMS",@progbits,1
+.LC0:
+	.string	"stoi"
+#NO_APP
+
+[exit_code=0]
+
+{
+  "number": 25,
+  "argv": [
+    "git",
+    "diff",
+    "--stat"
+  ],
+  "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory",
+  "started_utc": "2026-10-29T02:40:59.294611+00:00",
+  "duration_seconds": 0.004609266994521022,
+  "exit_code": 0,
+  "output": "25.log"
+}
+$ git diff --stat
+ unseen_conditions_v1/SOURCE_LOCK.json  |  6 ++---
+ unseen_conditions_v1/registration.json | 40 ----------------------------------
+ 2 files changed, 3 insertions(+), 43 deletions(-)
+
+[exit_code=0]
+
+{
+  "number": 26,
+  "argv": [
+    "git",
+    "ls-files",
+    "*AGENTS.md"
+  ],
+  "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory",
+  "started_utc": "2026-10-29T02:40:59.299799+00:00",
+  "duration_seconds": 0.002619431004859507,
+  "exit_code": 0,
+  "output": "26.log"
+}
+$ git ls-files '*AGENTS.md'
+
+[exit_code=0]
+

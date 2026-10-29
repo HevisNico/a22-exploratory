@@ -60,3 +60,16 @@ correction is described in [`AMENDMENT_1.md`](AMENDMENT_1.md). Recorded before v
 | Amendment merged by | [pull request #8](https://github.com/HevisNico/a22-exploratory/pull/8), merge commit `7bd4cb6446f1829ebcd0b766ade6b2e1f3fcad63` |
 | Rebuild from that commit, no simulation run | `SOURCE_LOCK.json`, SHA-256 `2575b7aa8a76ca4c72f7d06a1f6c47b7e024ca07530a86ea057b06f76b3f87de`; binaries `driver` `60f2a7d6…`, `driver_reference` `67aff94f…`; logs in `build_evidence/amendment1/` |
 | `registration.json` | implementation and lock updated; amendment entry added |
+
+## Amendment 2 (validation criteria)
+
+Validation attempt 2 failed on the static rest-shortcut fixture (bitwise equality, unattainable under
+binary64 roundoff); its record is published unchanged and the correction is described in
+[`AMENDMENT_2.md`](AMENDMENT_2.md). Recorded before validation is retried:
+
+| Item | Value |
+|---|---|
+| Failure record | [pull request #10](https://github.com/HevisNico/a22-exploratory/pull/10); attempt-2 report SHA-256 `face9d14a40195da726ba3bce727f7ecb6a2e59310bf67f9cf98ee366e952f9e` |
+| Amendment merged by | [pull request #11](https://github.com/HevisNico/a22-exploratory/pull/11), merge commit `2c483817dcc751f0ee477db8b84d26de56071b6f` |
+| Rebuild from that commit, no simulation run | `SOURCE_LOCK.json`, SHA-256 `c041e033e4e81ba589d6d02c490823aa5319cb9b66e1524c737e3b4820af705c`; binaries `driver` `60f2a7d6…`, `driver_reference` `67aff94f…` (identical to the previous build: `driver.cpp` unchanged); logs in `build_evidence/amendment2/` |
+| `registration.json` | implementation and lock updated; one amendment entry for each earlier failure (`face9d14…`, `cecb05e6…`), both pointing to the new lock |
