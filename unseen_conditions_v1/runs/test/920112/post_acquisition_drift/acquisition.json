@@ -1,0 +1,78 @@
+{
+  "job_spec": {
+    "group": "test",
+    "device": 920112,
+    "condition": "post_acquisition_drift",
+    "mode": "learn",
+    "purpose": "acquisition",
+    "source_lane": 0,
+    "cut_layer": 0,
+    "cut_lane": 0,
+    "n": 2048,
+    "start": 0.0,
+    "schedule": "train",
+    "stage": 101,
+    "noise_seed": 77152902,
+    "H_file": "H_unity.txt",
+    "label_offset": 0
+  },
+  "binding": {
+    "source_lock_sha256": "c041e033e4e81ba589d6d02c490823aa5319cb9b66e1524c737e3b4820af705c",
+    "registration_sha256": "9cdfab3ec5df209593d5388f29188a2e5556c7c8dcd215245e89e4f0bf7875e1",
+    "physical_sha256": "b03fc84049d56472ff9e4f86e2877b9f3490594e6156c14df359a3e80145d208",
+    "H_sha256": "e76df4edb0468a6c8c843da4bd1c039865f5623ecd62c657d08805625d1be923",
+    "checkpoint_sha256": null
+  },
+  "started_at": "2026-10-29T03:35:11.749691+00:00",
+  "files": {
+    "acquisition.raw.json.gz": "4403ff20a557f1b692dd29231ef356f7b1527c892df5d386d8c96ca0037d7e15",
+    "acquisition.states": "46a36b0b28199e595012993771f93343303e7b4ad341d3f279760b0a0c8911d0"
+  },
+  "seconds": 17.6297994319998,
+  "status": "OK_POINT_NOT_CERTIFIED",
+  "score": {
+    "words": [
+      false,
+      false,
+      true,
+      true,
+      true,
+      false,
+      true,
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "complete_words": 12,
+    "expected_words": 16,
+    "missing_labels": 2124,
+    "duplicate_labels": 0,
+    "ambiguous_events": 0,
+    "outside_labels": 0,
+    "order_violations": 0,
+    "final_events": 22452,
+    "interval_pairs": 22414,
+    "relative_interval_rms": 0.026130971315459384
+  },
+  "work_total": 27363943.09054804,
+  "work_components": [
+    2893855.6429909235,
+    2248662.75,
+    4751039.677511542,
+    8754392.52769522,
+    1786687.7999999844,
+    6253407.299999989,
+    670007.9250000007,
+    4503.662535221486,
+    1385.804815160094
+  ],
+  "resource_lower_bound": 67.78353067284749,
+  "sum_delta_z": 4503.6625352214705,
+  "sum_delta_b": 1385.8048151600935
+}

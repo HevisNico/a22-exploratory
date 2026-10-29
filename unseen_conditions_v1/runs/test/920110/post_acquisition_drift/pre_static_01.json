@@ -1,0 +1,78 @@
+{
+  "job_spec": {
+    "group": "test",
+    "device": 920110,
+    "condition": "post_acquisition_drift",
+    "mode": "static_01",
+    "purpose": "acquisition",
+    "source_lane": 0,
+    "cut_layer": 0,
+    "cut_lane": 0,
+    "n": 2048,
+    "start": 0.0,
+    "schedule": "train",
+    "stage": 101,
+    "noise_seed": 132432873,
+    "H_file": "H_unity.txt",
+    "label_offset": 0
+  },
+  "binding": {
+    "source_lock_sha256": "c041e033e4e81ba589d6d02c490823aa5319cb9b66e1524c737e3b4820af705c",
+    "registration_sha256": "9cdfab3ec5df209593d5388f29188a2e5556c7c8dcd215245e89e4f0bf7875e1",
+    "physical_sha256": "007ad6afbee0a470192945fa46f2915b8f929f829b217b8393dfe53b707a3a40",
+    "H_sha256": "e76df4edb0468a6c8c843da4bd1c039865f5623ecd62c657d08805625d1be923",
+    "checkpoint_sha256": null
+  },
+  "started_at": "2026-10-29T03:33:43.875928+00:00",
+  "files": {
+    "pre_static_01.raw.json.gz": "aa6bb95fb03f4cb6914bae4202b7a79ec8962f65465a560b73e91f3e536e3887",
+    "pre_static_01.states": "06211d2dcde46c66e22eab090dff42fc58e5759d5a2d975253f3e4526cccc4f9"
+  },
+  "seconds": 17.221114495000165,
+  "status": "OK_POINT_NOT_CERTIFIED",
+  "score": {
+    "words": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "complete_words": 16,
+    "expected_words": 16,
+    "missing_labels": 0,
+    "duplicate_labels": 0,
+    "ambiguous_events": 0,
+    "outside_labels": 0,
+    "order_violations": 0,
+    "final_events": 24576,
+    "interval_pairs": 24564,
+    "relative_interval_rms": 0.016832822415302196
+  },
+  "work_total": 26493236.19624262,
+  "work_components": [
+    2949790.5766092106,
+    2357760,
+    2880524.847978106,
+    9175791.171655403,
+    1872691.2000000274,
+    6554419.199999867,
+    702259.200000006,
+    0,
+    0
+  ],
+  "resource_lower_bound": 68.04889606249816,
+  "sum_delta_z": 0,
+  "sum_delta_b": 0
+}
