@@ -1,0 +1,64 @@
+{
+  "job_spec": {
+    "group": "design",
+    "device": 910102,
+    "condition": "post_acquisition_drift",
+    "mode": "static_08",
+    "purpose": "evaluation",
+    "source_lane": 0,
+    "cut_layer": 0,
+    "cut_lane": 0,
+    "n": 256,
+    "start": 16888.0,
+    "schedule": "test",
+    "stage": 201,
+    "noise_seed": 4756372,
+    "H_file": "post_acquisition_drift_H.txt",
+    "label_offset": 0
+  },
+  "binding": {
+    "source_lock_sha256": "c041e033e4e81ba589d6d02c490823aa5319cb9b66e1524c737e3b4820af705c",
+    "registration_sha256": "9cdfab3ec5df209593d5388f29188a2e5556c7c8dcd215245e89e4f0bf7875e1",
+    "physical_sha256": "b21e3e40cb7d9fe24e6019ec8dd2db36701abe3dee415c5fa96ca0491e79446f",
+    "H_sha256": "7dff2148e751f04fb3dae724ca253d88168ef786136045a37b7b9cdd60d29696",
+    "checkpoint_sha256": null
+  },
+  "started_at": "2026-10-29T03:12:26.370324+00:00",
+  "files": {
+    "static_08.raw.json.gz": "5db98362261e82aa4f48cdaa3f5316dfdcf80d658883bb1c7a2b43e231fdb19c",
+    "static_08.states": "ca19b87b1788397e3c25fc98a0ddb79d993fc17fb4061ab676769badb07c1474"
+  },
+  "seconds": 2.2651113709998754,
+  "status": "OK_POINT_NOT_CERTIFIED",
+  "score": {
+    "words": [
+      true,
+      true
+    ],
+    "complete_words": 2,
+    "expected_words": 2,
+    "missing_labels": 0,
+    "duplicate_labels": 0,
+    "ambiguous_events": 0,
+    "outside_labels": 0,
+    "order_violations": 0,
+    "final_events": 3072,
+    "interval_pairs": 3060,
+    "relative_interval_rms": 0.004957981002477436
+  },
+  "work_total": 3737455.752587985,
+  "work_components": [
+    362446.492718961,
+    294720,
+    792144.3331940023,
+    1146973.7266750343,
+    234086.3999999838,
+    819302.4000000047,
+    87782.39999999953,
+    0,
+    0
+  ],
+  "resource_lower_bound": 68.81617147377523,
+  "sum_delta_z": 0,
+  "sum_delta_b": 0
+}
