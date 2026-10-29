@@ -21,11 +21,11 @@
     "evidence_url": "https://github.com/HevisNico/a22-exploratory/rules/26088272"
   },
   "implementation": {
-    "commit_sha": "7bd4cb6446f1829ebcd0b766ade6b2e1f3fcad63",
-    "source_lock_sha256": "2575b7aa8a76ca4c72f7d06a1f6c47b7e024ca07530a86ea057b06f76b3f87de",
-    "evidence_url": "https://github.com/HevisNico/a22-exploratory/pull/8"
+    "commit_sha": "2c483817dcc751f0ee477db8b84d26de56071b6f",
+    "source_lock_sha256": "c041e033e4e81ba589d6d02c490823aa5319cb9b66e1524c737e3b4820af705c",
+    "evidence_url": "https://github.com/HevisNico/a22-exploratory/pull/11"
   },
-  "reviewer_attestation": "Public records checked through the GitHub API on 2026-10-29: PR #3 merged at 2026-10-29T00:54:53Z as merge commit 42cfd311 with PROTOCOL.md SHA-256 6e87280e; tag prereg-unseen-conditions-v1 points to 42cfd311 and is protected by ruleset 26088684 (no deletion, update or force push, no bypass); main is protected by ruleset 26088272 (pull request required, no deletion or force push, no bypass); the repository has no CI, so no status check is required; the implementation was merged by PR #5 as a3578419, and SOURCE_LOCK.json (SHA-256 fbfbf418) was built from that commit with the 24 published source hashes, no simulation run. Checked by Claude for the author, Nicolas Breuillaud. Amendment 1: validation attempt 1 (report SHA-256 cecb05e6) failed on the continuation fixture and was published unchanged by PR #7; the correction was merged by PR #8 as 7bd4cb64 before any new calculation; SOURCE_LOCK.json (SHA-256 2575b7aa) was rebuilt from that commit with the 24 published source hashes, no simulation run.",
+  "reviewer_attestation": "Public records checked through the GitHub API on 2026-10-29: PR #3 merged at 2026-10-29T00:54:53Z as merge commit 42cfd311 with PROTOCOL.md SHA-256 6e87280e; tag prereg-unseen-conditions-v1 points to 42cfd311 and is protected by ruleset 26088684 (no deletion, update or force push, no bypass); main is protected by ruleset 26088272 (pull request required, no deletion or force push, no bypass); the repository has no CI, so no status check is required; the implementation was merged by PR #5 as a3578419, and SOURCE_LOCK.json (SHA-256 fbfbf418) was built from that commit with the 24 published source hashes, no simulation run. Checked by Claude for the author, Nicolas Breuillaud. Amendment 1: validation attempt 1 (report SHA-256 cecb05e6) failed on the continuation fixture and was published unchanged by PR #7; the correction was merged by PR #8 as 7bd4cb64 before any new calculation; SOURCE_LOCK.json (SHA-256 2575b7aa) was rebuilt from that commit with the 24 published source hashes, no simulation run. Amendment 2: validation attempt 2 (report SHA-256 face9d14) failed on the static rest-shortcut fixture and was published unchanged by PR #10; the correction (validation.py only) was merged by PR #11 as 2c483817 before any new registered calculation; SOURCE_LOCK.json (SHA-256 c041e033) was rebuilt from that commit with the 24 published source hashes, binaries identical to the previous build, no simulation run.",
   "external_deposit": null,
   "amendments": [
     {
@@ -35,6 +35,22 @@
       "replacement_source_lock_sha256": "2575b7aa8a76ca4c72f7d06a1f6c47b7e024ca07530a86ea057b06f76b3f87de",
       "public_prospective_record_url": "https://github.com/HevisNico/a22-exploratory/pull/8",
       "scope": "validation fixture for chronological continuation and the trainquiet schedule it uses; no design or test job changed"
+    },
+    {
+      "id": "amendment-2-rest-equivalence-tolerances",
+      "previous_failure_sha256": "face9d14a40195da726ba3bce727f7ecb6a2e59310bf67f9cf98ee366e952f9e",
+      "previous_failure_record_url": "https://github.com/HevisNico/a22-exploratory/pull/10",
+      "replacement_source_lock_sha256": "c041e033e4e81ba589d6d02c490823aa5319cb9b66e1524c737e3b4820af705c",
+      "public_prospective_record_url": "https://github.com/HevisNico/a22-exploratory/pull/11",
+      "scope": "validation criteria only: tolerances for static rest equivalence, non-vacuous continuation and parity checks; no design or test job changed"
+    },
+    {
+      "id": "amendment-2-carries-amendment-1",
+      "previous_failure_sha256": "cecb05e623926408e7771444cbe6617262c44f8195cb337a5ca65d2ee3fdcbbd",
+      "previous_failure_record_url": "https://github.com/HevisNico/a22-exploratory/pull/7",
+      "replacement_source_lock_sha256": "c041e033e4e81ba589d6d02c490823aa5319cb9b66e1524c737e3b4820af705c",
+      "public_prospective_record_url": "https://github.com/HevisNico/a22-exploratory/pull/11",
+      "scope": "the amendment-1 correction is retained unchanged in the amendment-2 source lock"
     }
   ]
 }
