@@ -1,0 +1,15 @@
+[
+  {
+    "number": 1,
+    "argv": [
+      "bash",
+      "-c",
+      "ps -ef | grep -v grep | grep study.py"
+    ],
+    "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory",
+    "started_utc": "2026-10-29T03:05:02.687640+00:00",
+    "duration_seconds": 0.0065696730016497895,
+    "exit_code": 1,
+    "output": "01.log"
+  }
+]

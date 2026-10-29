@@ -28,9 +28,19 @@ and nothing in `runs/` existed before the refusal.
 The refusal is an environment fault, not a study outcome, and the 12-hour clock never started.
 Before the single design call is repeated:
 
-1. confirm that no `study.py` process is running;
+1. confirm that no `study.py` process is running (see the addendum below for how);
 2. move `RUNNING.lock` and `runs/` (containing only `INCOMPLETE.json`) out of the repository,
    unchanged, after checking the two hashes above;
 3. check every lock, binary and validation hash again, then run `python study.py design` once.
 
 If the lock or anything else unexpected reappears, stop again; no automatic retry.
+
+## Addendum — process check
+
+A first resumption stopped at step 1 before touching anything (`resume_stopped_process_check/`):
+the execution sandbox has no `/proc`, so `ps` cannot list processes (`Error, do this: mount -t proc
+proc /proc`). Nothing was mounted. Step 1 is replaced by checks that do not need a process table:
+the attempt-3 orchestrator recorded the validation process as exited (code 0 after 11.2 s,
+`EXECUTION_RESULT.json`), its report records `completed_at` 02:52:30.80, and nothing under
+`validation/` or `runs/` may have changed since then (every validation file hash listed in the
+report and the two hashes above are checked again). Steps 2 and 3 are unchanged.
