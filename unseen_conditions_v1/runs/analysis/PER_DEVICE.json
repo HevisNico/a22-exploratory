@@ -1,0 +1,578 @@
+[
+  {
+    "device": 920100,
+    "mean_success": {
+      "active": 1.0,
+      "frozen": 1.0,
+      "robust_static": 1.0,
+      "oracle_static": 1.0
+    },
+    "primary_difference": 0.0,
+    "refusal_lower_difference": 0.0,
+    "refusal_upper_difference": 0.0,
+    "summed_work_over_four_scenarios": {
+      "active": 135089405.78665292,
+      "frozen": 135118341.67182052,
+      "robust_static": 52986897.64421677,
+      "oracle_static": 52986897.64421677
+    }
+  },
+  {
+    "device": 920101,
+    "mean_success": {
+      "active": 0.875,
+      "frozen": 0.8125,
+      "robust_static": 1.0,
+      "oracle_static": 1.0
+    },
+    "primary_difference": -0.125,
+    "refusal_lower_difference": -0.125,
+    "refusal_upper_difference": -0.125,
+    "summed_work_over_four_scenarios": {
+      "active": 137561465.50025654,
+      "frozen": 137633019.92822897,
+      "robust_static": 52987068.63576394,
+      "oracle_static": 52987068.63576394
+    }
+  },
+  {
+    "device": 920102,
+    "mean_success": {
+      "active": 1.0,
+      "frozen": 1.0,
+      "robust_static": 1.0,
+      "oracle_static": 1.0
+    },
+    "primary_difference": 0.0,
+    "refusal_lower_difference": 0.0,
+    "refusal_upper_difference": 0.0,
+    "summed_work_over_four_scenarios": {
+      "active": 137122041.6759786,
+      "frozen": 137168882.14316925,
+      "robust_static": 52986587.143114015,
+      "oracle_static": 52986587.143114015
+    }
+  },
+  {
+    "device": 920103,
+    "mean_success": {
+      "active": 1.0,
+      "frozen": 1.0,
+      "robust_static": 1.0,
+      "oracle_static": 1.0
+    },
+    "primary_difference": 0.0,
+    "refusal_lower_difference": 0.0,
+    "refusal_upper_difference": 0.0,
+    "summed_work_over_four_scenarios": {
+      "active": 136990632.18431902,
+      "frozen": 137077629.67434084,
+      "robust_static": 52986752.690213226,
+      "oracle_static": 52986752.690213226
+    }
+  },
+  {
+    "device": 920104,
+    "mean_success": {
+      "active": 0.9375,
+      "frozen": 0.75,
+      "robust_static": 1.0,
+      "oracle_static": 1.0
+    },
+    "primary_difference": -0.0625,
+    "refusal_lower_difference": -0.0625,
+    "refusal_upper_difference": -0.0625,
+    "summed_work_over_four_scenarios": {
+      "active": 136947714.5976254,
+      "frozen": 136971763.6121971,
+      "robust_static": 52986857.39647638,
+      "oracle_static": 52986857.39647638
+    }
+  },
+  {
+    "device": 920105,
+    "mean_success": {
+      "active": 1.0,
+      "frozen": 0.9375,
+      "robust_static": 1.0,
+      "oracle_static": 1.0
+    },
+    "primary_difference": 0.0,
+    "refusal_lower_difference": 0.0,
+    "refusal_upper_difference": 0.0,
+    "summed_work_over_four_scenarios": {
+      "active": 136401752.20592576,
+      "frozen": 136438738.85895723,
+      "robust_static": 52986980.36064789,
+      "oracle_static": 52986980.36064789
+    }
+  },
+  {
+    "device": 920106,
+    "mean_success": {
+      "active": 0.875,
+      "frozen": 0.875,
+      "robust_static": 1.0,
+      "oracle_static": 1.0
+    },
+    "primary_difference": -0.125,
+    "refusal_lower_difference": -0.125,
+    "refusal_upper_difference": -0.125,
+    "summed_work_over_four_scenarios": {
+      "active": 136110523.0549052,
+      "frozen": 136129687.45012662,
+      "robust_static": 52986737.04478955,
+      "oracle_static": 52986737.04478955
+    }
+  },
+  {
+    "device": 920107,
+    "mean_success": {
+      "active": 1.0,
+      "frozen": 1.0,
+      "robust_static": 1.0,
+      "oracle_static": 1.0
+    },
+    "primary_difference": 0.0,
+    "refusal_lower_difference": 0.0,
+    "refusal_upper_difference": 0.0,
+    "summed_work_over_four_scenarios": {
+      "active": 136068241.69428682,
+      "frozen": 136099645.7077271,
+      "robust_static": 52986680.87959149,
+      "oracle_static": 52986680.87959149
+    }
+  },
+  {
+    "device": 920108,
+    "mean_success": {
+      "active": 0.875,
+      "frozen": 0.6875,
+      "robust_static": 1.0,
+      "oracle_static": 1.0
+    },
+    "primary_difference": -0.125,
+    "refusal_lower_difference": -0.125,
+    "refusal_upper_difference": -0.125,
+    "summed_work_over_four_scenarios": {
+      "active": 135600137.77054384,
+      "frozen": 135692457.8583278,
+      "robust_static": 52986761.00508345,
+      "oracle_static": 52986761.00508345
+    }
+  },
+  {
+    "device": 920109,
+    "mean_success": {
+      "active": 1.0,
+      "frozen": 1.0,
+      "robust_static": 1.0,
+      "oracle_static": 1.0
+    },
+    "primary_difference": 0.0,
+    "refusal_lower_difference": 0.0,
+    "refusal_upper_difference": 0.0,
+    "summed_work_over_four_scenarios": {
+      "active": 137254551.64201844,
+      "frozen": 137301621.01438928,
+      "robust_static": 52986832.847737275,
+      "oracle_static": 52986832.847737275
+    }
+  },
+  {
+    "device": 920110,
+    "mean_success": {
+      "active": 0.875,
+      "frozen": 0.875,
+      "robust_static": 1.0,
+      "oracle_static": 1.0
+    },
+    "primary_difference": -0.125,
+    "refusal_lower_difference": -0.125,
+    "refusal_upper_difference": -0.125,
+    "summed_work_over_four_scenarios": {
+      "active": 136911284.50332114,
+      "frozen": 136976576.9992114,
+      "robust_static": 52987473.97232194,
+      "oracle_static": 52987473.97232194
+    }
+  },
+  {
+    "device": 920111,
+    "mean_success": {
+      "active": 0.75,
+      "frozen": 0.8125,
+      "robust_static": 1.0,
+      "oracle_static": 1.0
+    },
+    "primary_difference": -0.25,
+    "refusal_lower_difference": -0.25,
+    "refusal_upper_difference": -0.25,
+    "summed_work_over_four_scenarios": {
+      "active": 135998855.45671895,
+      "frozen": 136053533.2179935,
+      "robust_static": 52986883.30417308,
+      "oracle_static": 52986883.30417308
+    }
+  },
+  {
+    "device": 920112,
+    "mean_success": {
+      "active": 0.9375,
+      "frozen": 0.9375,
+      "robust_static": 1.0,
+      "oracle_static": 1.0
+    },
+    "primary_difference": -0.0625,
+    "refusal_lower_difference": -0.0625,
+    "refusal_upper_difference": -0.0625,
+    "summed_work_over_four_scenarios": {
+      "active": 137778182.37956518,
+      "frozen": 137923908.12584788,
+      "robust_static": 52986834.249034174,
+      "oracle_static": 52986834.249034174
+    }
+  },
+  {
+    "device": 920113,
+    "mean_success": {
+      "active": 1.0,
+      "frozen": 1.0,
+      "robust_static": 1.0,
+      "oracle_static": 1.0
+    },
+    "primary_difference": 0.0,
+    "refusal_lower_difference": 0.0,
+    "refusal_upper_difference": 0.0,
+    "summed_work_over_four_scenarios": {
+      "active": 137364000.55547482,
+      "frozen": 137417930.2417579,
+      "robust_static": 52986886.24350471,
+      "oracle_static": 52986886.24350471
+    }
+  },
+  {
+    "device": 920114,
+    "mean_success": {
+      "active": 0.9375,
+      "frozen": 0.875,
+      "robust_static": 1.0,
+      "oracle_static": 1.0
+    },
+    "primary_difference": -0.0625,
+    "refusal_lower_difference": -0.0625,
+    "refusal_upper_difference": -0.0625,
+    "summed_work_over_four_scenarios": {
+      "active": 137989770.67301956,
+      "frozen": 138080985.00601727,
+      "robust_static": 52986605.64059425,
+      "oracle_static": 52986605.64059425
+    }
+  },
+  {
+    "device": 920115,
+    "mean_success": {
+      "active": 1.0,
+      "frozen": 0.9375,
+      "robust_static": 1.0,
+      "oracle_static": 1.0
+    },
+    "primary_difference": 0.0,
+    "refusal_lower_difference": 0.0,
+    "refusal_upper_difference": 0.0,
+    "summed_work_over_four_scenarios": {
+      "active": 136213452.39104676,
+      "frozen": 136260029.40763843,
+      "robust_static": 52986695.99092467,
+      "oracle_static": 52986695.99092467
+    }
+  },
+  {
+    "device": 920116,
+    "mean_success": {
+      "active": 0.9375,
+      "frozen": 0.875,
+      "robust_static": 1.0,
+      "oracle_static": 1.0
+    },
+    "primary_difference": -0.0625,
+    "refusal_lower_difference": -0.0625,
+    "refusal_upper_difference": -0.0625,
+    "summed_work_over_four_scenarios": {
+      "active": 135665044.95343685,
+      "frozen": 135704196.51402107,
+      "robust_static": 52986700.74807112,
+      "oracle_static": 52986700.74807112
+    }
+  },
+  {
+    "device": 920117,
+    "mean_success": {
+      "active": 0.9375,
+      "frozen": 0.8125,
+      "robust_static": 1.0,
+      "oracle_static": 1.0
+    },
+    "primary_difference": -0.0625,
+    "refusal_lower_difference": -0.0625,
+    "refusal_upper_difference": -0.0625,
+    "summed_work_over_four_scenarios": {
+      "active": 136186975.7782628,
+      "frozen": 136254417.66849226,
+      "robust_static": 52987279.55980004,
+      "oracle_static": 52987279.55980004
+    }
+  },
+  {
+    "device": 920118,
+    "mean_success": {
+      "active": 1.0,
+      "frozen": 1.0,
+      "robust_static": 1.0,
+      "oracle_static": 1.0
+    },
+    "primary_difference": 0.0,
+    "refusal_lower_difference": 0.0,
+    "refusal_upper_difference": 0.0,
+    "summed_work_over_four_scenarios": {
+      "active": 136682783.09186065,
+      "frozen": 136729262.27019727,
+      "robust_static": 52986765.061108045,
+      "oracle_static": 52986765.061108045
+    }
+  },
+  {
+    "device": 920119,
+    "mean_success": {
+      "active": 1.0,
+      "frozen": 1.0,
+      "robust_static": 1.0,
+      "oracle_static": 1.0
+    },
+    "primary_difference": 0.0,
+    "refusal_lower_difference": 0.0,
+    "refusal_upper_difference": 0.0,
+    "summed_work_over_four_scenarios": {
+      "active": 136079839.99727112,
+      "frozen": 136152376.1052912,
+      "robust_static": 52986703.25947625,
+      "oracle_static": 52986703.25947625
+    }
+  },
+  {
+    "device": 920120,
+    "mean_success": {
+      "active": 0.9375,
+      "frozen": 0.9375,
+      "robust_static": 1.0,
+      "oracle_static": 1.0
+    },
+    "primary_difference": -0.0625,
+    "refusal_lower_difference": -0.0625,
+    "refusal_upper_difference": -0.0625,
+    "summed_work_over_four_scenarios": {
+      "active": 135857645.84995928,
+      "frozen": 135907476.17989254,
+      "robust_static": 52986636.52844844,
+      "oracle_static": 52986636.52844844
+    }
+  },
+  {
+    "device": 920121,
+    "mean_success": {
+      "active": 0.875,
+      "frozen": 0.875,
+      "robust_static": 1.0,
+      "oracle_static": 1.0
+    },
+    "primary_difference": -0.125,
+    "refusal_lower_difference": -0.125,
+    "refusal_upper_difference": -0.125,
+    "summed_work_over_four_scenarios": {
+      "active": 137901351.2292181,
+      "frozen": 137970869.82059872,
+      "robust_static": 52986179.366692364,
+      "oracle_static": 52986179.366692364
+    }
+  },
+  {
+    "device": 920122,
+    "mean_success": {
+      "active": 1.0,
+      "frozen": 1.0,
+      "robust_static": 1.0,
+      "oracle_static": 1.0
+    },
+    "primary_difference": 0.0,
+    "refusal_lower_difference": 0.0,
+    "refusal_upper_difference": 0.0,
+    "summed_work_over_four_scenarios": {
+      "active": 136742914.51126358,
+      "frozen": 136793285.16782367,
+      "robust_static": 52986768.931853876,
+      "oracle_static": 52986768.931853876
+    }
+  },
+  {
+    "device": 920123,
+    "mean_success": {
+      "active": 1.0,
+      "frozen": 1.0,
+      "robust_static": 1.0,
+      "oracle_static": 1.0
+    },
+    "primary_difference": 0.0,
+    "refusal_lower_difference": 0.0,
+    "refusal_upper_difference": 0.0,
+    "summed_work_over_four_scenarios": {
+      "active": 135803353.9406371,
+      "frozen": 135859759.27097574,
+      "robust_static": 52986581.52465428,
+      "oracle_static": 52986581.52465428
+    }
+  },
+  {
+    "device": 920124,
+    "mean_success": {
+      "active": 1.0,
+      "frozen": 1.0,
+      "robust_static": 1.0,
+      "oracle_static": 1.0
+    },
+    "primary_difference": 0.0,
+    "refusal_lower_difference": 0.0,
+    "refusal_upper_difference": 0.0,
+    "summed_work_over_four_scenarios": {
+      "active": 137396704.20844933,
+      "frozen": 137451330.89488783,
+      "robust_static": 52986746.69520609,
+      "oracle_static": 52986746.69520609
+    }
+  },
+  {
+    "device": 920125,
+    "mean_success": {
+      "active": 1.0,
+      "frozen": 0.875,
+      "robust_static": 1.0,
+      "oracle_static": 1.0
+    },
+    "primary_difference": 0.0,
+    "refusal_lower_difference": 0.0,
+    "refusal_upper_difference": 0.0,
+    "summed_work_over_four_scenarios": {
+      "active": 136512964.09803158,
+      "frozen": 136565260.58422434,
+      "robust_static": 52986599.385823324,
+      "oracle_static": 52986599.385823324
+    }
+  },
+  {
+    "device": 920126,
+    "mean_success": {
+      "active": 1.0,
+      "frozen": 1.0,
+      "robust_static": 1.0,
+      "oracle_static": 1.0
+    },
+    "primary_difference": 0.0,
+    "refusal_lower_difference": 0.0,
+    "refusal_upper_difference": 0.0,
+    "summed_work_over_four_scenarios": {
+      "active": 136125052.8136055,
+      "frozen": 136159509.78122762,
+      "robust_static": 52986907.48510717,
+      "oracle_static": 52986907.48510717
+    }
+  },
+  {
+    "device": 920127,
+    "mean_success": {
+      "active": 0.875,
+      "frozen": 0.6875,
+      "robust_static": 1.0,
+      "oracle_static": 1.0
+    },
+    "primary_difference": -0.125,
+    "refusal_lower_difference": -0.125,
+    "refusal_upper_difference": -0.125,
+    "summed_work_over_four_scenarios": {
+      "active": 137584727.10304832,
+      "frozen": 137704516.46129662,
+      "robust_static": 52987006.80496518,
+      "oracle_static": 52987006.80496518
+    }
+  },
+  {
+    "device": 920128,
+    "mean_success": {
+      "active": 1.0,
+      "frozen": 1.0,
+      "robust_static": 1.0,
+      "oracle_static": 1.0
+    },
+    "primary_difference": 0.0,
+    "refusal_lower_difference": 0.0,
+    "refusal_upper_difference": 0.0,
+    "summed_work_over_four_scenarios": {
+      "active": 135915012.5200277,
+      "frozen": 135969143.65819556,
+      "robust_static": 52986374.24535033,
+      "oracle_static": 52986374.24535033
+    }
+  },
+  {
+    "device": 920129,
+    "mean_success": {
+      "active": 1.0,
+      "frozen": 1.0,
+      "robust_static": 1.0,
+      "oracle_static": 1.0
+    },
+    "primary_difference": 0.0,
+    "refusal_lower_difference": 0.0,
+    "refusal_upper_difference": 0.0,
+    "summed_work_over_four_scenarios": {
+      "active": 135708956.08394328,
+      "frozen": 135748489.78179622,
+      "robust_static": 52986801.587794736,
+      "oracle_static": 52986801.587794736
+    }
+  },
+  {
+    "device": 920130,
+    "mean_success": {
+      "active": 0.9375,
+      "frozen": 0.9375,
+      "robust_static": 1.0,
+      "oracle_static": 1.0
+    },
+    "primary_difference": -0.0625,
+    "refusal_lower_difference": -0.0625,
+    "refusal_upper_difference": -0.0625,
+    "summed_work_over_four_scenarios": {
+      "active": 136754067.55789518,
+      "frozen": 136816988.34190595,
+      "robust_static": 52986488.84194598,
+      "oracle_static": 52986488.84194598
+    }
+  },
+  {
+    "device": 920131,
+    "mean_success": {
+      "active": 0.9375,
+      "frozen": 0.875,
+      "robust_static": 1.0,
+      "oracle_static": 1.0
+    },
+    "primary_difference": -0.0625,
+    "refusal_lower_difference": -0.0625,
+    "refusal_upper_difference": -0.0625,
+    "summed_work_over_four_scenarios": {
+      "active": 137190543.3209569,
+      "frozen": 137236773.5479769,
+      "robust_static": 52986843.863296814,
+      "oracle_static": 52986843.863296814
+    }
+  }
+]
