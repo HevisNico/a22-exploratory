@@ -1,0 +1,31 @@
+{
+  "protocol": {
+    "commit_sha": null,
+    "sha256": null,
+    "pull_request_url": null,
+    "merge_event_evidence_url": null,
+    "server_merged_at": null
+  },
+  "tag": {
+    "name": "prereg-unseen-conditions-v1",
+    "target_commit_sha": null,
+    "protected": false,
+    "protection_evidence_url": null
+  },
+  "main": {
+    "reviewed_pr_required": false,
+    "force_pushes_blocked": false,
+    "deletions_blocked": false,
+    "required_checks_verified": false,
+    "bypass_permissions": [],
+    "evidence_url": null
+  },
+  "implementation": {
+    "commit_sha": null,
+    "source_lock_sha256": null,
+    "evidence_url": null
+  },
+  "reviewer_attestation": null,
+  "external_deposit": null,
+  "amendments": []
+}
