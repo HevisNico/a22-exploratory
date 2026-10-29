@@ -1,0 +1,6 @@
+$ git status --short
+NOTE: executed after validate was already launched, following the additional user instruction.
+?? unseen_conditions_v1/validation/
+
+exit_status=0
+elapsed_seconds=0.004962762

@@ -1,0 +1,8 @@
+{
+  "logs_outside_repo": true,
+  "git_status_output": "?? unseen_conditions_v1/validation/\n",
+  "tracked_files_unchanged": true,
+  "performed_after_validate_launch": true,
+  "reason": "Additional git status requirement arrived after validate was already launched.",
+  "validate_restarted": false
+}

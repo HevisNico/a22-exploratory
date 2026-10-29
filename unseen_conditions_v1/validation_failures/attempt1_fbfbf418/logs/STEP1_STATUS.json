@@ -1,0 +1,82 @@
+{
+  "records": [
+    {
+      "command": [
+        "mv",
+        "SOURCE_LOCK.json",
+        "/tmp/SOURCE_LOCK.local.json"
+      ],
+      "working_directory": "/workspace/scratch/1ebdaa405a5d/build_only_a3578419/a22-exploratory/unseen_conditions_v1",
+      "log": "01b_move_local_lock.log",
+      "exit_status": 1,
+      "elapsed_seconds": 0.0024436209932900965
+    },
+    {
+      "command": [
+        "mv",
+        "SOURCE_LOCK.json",
+        "/workspace/scratch/1ebdaa405a5d/build_only_a3578419/validate_request_logs/SOURCE_LOCK.local.json"
+      ],
+      "working_directory": "/workspace/scratch/1ebdaa405a5d/build_only_a3578419/a22-exploratory/unseen_conditions_v1",
+      "log": "01b2_move_local_lock_fallback.log",
+      "exit_status": 0,
+      "elapsed_seconds": 0.004079759994056076
+    },
+    {
+      "command": [
+        "git",
+        "pull",
+        "origin",
+        "main"
+      ],
+      "working_directory": "/workspace/scratch/1ebdaa405a5d/build_only_a3578419/a22-exploratory",
+      "log": "01c_git_pull.log",
+      "exit_status": 0,
+      "elapsed_seconds": 4.749849907995667
+    },
+    {
+      "command": [
+        "git",
+        "log",
+        "-1",
+        "--oneline"
+      ],
+      "working_directory": "/workspace/scratch/1ebdaa405a5d/build_only_a3578419/a22-exploratory/unseen_conditions_v1",
+      "log": "01d_git_log.log",
+      "exit_status": 0,
+      "elapsed_seconds": 0.0030813470075372607
+    },
+    {
+      "command": [
+        "sha256sum",
+        "SOURCE_LOCK.json"
+      ],
+      "working_directory": "/workspace/scratch/1ebdaa405a5d/build_only_a3578419/a22-exploratory/unseen_conditions_v1",
+      "log": "01e_pulled_source_lock.log",
+      "exit_status": 0,
+      "elapsed_seconds": 0.002707414998440072
+    },
+    {
+      "command": [
+        "sha256sum",
+        "build/driver",
+        "build/driver_reference"
+      ],
+      "working_directory": "/workspace/scratch/1ebdaa405a5d/build_only_a3578419/a22-exploratory/unseen_conditions_v1",
+      "log": "01f_binary_sha256.log",
+      "exit_status": 0,
+      "elapsed_seconds": 0.003060921997530386
+    }
+  ],
+  "expected_binary_sha256": {
+    "driver": "0c2009bf71a36f57cb14415050ab2dae61542d4bf9f6a77a98dc84216aa5b074",
+    "driver_reference": "e57efa8fda833c9651525b3b63437f554e9ba143b3dc641ae9b09aa8ebd2ea9c"
+  },
+  "status": "PASS_ALL_REQUESTED_HASHES_MATCH",
+  "local_lock_backup": "/workspace/scratch/1ebdaa405a5d/build_only_a3578419/validate_request_logs/SOURCE_LOCK.local.json",
+  "environment_deviation": "/tmp absent; failed move retained; lock set aside outside repo in the same sandbox instead.",
+  "actual_binary_sha256": {
+    "driver": "0c2009bf71a36f57cb14415050ab2dae61542d4bf9f6a77a98dc84216aa5b074",
+    "driver_reference": "e57efa8fda833c9651525b3b63437f554e9ba143b3dc641ae9b09aa8ebd2ea9c"
+  }
+}

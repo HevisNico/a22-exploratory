@@ -1,0 +1,5 @@
+$ sha256sum SOURCE_LOCK.json
+fbfbf4183737bb82a4277b7cdbb260f5b8ccc4caaf182c46e366e2bf9b7e80bf  SOURCE_LOCK.json
+
+exit_status=0
+elapsed_seconds=0.003059536

@@ -1,0 +1,6 @@
+$ git log -1 --oneline
+working_directory=/workspace/scratch/1ebdaa405a5d/build_only_a3578419/a22-exploratory/unseen_conditions_v1
+bc9c231 Merge pull request #6 from HevisNico/registration-implementation
+
+exit_status=0
+elapsed_seconds=0.003081347

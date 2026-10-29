@@ -1,0 +1,22 @@
+{
+  "status": "VALIDATE_FAILED_STOPPED_NO_CORRECTION_NO_RETRY",
+  "same_sandbox": "/workspace/scratch/1ebdaa405a5d/build_only_a3578419/a22-exploratory",
+  "all_requested_hashes_match": true,
+  "build_preserved": true,
+  "tracked_files_unchanged": true,
+  "logs_outside_repository": true,
+  "check_registration_seconds": 0.06594557099742815,
+  "validate_seconds": 1.1465914939908544,
+  "failure": "Execution fault retained in /workspace/scratch/1ebdaa405a5d/build_only_a3578419/a22-exploratory/unseen_conditions_v1/validation/fbfbf4183737bb82a4277b7cdbb260f5b8ccc4caaf182c46e366e2bf9b7e80bf/suffix_64.json: layer=45 lane=1 nonchronological continuation\n",
+  "validation_report": "validation/fbfbf4183737bb82a4277b7cdbb260f5b8ccc4caaf182c46e366e2bf9b7e80bf/VALIDATION.json",
+  "runs_directory_exists": false,
+  "design_launched": false,
+  "held_out_test_launched": false,
+  "analysis_launched": false,
+  "validation_attempts": 1,
+  "deviations": [
+    "/tmp absent; failed move retained; lock set aside outside repo in the same sandbox instead.",
+    "The additional git status instruction arrived after validate was launched; this timing is recorded explicitly."
+  ],
+  "timed_commands": 0.00305953600036446
+}

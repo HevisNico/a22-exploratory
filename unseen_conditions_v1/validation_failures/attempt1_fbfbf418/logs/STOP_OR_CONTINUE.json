@@ -1,0 +1,12 @@
+{
+  "command": [
+    "sha256sum",
+    "SOURCE_LOCK.json"
+  ],
+  "elapsed_seconds": 0.00305953600036446,
+  "exit_status": 0,
+  "expected_sha256": "fbfbf4183737bb82a4277b7cdbb260f5b8ccc4caaf182c46e366e2bf9b7e80bf",
+  "actual_sha256": "fbfbf4183737bb82a4277b7cdbb260f5b8ccc4caaf182c46e366e2bf9b7e80bf",
+  "match": true,
+  "study_path": "/workspace/scratch/1ebdaa405a5d/build_only_a3578419/a22-exploratory/unseen_conditions_v1"
+}
