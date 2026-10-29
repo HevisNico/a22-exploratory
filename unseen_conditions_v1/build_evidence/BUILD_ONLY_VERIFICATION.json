@@ -1,0 +1,56 @@
+{
+  "status": "BUILD_ONLY_COMPLETE",
+  "commit": "a357841900516968745bc5ec77aa234c1b16a529",
+  "repository_source_url": "https://github.com/HevisNico/a22-exploratory",
+  "sandbox_path": "/workspace/scratch/1ebdaa405a5d/build_only_a3578419/a22-exploratory",
+  "study_path": "/workspace/scratch/1ebdaa405a5d/build_only_a3578419/a22-exploratory/unseen_conditions_v1",
+  "source_manifest_files_ok": 24,
+  "tracked_repository_files_unchanged": true,
+  "source_lock_sha256": "fbfbf4183737bb82a4277b7cdbb260f5b8ccc4caaf182c46e366e2bf9b7e80bf",
+  "binaries_sha256": {
+    "driver": "0c2009bf71a36f57cb14415050ab2dae61542d4bf9f6a77a98dc84216aa5b074",
+    "driver_reference": "e57efa8fda833c9651525b3b63437f554e9ba143b3dc641ae9b09aa8ebd2ea9c"
+  },
+  "scientific_simulations_run": false,
+  "study_registration_json_created": false,
+  "scientific_data_directories_created": false,
+  "commands_executed": [
+    {
+      "command": [
+        "python",
+        "study.py",
+        "build"
+      ],
+      "log": "04a_build.log",
+      "exit_status": 0,
+      "elapsed_seconds": 4.187423379989923
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "test_gates.py"
+      ],
+      "log": "04b_test_gates.log",
+      "exit_status": 0,
+      "elapsed_seconds": 0.11314824600412976
+    },
+    {
+      "command": [
+        "python",
+        "study.py",
+        "plan"
+      ],
+      "log": "04c_plan.log",
+      "exit_status": 0,
+      "elapsed_seconds": 0.05439991899766028
+    }
+  ],
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "python_executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "numpy": "2.3.5",
+    "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n"
+  }
+}
