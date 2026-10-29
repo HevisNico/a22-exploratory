@@ -1,0 +1,31 @@
+{
+  "protocol": {
+    "commit_sha": "42cfd3111bc79f38d722a27f635d40d1167658a9",
+    "sha256": "6e87280e8ceef910f2d38c09ee599f900fd0a8a2db65594a4945a720415db867",
+    "pull_request_url": "https://github.com/HevisNico/a22-exploratory/pull/3",
+    "merge_event_evidence_url": "https://github.com/HevisNico/a22-exploratory/pull/3",
+    "server_merged_at": "2026-10-29T00:54:53Z"
+  },
+  "tag": {
+    "name": "prereg-unseen-conditions-v1",
+    "target_commit_sha": "42cfd3111bc79f38d722a27f635d40d1167658a9",
+    "protected": true,
+    "protection_evidence_url": "https://github.com/HevisNico/a22-exploratory/rules/26088684"
+  },
+  "main": {
+    "reviewed_pr_required": true,
+    "force_pushes_blocked": true,
+    "deletions_blocked": true,
+    "required_checks_verified": true,
+    "bypass_permissions": [],
+    "evidence_url": "https://github.com/HevisNico/a22-exploratory/rules/26088272"
+  },
+  "implementation": {
+    "commit_sha": "a357841900516968745bc5ec77aa234c1b16a529",
+    "source_lock_sha256": "fbfbf4183737bb82a4277b7cdbb260f5b8ccc4caaf182c46e366e2bf9b7e80bf",
+    "evidence_url": "https://github.com/HevisNico/a22-exploratory/pull/5"
+  },
+  "reviewer_attestation": "Public records checked through the GitHub API on 2026-10-29: PR #3 merged at 2026-10-29T00:54:53Z as merge commit 42cfd311 with PROTOCOL.md SHA-256 6e87280e; tag prereg-unseen-conditions-v1 points to 42cfd311 and is protected by ruleset 26088684 (no deletion, update or force push, no bypass); main is protected by ruleset 26088272 (pull request required, no deletion or force push, no bypass); the repository has no CI, so no status check is required; the implementation was merged by PR #5 as a3578419, and SOURCE_LOCK.json (SHA-256 fbfbf418) was built from that commit with the 24 published source hashes, no simulation run. Checked by Claude for the author, Nicolas Breuillaud.",
+  "external_deposit": null,
+  "amendments": []
+}

@@ -37,14 +37,14 @@ slightly below 4 on some ports. Learned gains are bounded by the same cap, and H
 control gain in every arm. The protocol text does not state this initialization; it is recorded
 here, with no numerical result available, as part of the implementation to be registered.
 
-## Remaining gate before any calculation
+## Implementation
 
-Item 4 of the launch gate: the implementation sources and their SHA-256 hashes
-(`SOURCE_SHA256.txt`) are published in this folder by pull request. Still required before any
-numerical validation, candidate evaluation or study simulation:
+| Item | Value |
+|---|---|
+| Implementation merged by | [pull request #5](https://github.com/HevisNico/a22-exploratory/pull/5), merge commit `a357841900516968745bc5ec77aa234c1b16a529` |
+| Source hashes | `SOURCE_SHA256.txt` (24 files) |
+| Build, from that commit, no simulation run | `SOURCE_LOCK.json`, SHA-256 `fbfbf4183737bb82a4277b7cdbb260f5b8ccc4caaf182c46e366e2bf9b7e80bf`; binaries `driver` `0c2009bf…`, `driver_reference` `e57efa8f…`; g++ 13.3.0, Python 3.12.14, NumPy 2.3.5; logs in `build_evidence/` |
+| Registration evidence read by the launcher | `registration.json` |
 
-1. the merge commit of that pull request, recorded here;
-2. the `SOURCE_LOCK.json` produced by `python study.py build` on the machine that will run the
-   study (it adds the compiled binaries and the compiler), published here by pull request, with its
-   SHA-256, since `registration.json` must cite it;
-3. `registration.json` filled from these public records.
+The launch gate is complete once this record is merged. Validation, design and test follow the
+protocol's order; the design selection must be committed before any held-out device is generated.

@@ -1,0 +1,68 @@
+$ sha256sum -c SOURCE_SHA256.txt
+IMPLEMENTATION_NOTES.md: OK
+LICENSE: OK
+LICENSE-docs.md: OK
+PROTOCOL.md: OK
+README_EN.md: OK
+analysis.py: OK
+config.py: OK
+driver.cpp: OK
+inference.py: OK
+reference_vendor/field.hpp: OK
+reference_vendor/work_budget.hpp: OK
+reference_vendor/work_cell.cpp: OK
+reference_vendor/work_common.cpp: OK
+registration.example.json: OK
+requirements.txt: OK
+scoring.py: OK
+selection_evidence.example.json: OK
+study.py: OK
+test_gates.py: OK
+validation.py: OK
+vendor/field.hpp: OK
+vendor/work_budget.hpp: OK
+vendor/work_cell.cpp: OK
+vendor/work_common.cpp: OK
+
+exit_status=0
+
+$ python study.py build
+Compiled both drivers; no numerical fixture or simulation was run.
+
+exit_status=0
+
+$ python -m unittest test_gates.py
+.............
+----------------------------------------------------------------------
+Ran 13 tests in 0.006s
+
+OK
+
+exit_status=0
+
+$ python study.py plan
+{
+  "status": "CODE_PREPARATION_ONLY_NO_SIMULATIONS",
+  "design_devices": 8,
+  "held_out_devices": 32,
+  "condition_families": [
+    "source_shift",
+    "broken_link",
+    "gain_heterogeneity",
+    "post_acquisition_drift"
+  ],
+  "static_candidates": 12,
+  "design_evaluations": 384,
+  "held_out_static_evaluations": 1536,
+  "held_out_acquisitions": 128,
+  "active_or_frozen_evaluations": 256,
+  "selected_drift_static_pre_lifetimes": "32 to 64 additional jobs",
+  "numerical_validation": "separate dedicated seeds",
+  "workers": 4,
+  "raw_word_definition": "128 labels, all 12 final lanes, once and in order, no extras",
+  "protocol_revision": "65e51bfb9988ef5cb95c42fcb8b8ac2152054822",
+  "registration": "required; currently not supplied"
+}
+
+exit_status=0
+
