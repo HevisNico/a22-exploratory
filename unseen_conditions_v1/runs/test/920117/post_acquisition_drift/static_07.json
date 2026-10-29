@@ -1,0 +1,66 @@
+{
+  "job_spec": {
+    "group": "test",
+    "device": 920117,
+    "condition": "post_acquisition_drift",
+    "mode": "static_07",
+    "purpose": "evaluation",
+    "source_lane": 0,
+    "cut_layer": 0,
+    "cut_lane": 0,
+    "n": 512,
+    "start": 16888.0,
+    "schedule": "test",
+    "stage": 201,
+    "noise_seed": 876292106,
+    "H_file": "post_acquisition_drift_H.txt",
+    "label_offset": 0
+  },
+  "binding": {
+    "source_lock_sha256": "c041e033e4e81ba589d6d02c490823aa5319cb9b66e1524c737e3b4820af705c",
+    "registration_sha256": "9cdfab3ec5df209593d5388f29188a2e5556c7c8dcd215245e89e4f0bf7875e1",
+    "physical_sha256": "dd0910ce3f5388de8a655f8501611a5c9988cbbe707386a7037dfdf3cdced3b4",
+    "H_sha256": "91fcb3b2838c7b608ccfb153d7ff33e4905b94dfaa331d2a76a148a23c66bba8",
+    "checkpoint_sha256": null
+  },
+  "started_at": "2026-10-29T03:43:11.215705+00:00",
+  "files": {
+    "static_07.raw.json.gz": "c47c4049b3ee9d74af40ee3ee1d9de79b365dfe7c4b0750c8677bd57e412c3ad",
+    "static_07.states": "197a1987c2bdcf0a44e2a18284568189dd94485775b783de239c801862b08d72"
+  },
+  "seconds": 4.152340160999756,
+  "status": "OK_POINT_NOT_CERTIFIED",
+  "score": {
+    "words": [
+      false,
+      false,
+      false,
+      true
+    ],
+    "complete_words": 1,
+    "expected_words": 4,
+    "missing_labels": 0,
+    "duplicate_labels": 72,
+    "ambiguous_events": 0,
+    "outside_labels": 0,
+    "order_violations": 0,
+    "final_events": 6216,
+    "interval_pairs": 6000,
+    "relative_interval_rms": 0.0080158668631891
+  },
+  "work_total": 6664593.821452087,
+  "work_components": [
+    740913.667655665,
+    593248.5,
+    724784.1363309837,
+    2308662.5674654357,
+    471176.4000000055,
+    1649117.3999999994,
+    176691.14999999767,
+    0,
+    0
+  ],
+  "resource_lower_bound": 66.62731853658633,
+  "sum_delta_z": 0,
+  "sum_delta_b": 0
+}
