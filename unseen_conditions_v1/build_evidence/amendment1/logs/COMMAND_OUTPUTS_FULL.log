@@ -1,0 +1,140 @@
+$ git clone https://github.com/HevisNico/a22-exploratory rebuild_amendment1_pr8/a22-exploratory
+Cloning into 'rebuild_amendment1_pr8/a22-exploratory'...
+
+exit_status=0
+
+$ git log -1 --oneline
+working_directory=/workspace/scratch/1ebdaa405a5d/rebuild_amendment1_pr8/a22-exploratory
+7bd4cb6 Merge pull request #8 from HevisNico/amendment-1-continuation
+
+exit_status=0
+elapsed_seconds=0.003069450
+
+$ git rev-parse HEAD
+working_directory=/workspace/scratch/1ebdaa405a5d/rebuild_amendment1_pr8/a22-exploratory
+7bd4cb6446f1829ebcd0b766ade6b2e1f3fcad63
+
+exit_status=0
+elapsed_seconds=0.002307518
+
+$ sha256sum -c SOURCE_SHA256.txt
+working_directory=/workspace/scratch/1ebdaa405a5d/rebuild_amendment1_pr8/a22-exploratory/unseen_conditions_v1
+IMPLEMENTATION_NOTES.md: OK
+LICENSE: OK
+LICENSE-docs.md: OK
+PROTOCOL.md: OK
+README_EN.md: OK
+analysis.py: OK
+config.py: OK
+driver.cpp: OK
+inference.py: OK
+reference_vendor/field.hpp: OK
+reference_vendor/work_budget.hpp: OK
+reference_vendor/work_cell.cpp: OK
+reference_vendor/work_common.cpp: OK
+registration.example.json: OK
+requirements.txt: OK
+scoring.py: OK
+selection_evidence.example.json: OK
+study.py: OK
+test_gates.py: OK
+validation.py: OK
+vendor/field.hpp: OK
+vendor/work_budget.hpp: OK
+vendor/work_cell.cpp: OK
+vendor/work_common.cpp: OK
+
+exit_status=0
+elapsed_seconds=0.004541418
+
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "python_executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+  "numpy": "2.3.5",
+  "g++": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n"
+}
+
+{
+  "PYTHONDONTWRITEBYTECODE": "1",
+  "TMPDIR": "/workspace/scratch/1ebdaa405a5d/rebuild_amendment1_pr8/temporary_tests",
+  "registration_backup": "/workspace/scratch/1ebdaa405a5d/rebuild_amendment1_pr8/set_aside/registration.json"
+}
+
+$ cp SOURCE_LOCK.json /workspace/scratch/1ebdaa405a5d/rebuild_amendment1_pr8/set_aside/SOURCE_LOCK.before_rebuild.json
+working_directory=/workspace/scratch/1ebdaa405a5d/rebuild_amendment1_pr8/a22-exploratory/unseen_conditions_v1
+
+exit_status=0
+elapsed_seconds=0.002632401
+
+$ mv registration.json /workspace/scratch/1ebdaa405a5d/rebuild_amendment1_pr8/set_aside/registration.json
+working_directory=/workspace/scratch/1ebdaa405a5d/rebuild_amendment1_pr8/a22-exploratory/unseen_conditions_v1
+
+exit_status=0
+elapsed_seconds=0.002156244
+
+$ python study.py build
+working_directory=/workspace/scratch/1ebdaa405a5d/rebuild_amendment1_pr8/a22-exploratory/unseen_conditions_v1
+Compiled both drivers; no numerical fixture or simulation was run.
+
+exit_status=0
+elapsed_seconds=3.995413146
+
+$ python -m unittest test_gates.py
+working_directory=/workspace/scratch/1ebdaa405a5d/rebuild_amendment1_pr8/a22-exploratory/unseen_conditions_v1
+.............
+----------------------------------------------------------------------
+Ran 13 tests in 0.005s
+
+OK
+
+exit_status=0
+elapsed_seconds=0.097493543
+
+$ python study.py plan
+working_directory=/workspace/scratch/1ebdaa405a5d/rebuild_amendment1_pr8/a22-exploratory/unseen_conditions_v1
+{
+  "status": "CODE_PREPARATION_ONLY_NO_SIMULATIONS",
+  "design_devices": 8,
+  "held_out_devices": 32,
+  "condition_families": [
+    "source_shift",
+    "broken_link",
+    "gain_heterogeneity",
+    "post_acquisition_drift"
+  ],
+  "static_candidates": 12,
+  "design_evaluations": 384,
+  "held_out_static_evaluations": 1536,
+  "held_out_acquisitions": 128,
+  "active_or_frozen_evaluations": 256,
+  "selected_drift_static_pre_lifetimes": "32 to 64 additional jobs",
+  "numerical_validation": "separate dedicated seeds",
+  "workers": 4,
+  "raw_word_definition": "128 labels, all 12 final lanes, once and in order, no extras",
+  "protocol_revision": "65e51bfb9988ef5cb95c42fcb8b8ac2152054822",
+  "registration": "required; currently not supplied"
+}
+
+exit_status=0
+elapsed_seconds=0.049825906
+
+$ cp /workspace/scratch/1ebdaa405a5d/rebuild_amendment1_pr8/set_aside/registration.json registration.json
+working_directory=/workspace/scratch/1ebdaa405a5d/rebuild_amendment1_pr8/a22-exploratory/unseen_conditions_v1
+
+exit_status=0
+elapsed_seconds=0.003551326
+
+$ git status --short
+working_directory=/workspace/scratch/1ebdaa405a5d/rebuild_amendment1_pr8/a22-exploratory
+ M unseen_conditions_v1/SOURCE_LOCK.json
+
+exit_status=0
+elapsed_seconds=0.004269182
+
+$ git diff --name-only HEAD --
+working_directory=/workspace/scratch/1ebdaa405a5d/rebuild_amendment1_pr8/a22-exploratory
+unseen_conditions_v1/SOURCE_LOCK.json
+
+exit_status=0
+elapsed_seconds=0.003163870
+

@@ -1,0 +1,27 @@
+$ python study.py plan
+working_directory=/workspace/scratch/1ebdaa405a5d/rebuild_amendment1_pr8/a22-exploratory/unseen_conditions_v1
+{
+  "status": "CODE_PREPARATION_ONLY_NO_SIMULATIONS",
+  "design_devices": 8,
+  "held_out_devices": 32,
+  "condition_families": [
+    "source_shift",
+    "broken_link",
+    "gain_heterogeneity",
+    "post_acquisition_drift"
+  ],
+  "static_candidates": 12,
+  "design_evaluations": 384,
+  "held_out_static_evaluations": 1536,
+  "held_out_acquisitions": 128,
+  "active_or_frozen_evaluations": 256,
+  "selected_drift_static_pre_lifetimes": "32 to 64 additional jobs",
+  "numerical_validation": "separate dedicated seeds",
+  "workers": 4,
+  "raw_word_definition": "128 labels, all 12 final lanes, once and in order, no extras",
+  "protocol_revision": "65e51bfb9988ef5cb95c42fcb8b8ac2152054822",
+  "registration": "required; currently not supplied"
+}
+
+exit_status=0
+elapsed_seconds=0.049825906

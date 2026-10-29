@@ -1,0 +1,29 @@
+$ sha256sum -c SOURCE_SHA256.txt
+working_directory=/workspace/scratch/1ebdaa405a5d/rebuild_amendment1_pr8/a22-exploratory/unseen_conditions_v1
+IMPLEMENTATION_NOTES.md: OK
+LICENSE: OK
+LICENSE-docs.md: OK
+PROTOCOL.md: OK
+README_EN.md: OK
+analysis.py: OK
+config.py: OK
+driver.cpp: OK
+inference.py: OK
+reference_vendor/field.hpp: OK
+reference_vendor/work_budget.hpp: OK
+reference_vendor/work_cell.cpp: OK
+reference_vendor/work_common.cpp: OK
+registration.example.json: OK
+requirements.txt: OK
+scoring.py: OK
+selection_evidence.example.json: OK
+study.py: OK
+test_gates.py: OK
+validation.py: OK
+vendor/field.hpp: OK
+vendor/work_budget.hpp: OK
+vendor/work_cell.cpp: OK
+vendor/work_common.cpp: OK
+
+exit_status=0
+elapsed_seconds=0.004541418

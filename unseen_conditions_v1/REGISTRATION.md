@@ -52,5 +52,11 @@ protocol's order; the design selection must be committed before any held-out dev
 ## Amendment 1 (validation fixture)
 
 Validation attempt 1 failed on the continuation fixture; its record is published unchanged and the
-correction is described in [`AMENDMENT_1.md`](AMENDMENT_1.md). A new build, its source lock and the
-updated `registration.json` will be recorded here before validation is retried.
+correction is described in [`AMENDMENT_1.md`](AMENDMENT_1.md). Recorded before validation is retried:
+
+| Item | Value |
+|---|---|
+| Failure record | [pull request #7](https://github.com/HevisNico/a22-exploratory/pull/7); attempt-1 report SHA-256 `cecb05e623926408e7771444cbe6617262c44f8195cb337a5ca65d2ee3fdcbbd` |
+| Amendment merged by | [pull request #8](https://github.com/HevisNico/a22-exploratory/pull/8), merge commit `7bd4cb6446f1829ebcd0b766ade6b2e1f3fcad63` |
+| Rebuild from that commit, no simulation run | `SOURCE_LOCK.json`, SHA-256 `2575b7aa8a76ca4c72f7d06a1f6c47b7e024ca07530a86ea057b06f76b3f87de`; binaries `driver` `60f2a7d6…`, `driver_reference` `67aff94f…`; logs in `build_evidence/amendment1/` |
+| `registration.json` | implementation and lock updated; amendment entry added |
