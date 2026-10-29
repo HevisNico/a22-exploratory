@@ -1,0 +1,322 @@
+[
+  {
+    "number": 1,
+    "argv": [
+      "git",
+      "status",
+      "--short"
+    ],
+    "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory",
+    "started_utc": "2026-10-29T02:52:02.415460+00:00",
+    "duration_seconds": 0.006297885993262753,
+    "exit_code": 0,
+    "output": "01.log"
+  },
+  {
+    "number": 2,
+    "argv": [
+      "git",
+      "diff",
+      "--exit-code",
+      "HEAD",
+      "--"
+    ],
+    "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory",
+    "started_utc": "2026-10-29T02:52:02.422026+00:00",
+    "duration_seconds": 0.0038020040083210915,
+    "exit_code": 0,
+    "output": "02.log"
+  },
+  {
+    "number": 3,
+    "argv": [
+      "git",
+      "pull"
+    ],
+    "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory",
+    "started_utc": "2026-10-29T02:52:02.426111+00:00",
+    "duration_seconds": 4.674838336999528,
+    "exit_code": 0,
+    "output": "03.log"
+  },
+  {
+    "number": 4,
+    "argv": [
+      "git",
+      "log",
+      "-1",
+      "--oneline"
+    ],
+    "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory",
+    "started_utc": "2026-10-29T02:52:07.101419+00:00",
+    "duration_seconds": 0.002942475999589078,
+    "exit_code": 0,
+    "output": "04.log"
+  },
+  {
+    "number": 5,
+    "argv": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory",
+    "started_utc": "2026-10-29T02:52:07.104647+00:00",
+    "duration_seconds": 0.0035793979914160445,
+    "exit_code": 0,
+    "output": "05.log"
+  },
+  {
+    "number": 6,
+    "argv": [
+      "git",
+      "branch",
+      "--show-current"
+    ],
+    "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory",
+    "started_utc": "2026-10-29T02:52:07.108747+00:00",
+    "duration_seconds": 0.003073596002650447,
+    "exit_code": 0,
+    "output": "06.log"
+  },
+  {
+    "number": 7,
+    "argv": [
+      "sha256sum",
+      "unseen_conditions_v1/SOURCE_LOCK.json"
+    ],
+    "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory",
+    "started_utc": "2026-10-29T02:52:07.112523+00:00",
+    "duration_seconds": 0.003176439000526443,
+    "exit_code": 0,
+    "output": "07.log"
+  },
+  {
+    "number": 8,
+    "argv": [
+      "cmp",
+      "unseen_conditions_v1/SOURCE_LOCK.json",
+      "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/set_aside/SOURCE_LOCK.rebuild.json"
+    ],
+    "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory",
+    "started_utc": "2026-10-29T02:52:07.115982+00:00",
+    "duration_seconds": 0.0044172230118419975,
+    "exit_code": 0,
+    "output": "08.log"
+  },
+  {
+    "number": 9,
+    "argv": [
+      "sha256sum",
+      "unseen_conditions_v1/build/driver",
+      "unseen_conditions_v1/build/driver_reference"
+    ],
+    "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory",
+    "started_utc": "2026-10-29T02:52:07.120869+00:00",
+    "duration_seconds": 0.004168453000602312,
+    "exit_code": 0,
+    "output": "09.log"
+  },
+  {
+    "number": 10,
+    "argv": [
+      "git",
+      "status",
+      "--short"
+    ],
+    "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory",
+    "started_utc": "2026-10-29T02:52:07.125471+00:00",
+    "duration_seconds": 0.005848678993061185,
+    "exit_code": 0,
+    "output": "10.log"
+  },
+  {
+    "number": 11,
+    "argv": [
+      "git",
+      "diff",
+      "--exit-code",
+      "HEAD",
+      "--"
+    ],
+    "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory",
+    "started_utc": "2026-10-29T02:52:07.131773+00:00",
+    "duration_seconds": 0.005173557001398876,
+    "exit_code": 0,
+    "output": "11.log"
+  },
+  {
+    "number": 12,
+    "argv": [
+      "sha256sum",
+      "cc0xdGW0.s"
+    ],
+    "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory/unseen_conditions_v1",
+    "started_utc": "2026-10-29T02:52:07.137500+00:00",
+    "duration_seconds": 0.003637043002527207,
+    "exit_code": 0,
+    "output": "12.log"
+  },
+  {
+    "number": 13,
+    "argv": [
+      "git",
+      "ls-files",
+      "*AGENTS.md"
+    ],
+    "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory",
+    "started_utc": "2026-10-29T02:52:07.141555+00:00",
+    "duration_seconds": 0.002874721001717262,
+    "exit_code": 0,
+    "output": "13.log"
+  },
+  {
+    "number": 14,
+    "argv": [
+      "mkdir",
+      "-p",
+      "validation"
+    ],
+    "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory/unseen_conditions_v1",
+    "started_utc": "2026-10-29T02:52:07.144880+00:00",
+    "duration_seconds": 0.0024586419895058498,
+    "exit_code": 0,
+    "output": "14.log"
+  },
+  {
+    "number": 15,
+    "argv": [
+      "cp",
+      "-a",
+      "validation_failures/attempt1_fbfbf418/validation/fbfbf4183737bb82a4277b7cdbb260f5b8ccc4caaf182c46e366e2bf9b7e80bf",
+      "validation/"
+    ],
+    "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory/unseen_conditions_v1",
+    "started_utc": "2026-10-29T02:52:07.147679+00:00",
+    "duration_seconds": 0.005859265002072789,
+    "exit_code": 0,
+    "output": "15.log"
+  },
+  {
+    "number": 16,
+    "argv": [
+      "cp",
+      "-a",
+      "validation_failures/attempt2_2575b7aa/unseen_conditions_v1/validation/2575b7aa8a76ca4c72f7d06a1f6c47b7e024ca07530a86ea057b06f76b3f87de",
+      "validation/"
+    ],
+    "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory/unseen_conditions_v1",
+    "started_utc": "2026-10-29T02:52:07.154109+00:00",
+    "duration_seconds": 0.007730760000413284,
+    "exit_code": 0,
+    "output": "16.log"
+  },
+  {
+    "number": 17,
+    "argv": [
+      "sha256sum",
+      "validation/fbfbf4183737bb82a4277b7cdbb260f5b8ccc4caaf182c46e366e2bf9b7e80bf/VALIDATION.json",
+      "validation/2575b7aa8a76ca4c72f7d06a1f6c47b7e024ca07530a86ea057b06f76b3f87de/VALIDATION.json"
+    ],
+    "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory/unseen_conditions_v1",
+    "started_utc": "2026-10-29T02:52:07.162560+00:00",
+    "duration_seconds": 0.0032068440050352365,
+    "exit_code": 0,
+    "output": "17.log"
+  },
+  {
+    "number": 18,
+    "argv": [
+      "test",
+      "!",
+      "-e",
+      "validation/c041e033e4e81ba589d6d02c490823aa5319cb9b66e1524c737e3b4820af705c"
+    ],
+    "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory/unseen_conditions_v1",
+    "started_utc": "2026-10-29T02:52:07.166528+00:00",
+    "duration_seconds": 0.0023302420013351366,
+    "exit_code": 0,
+    "output": "18.log"
+  },
+  {
+    "number": 19,
+    "argv": [
+      "python",
+      "study.py",
+      "check-registration"
+    ],
+    "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory/unseen_conditions_v1",
+    "started_utc": "2026-10-29T02:52:19.522183+00:00",
+    "duration_seconds": 0.059687115004635416,
+    "exit_code": 0,
+    "output": "19.log"
+  },
+  {
+    "number": 20,
+    "argv": [
+      "python",
+      "study.py",
+      "validate"
+    ],
+    "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory/unseen_conditions_v1",
+    "started_utc": "2026-10-29T02:52:19.582858+00:00",
+    "duration_seconds": 11.24482989301032,
+    "exit_code": 0,
+    "output": "20.log"
+  },
+  {
+    "number": 21,
+    "argv": [
+      "git",
+      "status",
+      "--short"
+    ],
+    "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory",
+    "started_utc": "2026-10-29T02:52:30.828396+00:00",
+    "duration_seconds": 0.005913500004680827,
+    "exit_code": 0,
+    "output": "21.log"
+  },
+  {
+    "number": 22,
+    "argv": [
+      "git",
+      "diff",
+      "--exit-code",
+      "HEAD",
+      "--"
+    ],
+    "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory",
+    "started_utc": "2026-10-29T02:52:30.834742+00:00",
+    "duration_seconds": 0.003964616000303067,
+    "exit_code": 0,
+    "output": "22.log"
+  },
+  {
+    "number": 23,
+    "argv": [
+      "sha256sum",
+      "unseen_conditions_v1/build/driver",
+      "unseen_conditions_v1/build/driver_reference"
+    ],
+    "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory",
+    "started_utc": "2026-10-29T02:52:30.839128+00:00",
+    "duration_seconds": 0.0027650630072457716,
+    "exit_code": 0,
+    "output": "23.log"
+  },
+  {
+    "number": 24,
+    "argv": [
+      "sha256sum",
+      "SOURCE_LOCK.json",
+      "validation/c041e033e4e81ba589d6d02c490823aa5319cb9b66e1524c737e3b4820af705c/VALIDATION.json",
+      "cc0xdGW0.s"
+    ],
+    "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory/unseen_conditions_v1",
+    "started_utc": "2026-10-29T02:52:30.842282+00:00",
+    "duration_seconds": 0.0024649119877722114,
+    "exit_code": 0,
+    "output": "24.log"
+  }
+]

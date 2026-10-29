@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "head": "b74c9bd6e64023653da5733bf908eb702237e28f",
+  "expected_merge_pr": 12,
+  "source_lock_sha256": "c041e033e4e81ba589d6d02c490823aa5319cb9b66e1524c737e3b4820af705c",
+  "validation_report_sha256": "6d0bc76b850b3620541bc72ff1feeb4f22c50cc4717908614532b9cc0140d2db",
+  "validate_invocations": 1,
+  "command_durations_seconds": {
+    "check-registration": 0.059687115004635416,
+    "validate": 11.24482989301032
+  },
+  "validation_files": 175,
+  "historical_files_unchanged": 42,
+  "tracked_files_unchanged": true,
+  "binaries_unchanged": true,
+  "assembly_temporary_unchanged": true,
+  "sandbox": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory",
+  "build": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory/unseen_conditions_v1/build"
+}
