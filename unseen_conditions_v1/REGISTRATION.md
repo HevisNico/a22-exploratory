@@ -73,3 +73,11 @@ binary64 roundoff); its record is published unchanged and the correction is desc
 | Amendment merged by | [pull request #11](https://github.com/HevisNico/a22-exploratory/pull/11), merge commit `2c483817dcc751f0ee477db8b84d26de56071b6f` |
 | Rebuild from that commit, no simulation run | `SOURCE_LOCK.json`, SHA-256 `c041e033e4e81ba589d6d02c490823aa5319cb9b66e1524c737e3b4820af705c`; binaries `driver` `60f2a7d6…`, `driver_reference` `67aff94f…` (identical to the previous build: `driver.cpp` unchanged); logs in `build_evidence/amendment2/` |
 | `registration.json` | implementation and lock updated; one amendment entry for each earlier failure (`face9d14…`, `cecb05e6…`), both pointing to the new lock |
+
+## Validation attempt 3 (PASS)
+
+Run once on the registered source lock `c041e033…` at main `b74c9bd6e64023653da5733bf908eb702237e28f`
+(merge of PR #12), after check-registration, with both earlier failure reports restored unchanged.
+Report `VALIDATION.json` SHA-256 `6d0bc76b850b3620541bc72ff1feeb4f22c50cc4717908614532b9cc0140d2db`,
+status PASS; complete record in [`validation_records/attempt3_c041e033/`](validation_records/attempt3_c041e033/).
+No design, test or analysis job had been run.

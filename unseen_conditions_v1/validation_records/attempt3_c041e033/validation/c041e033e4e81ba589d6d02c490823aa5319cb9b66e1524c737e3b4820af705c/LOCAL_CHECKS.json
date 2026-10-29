@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "isolated_gain_checks": [
+    {
+      "H": 0.8,
+      "main_admission_work": 0.18,
+      "expected": 0.18,
+      "terminal_charge": 0.21811329488952555
+    },
+    {
+      "H": 1,
+      "main_admission_work": 0.22500000000000003,
+      "expected": 0.22499999999999998,
+      "terminal_charge": 0.24764161861190692
+    },
+    {
+      "H": 1.2,
+      "main_admission_work": 0.27,
+      "expected": 0.26999999999999996,
+      "terminal_charge": 0.2771699423342884
+    }
+  ],
+  "central_link_removed_only": true
+}

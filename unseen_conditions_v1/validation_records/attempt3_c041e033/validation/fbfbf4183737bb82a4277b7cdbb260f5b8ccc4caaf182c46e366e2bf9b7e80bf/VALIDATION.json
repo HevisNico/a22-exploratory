@@ -1,0 +1,30 @@
+{
+  "status": "FAIL",
+  "source_lock_sha256": "fbfbf4183737bb82a4277b7cdbb260f5b8ccc4caaf182c46e366e2bf9b7e80bf",
+  "registration_sha256": "120762c42d2702f38558f6bd06e2f6bb422ac418aed30a18fa302472ad7111ea",
+  "dedicated_seed": 930901,
+  "started_at": "2026-10-29T01:53:50.776743+00:00",
+  "tolerance_model_units": 1e-07,
+  "unmodified_kernel_H1_parity": {
+    "all_outputs_bitwise_identical": true,
+    "work_and_states_identical": true
+  },
+  "error": "Execution fault retained in /workspace/scratch/1ebdaa405a5d/build_only_a3578419/a22-exploratory/unseen_conditions_v1/validation/fbfbf4183737bb82a4277b7cdbb260f5b8ccc4caaf182c46e366e2bf9b7e80bf/suffix_64.json: layer=45 lane=1 nonchronological continuation\n",
+  "traceback": "Traceback (most recent call last):\n  File \"/workspace/scratch/1ebdaa405a5d/build_only_a3578419/a22-exploratory/unseen_conditions_v1/validation.py\", line 87, in run\n    suffix_path, suffix = fixture('suffix_64', 'active', 64, start=512.0, offset=64,\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/1ebdaa405a5d/build_only_a3578419/a22-exploratory/unseen_conditions_v1/validation.py\", line 73, in fixture\n    job = s.run_job(f, spec, inputs, reg, checkpoint,\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/1ebdaa405a5d/build_only_a3578419/a22-exploratory/unseen_conditions_v1/study.py\", line 321, in run_job\n    raise StudyError('Execution fault retained in '+str(dest)+': '+r.stderr)\nstudy.StudyError: Execution fault retained in /workspace/scratch/1ebdaa405a5d/build_only_a3578419/a22-exploratory/unseen_conditions_v1/validation/fbfbf4183737bb82a4277b7cdbb260f5b8ccc4caaf182c46e366e2bf9b7e80bf/suffix_64.json: layer=45 lane=1 nonchronological continuation\n\n",
+  "completed_at": "2026-10-29T01:53:51.860695+00:00",
+  "files": {
+    "inputs/H_drift.txt": "cbffeea4b6ad1aed7fdfe1be4310b4aff8a738a150f6f3e07c1ac77f8dddec95",
+    "inputs/H_unity.txt": "e76df4edb0468a6c8c843da4bd1c039865f5623ecd62c657d08805625d1be923",
+    "inputs/physical.txt": "37f4a4939f88db4479eb5b945a6e70ac894ffdfc69665df88151ee410dbd8331",
+    "modified_128.json": "b97b77eddd06b888f3d83238ea348e06ca3dc753aaac8d130ad42cfb30919e69",
+    "modified_128.raw.json.gz": "d576a550f88c66549b0db1504361c472b542b397438259f8e634e1698de5938d",
+    "modified_128.states": "3dcd9a92e85e552043683aefe8760e19185d4f9ec8e1a0350e4dec5ef9f8dee0",
+    "original_128.json": "c3b6f6b4de67d3c33722bfb980d03de3c6b0123a37706357d1a14339ab22596a",
+    "original_128.raw.json.gz": "cbddf77c764504f9167f0b21d35eb7e3eca347ae5282fc21632f1222d511add4",
+    "original_128.states": "3dcd9a92e85e552043683aefe8760e19185d4f9ec8e1a0350e4dec5ef9f8dee0",
+    "prefix_64.json": "24d2fbe4e40daae4c4a648155f05b936557e9ead508995cd290d65bf6331f6fa",
+    "prefix_64.raw.json.gz": "7672d52cf5410eebfcae3b4ce2b3cd721ac2be398cba67ead0f2c322591a166e",
+    "prefix_64.states": "cc54e45135fae630ee5f2b8b44af812fcc9675fd376229c8641c4fd5edb03f61",
+    "suffix_64.json": "0c0f6cbb927aee76dc141f0be6f79f26b39b7b6924990ea80d225c934ef8ddd0"
+  }
+}

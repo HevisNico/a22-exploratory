@@ -1,0 +1,163 @@
+{
+  "number": 1,
+  "argv": [
+    "sha256sum",
+    "unseen_conditions_v1/build/driver",
+    "unseen_conditions_v1/build/driver_reference"
+  ],
+  "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory",
+  "started_utc": "2026-10-29T02:47:30.519403+00:00",
+  "duration_seconds": 0.0034587789996294305,
+  "exit_code": 0,
+  "output": "01.log"
+}
+$ sha256sum unseen_conditions_v1/build/driver unseen_conditions_v1/build/driver_reference
+60f2a7d600ac5d4eb67bfd876c39f7a66dfe6184befbaf221dbb9830e071e4c3  unseen_conditions_v1/build/driver
+67aff94f68e93d3ec4478b9a1514e1b9e3d56a3476b224291a7d3bf17c7d4a74  unseen_conditions_v1/build/driver_reference
+
+[exit_code=0]
+
+{
+  "number": 2,
+  "argv": [
+    "sha256sum",
+    "cc0xdGW0.s"
+  ],
+  "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory/unseen_conditions_v1",
+  "started_utc": "2026-10-29T02:47:30.523132+00:00",
+  "duration_seconds": 0.0036328370042610914,
+  "exit_code": 0,
+  "output": "02.log"
+}
+$ sha256sum cc0xdGW0.s
+7c6b90d06d719b4ac7a020563c6178e89be3a300d292ec1d037c7cc89574064c  cc0xdGW0.s
+
+[exit_code=0]
+
+{
+  "number": 3,
+  "argv": [
+    "test",
+    "!",
+    "-e",
+    "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/set_aside/SOURCE_LOCK.rebuild.json"
+  ],
+  "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory",
+  "started_utc": "2026-10-29T02:47:30.527085+00:00",
+  "duration_seconds": 0.002752708998741582,
+  "exit_code": 0,
+  "output": "03.log"
+}
+$ test '!' -e /workspace/scratch/1ebdaa405a5d/rebuild_pr11/set_aside/SOURCE_LOCK.rebuild.json
+
+[exit_code=0]
+
+{
+  "number": 4,
+  "argv": [
+    "mv",
+    "unseen_conditions_v1/SOURCE_LOCK.json",
+    "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/set_aside/SOURCE_LOCK.rebuild.json"
+  ],
+  "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory",
+  "started_utc": "2026-10-29T02:47:30.530153+00:00",
+  "duration_seconds": 0.002190093000535853,
+  "exit_code": 0,
+  "output": "04.log"
+}
+$ mv unseen_conditions_v1/SOURCE_LOCK.json /workspace/scratch/1ebdaa405a5d/rebuild_pr11/set_aside/SOURCE_LOCK.rebuild.json
+
+[exit_code=0]
+
+{
+  "number": 5,
+  "argv": [
+    "git",
+    "restore",
+    "unseen_conditions_v1/registration.json",
+    "unseen_conditions_v1/SOURCE_LOCK.json"
+  ],
+  "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory",
+  "started_utc": "2026-10-29T02:47:30.532613+00:00",
+  "duration_seconds": 0.0038579309912165627,
+  "exit_code": 0,
+  "output": "05.log"
+}
+$ git restore unseen_conditions_v1/registration.json unseen_conditions_v1/SOURCE_LOCK.json
+
+[exit_code=0]
+
+{
+  "number": 6,
+  "argv": [
+    "git",
+    "pull"
+  ],
+  "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory",
+  "started_utc": "2026-10-29T02:47:30.536731+00:00",
+  "duration_seconds": 4.776837637997232,
+  "exit_code": 0,
+  "output": "06.log"
+}
+$ git pull
+From https://github.com/HevisNico/a22-exploratory
+ * [new branch]      registration-amendment-2 -> origin/registration-amendment-2
+Already up to date.
+
+[exit_code=0]
+
+{
+  "number": 7,
+  "argv": [
+    "git",
+    "log",
+    "-1",
+    "--oneline"
+  ],
+  "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory",
+  "started_utc": "2026-10-29T02:47:35.314159+00:00",
+  "duration_seconds": 0.003378559005795978,
+  "exit_code": 0,
+  "output": "07.log"
+}
+$ git log -1 --oneline
+2c48381 Merge pull request #11 from HevisNico/amendment-2-tolerances
+
+[exit_code=0]
+
+{
+  "number": 8,
+  "argv": [
+    "git",
+    "rev-parse",
+    "HEAD"
+  ],
+  "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory",
+  "started_utc": "2026-10-29T02:47:35.317842+00:00",
+  "duration_seconds": 0.00221082400821615,
+  "exit_code": 0,
+  "output": "08.log"
+}
+$ git rev-parse HEAD
+2c483817dcc751f0ee477db8b84d26de56071b6f
+
+[exit_code=0]
+
+{
+  "number": 9,
+  "argv": [
+    "git",
+    "branch",
+    "--show-current"
+  ],
+  "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory",
+  "started_utc": "2026-10-29T02:47:35.320352+00:00",
+  "duration_seconds": 0.002366004991927184,
+  "exit_code": 0,
+  "output": "09.log"
+}
+$ git branch --show-current
+main
+
+[exit_code=0]
+
