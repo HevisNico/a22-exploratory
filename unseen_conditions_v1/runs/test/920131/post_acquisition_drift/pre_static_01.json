@@ -1,0 +1,78 @@
+{
+  "job_spec": {
+    "group": "test",
+    "device": 920131,
+    "condition": "post_acquisition_drift",
+    "mode": "static_01",
+    "purpose": "acquisition",
+    "source_lane": 0,
+    "cut_layer": 0,
+    "cut_lane": 0,
+    "n": 2048,
+    "start": 0.0,
+    "schedule": "train",
+    "stage": 101,
+    "noise_seed": 2192276,
+    "H_file": "H_unity.txt",
+    "label_offset": 0
+  },
+  "binding": {
+    "source_lock_sha256": "c041e033e4e81ba589d6d02c490823aa5319cb9b66e1524c737e3b4820af705c",
+    "registration_sha256": "9cdfab3ec5df209593d5388f29188a2e5556c7c8dcd215245e89e4f0bf7875e1",
+    "physical_sha256": "5a6b1cf17f5138ff21dd1959d0049f1b6e99f6ece391cb3629d8c6c970101ad1",
+    "H_sha256": "e76df4edb0468a6c8c843da4bd1c039865f5623ecd62c657d08805625d1be923",
+    "checkpoint_sha256": null
+  },
+  "started_at": "2026-10-29T04:03:15.435576+00:00",
+  "files": {
+    "pre_static_01.raw.json.gz": "e2b5757cfd234ab6514d9d112304988c067bbe78ec2797cc21fb889ef915ba55",
+    "pre_static_01.states": "c6a63eaee508f17f752e30690b6d12dcd00e4112725bbe0caab139d21c5f05b8"
+  },
+  "seconds": 18.083533594999608,
+  "status": "OK_POINT_NOT_CERTIFIED",
+  "score": {
+    "words": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "complete_words": 16,
+    "expected_words": 16,
+    "missing_labels": 0,
+    "duplicate_labels": 0,
+    "ambiguous_events": 0,
+    "outside_labels": 0,
+    "order_violations": 0,
+    "final_events": 24576,
+    "interval_pairs": 24564,
+    "relative_interval_rms": 0.01676629401703254
+  },
+  "work_total": 26493234.733334225,
+  "work_components": [
+    2949790.864908772,
+    2357760,
+    2880524.847978106,
+    9175789.420447461,
+    1872691.2000000088,
+    6554419.199999869,
+    702259.2000000085,
+    0,
+    0
+  ],
+  "resource_lower_bound": 68.68637785046059,
+  "sum_delta_z": 0,
+  "sum_delta_b": 0
+}

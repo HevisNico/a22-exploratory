@@ -1,0 +1,78 @@
+{
+  "job_spec": {
+    "group": "test",
+    "device": 920125,
+    "condition": "post_acquisition_drift",
+    "mode": "learn",
+    "purpose": "acquisition",
+    "source_lane": 0,
+    "cut_layer": 0,
+    "cut_lane": 0,
+    "n": 2048,
+    "start": 0.0,
+    "schedule": "train",
+    "stage": 101,
+    "noise_seed": 218268217,
+    "H_file": "H_unity.txt",
+    "label_offset": 0
+  },
+  "binding": {
+    "source_lock_sha256": "c041e033e4e81ba589d6d02c490823aa5319cb9b66e1524c737e3b4820af705c",
+    "registration_sha256": "9cdfab3ec5df209593d5388f29188a2e5556c7c8dcd215245e89e4f0bf7875e1",
+    "physical_sha256": "847893d1255b80a87f142aca2ff0ca4ffb673900b576f614df0191a237662378",
+    "H_sha256": "e76df4edb0468a6c8c843da4bd1c039865f5623ecd62c657d08805625d1be923",
+    "checkpoint_sha256": null
+  },
+  "started_at": "2026-10-29T03:53:33.988354+00:00",
+  "files": {
+    "acquisition.raw.json.gz": "b070569e51fb8a754f49f137770fe4a807c9923aef5edb8ad3304d04c2555880",
+    "acquisition.states": "cd8f44b8c85c37146286439589b554f01aedcfab3e056fdf194d70da4f175001"
+  },
+  "seconds": 17.57082897500004,
+  "status": "OK_POINT_NOT_CERTIFIED",
+  "score": {
+    "words": [
+      false,
+      false,
+      false,
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "complete_words": 11,
+    "expected_words": 16,
+    "missing_labels": 2134,
+    "duplicate_labels": 278,
+    "ambiguous_events": 0,
+    "outside_labels": 0,
+    "order_violations": 0,
+    "final_events": 22720,
+    "interval_pairs": 21974,
+    "relative_interval_rms": 0.027753590901567288
+  },
+  "work_total": 26699572.995519254,
+  "work_components": [
+    2884690.6357878996,
+    2251969.5,
+    4067726.2529189996,
+    8766565.439424384,
+    1789172.4000000178,
+    6262103.400000002,
+    670939.6500000004,
+    4957.811899243569,
+    1447.905488704116
+  ],
+  "resource_lower_bound": 67.98764680301261,
+  "sum_delta_z": 4957.811899243558,
+  "sum_delta_b": 1447.9054887041157
+}
