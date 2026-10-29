@@ -1,0 +1,40 @@
+{
+  "group": "test",
+  "device": 920111,
+  "conditions": {
+    "source_shift": {
+      "source_lane": 11,
+      "cut_layer": 0,
+      "cut_lane": 0,
+      "gain_half_width": 0.0
+    },
+    "broken_link": {
+      "source_lane": 0,
+      "cut_layer": 108,
+      "cut_lane": 4,
+      "gain_half_width": 0.0
+    },
+    "gain_heterogeneity": {
+      "source_lane": 0,
+      "cut_layer": 0,
+      "cut_lane": 0,
+      "gain_half_width": 0.2
+    },
+    "post_acquisition_drift": {
+      "source_lane": 0,
+      "cut_layer": 0,
+      "cut_lane": 0,
+      "gain_half_width": 0.2
+    }
+  },
+  "files": {
+    "H_unity.txt": "e76df4edb0468a6c8c843da4bd1c039865f5623ecd62c657d08805625d1be923",
+    "broken_link_H.txt": "e76df4edb0468a6c8c843da4bd1c039865f5623ecd62c657d08805625d1be923",
+    "gain_heterogeneity_H.txt": "8a27e5564026136521697c0f889f959c663a99ae2dbba34d1e9445dda5682e6e",
+    "physical.txt": "9dc09b8d1eead6b15921d6a14e3858c576d294b5b16c95425f5bff218d3d90fd",
+    "post_acquisition_drift_H.txt": "94feacd4ed030248a79c3af8bdf541213cc9dcb50f40a2289512c4552f87d9fc",
+    "source_shift_H.txt": "e76df4edb0468a6c8c843da4bd1c039865f5623ecd62c657d08805625d1be923"
+  },
+  "generator": "SHA256(namespace/counter), first 53 of 64 bits, midpoint uniform",
+  "paired_H": "One shared file per device/condition, never drawn per arm."
+}
