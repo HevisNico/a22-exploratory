@@ -1,0 +1,78 @@
+{
+  "job_spec": {
+    "group": "test",
+    "device": 920117,
+    "condition": "gain_heterogeneity",
+    "mode": "learn",
+    "purpose": "acquisition",
+    "source_lane": 0,
+    "cut_layer": 0,
+    "cut_lane": 0,
+    "n": 2048,
+    "start": 0.0,
+    "schedule": "train",
+    "stage": 101,
+    "noise_seed": 299787502,
+    "H_file": "gain_heterogeneity_H.txt",
+    "label_offset": 0
+  },
+  "binding": {
+    "source_lock_sha256": "c041e033e4e81ba589d6d02c490823aa5319cb9b66e1524c737e3b4820af705c",
+    "registration_sha256": "9cdfab3ec5df209593d5388f29188a2e5556c7c8dcd215245e89e4f0bf7875e1",
+    "physical_sha256": "dd0910ce3f5388de8a655f8501611a5c9988cbbe707386a7037dfdf3cdced3b4",
+    "H_sha256": "c0b93d5f3fcc6d76de8615a1867af30e7f38a7768a38d9c406567bf0798fef5a",
+    "checkpoint_sha256": null
+  },
+  "started_at": "2026-10-29T03:41:01.770301+00:00",
+  "files": {
+    "acquisition.raw.json.gz": "7e56c5073f747c07c5d8c5f496c8896544ddd9a4fdba715a5af38a5a9e3ec7da",
+    "acquisition.states": "705926855edcfa6e27b31e7ad6543178a6b634049b6e0a3a8a7798cec20609f4"
+  },
+  "seconds": 17.03831987600006,
+  "status": "OK_POINT_NOT_CERTIFIED",
+  "score": {
+    "words": [
+      false,
+      false,
+      false,
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "complete_words": 12,
+    "expected_words": 16,
+    "missing_labels": 2001,
+    "duplicate_labels": 221,
+    "ambiguous_events": 0,
+    "outside_labels": 0,
+    "order_violations": 0,
+    "final_events": 22796,
+    "interval_pairs": 22107,
+    "relative_interval_rms": 0.03538433271526009
+  },
+  "work_total": 27301033.798462037,
+  "work_components": [
+    2906242.2292680657,
+    2253718.5,
+    4633237.99079604,
+    8773196.615301223,
+    1790525.9999999893,
+    6266840.999999997,
+    671447.2500000002,
+    4459.51032101878,
+    1364.7027757074281
+  ],
+  "resource_lower_bound": 68.02142497259055,
+  "sum_delta_z": 4459.510321018776,
+  "sum_delta_b": 1364.7027757074277
+}

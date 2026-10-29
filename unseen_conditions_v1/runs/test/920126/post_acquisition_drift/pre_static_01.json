@@ -1,0 +1,78 @@
+{
+  "job_spec": {
+    "group": "test",
+    "device": 920126,
+    "condition": "post_acquisition_drift",
+    "mode": "static_01",
+    "purpose": "acquisition",
+    "source_lane": 0,
+    "cut_layer": 0,
+    "cut_lane": 0,
+    "n": 2048,
+    "start": 0.0,
+    "schedule": "train",
+    "stage": 101,
+    "noise_seed": 643437934,
+    "H_file": "H_unity.txt",
+    "label_offset": 0
+  },
+  "binding": {
+    "source_lock_sha256": "c041e033e4e81ba589d6d02c490823aa5319cb9b66e1524c737e3b4820af705c",
+    "registration_sha256": "9cdfab3ec5df209593d5388f29188a2e5556c7c8dcd215245e89e4f0bf7875e1",
+    "physical_sha256": "c26693d4a96c77e6c5e69c15b755a310a0dadfa9ee7c9363cf8c655a9ca171df",
+    "H_sha256": "e76df4edb0468a6c8c843da4bd1c039865f5623ecd62c657d08805625d1be923",
+    "checkpoint_sha256": null
+  },
+  "started_at": "2026-10-29T03:56:14.371799+00:00",
+  "files": {
+    "pre_static_01.raw.json.gz": "620cb8e418f2196fdd8152ce02823ef3bbb5df1e0baf373593f3a55a8883b929",
+    "pre_static_01.states": "fa88d052b1309a0397cd9f325ea87e134e1cb6d9717f30d5494394a2b6f497f5"
+  },
+  "seconds": 16.857200462000037,
+  "status": "OK_POINT_NOT_CERTIFIED",
+  "score": {
+    "words": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "complete_words": 16,
+    "expected_words": 16,
+    "missing_labels": 0,
+    "duplicate_labels": 0,
+    "ambiguous_events": 0,
+    "outside_labels": 0,
+    "order_violations": 0,
+    "final_events": 24576,
+    "interval_pairs": 24564,
+    "relative_interval_rms": 0.01642883479920561
+  },
+  "work_total": 26493225.9086699,
+  "work_components": [
+    2949780.261343269,
+    2357760,
+    2880524.8479781053,
+    9175791.199348653,
+    1872691.2000000014,
+    6554419.199999863,
+    702259.2000000064,
+    0,
+    0
+  ],
+  "resource_lower_bound": 68.05408895404275,
+  "sum_delta_z": 0,
+  "sum_delta_b": 0
+}

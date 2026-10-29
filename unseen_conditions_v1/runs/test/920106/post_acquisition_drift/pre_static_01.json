@@ -1,0 +1,78 @@
+{
+  "job_spec": {
+    "group": "test",
+    "device": 920106,
+    "condition": "post_acquisition_drift",
+    "mode": "static_01",
+    "purpose": "acquisition",
+    "source_lane": 0,
+    "cut_layer": 0,
+    "cut_lane": 0,
+    "n": 2048,
+    "start": 0.0,
+    "schedule": "train",
+    "stage": 101,
+    "noise_seed": 221812734,
+    "H_file": "H_unity.txt",
+    "label_offset": 0
+  },
+  "binding": {
+    "source_lock_sha256": "c041e033e4e81ba589d6d02c490823aa5319cb9b66e1524c737e3b4820af705c",
+    "registration_sha256": "9cdfab3ec5df209593d5388f29188a2e5556c7c8dcd215245e89e4f0bf7875e1",
+    "physical_sha256": "49482dbe4114a72543d0c0e27abdf8675a2b95318d35d2859e287a0fdaad3c38",
+    "H_sha256": "e76df4edb0468a6c8c843da4bd1c039865f5623ecd62c657d08805625d1be923",
+    "checkpoint_sha256": null
+  },
+  "started_at": "2026-10-29T03:28:07.137608+00:00",
+  "files": {
+    "pre_static_01.raw.json.gz": "80082c9327e469a5d1d22fee56c519680b242660e45192e5493c574d899068a9",
+    "pre_static_01.states": "d5a12d62aaa44c19e06be27baed1a59ee608bec4603afbc7b19292020a303f5d"
+  },
+  "seconds": 17.161236669000118,
+  "status": "OK_POINT_NOT_CERTIFIED",
+  "score": {
+    "words": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "complete_words": 16,
+    "expected_words": 16,
+    "missing_labels": 0,
+    "duplicate_labels": 0,
+    "ambiguous_events": 0,
+    "outside_labels": 0,
+    "order_violations": 0,
+    "final_events": 24576,
+    "interval_pairs": 24564,
+    "relative_interval_rms": 0.016578582849623772
+  },
+  "work_total": 26493196.46891701,
+  "work_components": [
+    2949751.1795045845,
+    2357760,
+    2880524.847978106,
+    9175790.841434438,
+    1872691.1999999916,
+    6554419.199999882,
+    702259.2000000073,
+    0,
+    0
+  ],
+  "resource_lower_bound": 67.95873567304793,
+  "sum_delta_z": 0,
+  "sum_delta_b": 0
+}
