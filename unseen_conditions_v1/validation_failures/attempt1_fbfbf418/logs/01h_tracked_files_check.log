@@ -1,0 +1,4 @@
+$ git diff --exit-code HEAD --
+
+exit_status=0
+elapsed_seconds=0.003380312

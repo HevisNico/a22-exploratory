@@ -1,0 +1,32 @@
+$ git pull origin main
+working_directory=/workspace/scratch/1ebdaa405a5d/build_only_a3578419/a22-exploratory
+From https://github.com/HevisNico/a22-exploratory
+ * branch            main       -> FETCH_HEAD
+   a357841..bc9c231  main       -> origin/main
+Updating a357841..bc9c231
+Fast-forward
+ unseen_conditions_v1/REGISTRATION.md               | 18 +++---
+ unseen_conditions_v1/SOURCE_LOCK.json              | 37 ++++++++++++
+ .../build_evidence/BUILD_ONLY_VERIFICATION.json    | 56 ++++++++++++++++++
+ .../build_evidence/logs/02_sha256sum.log           | 27 +++++++++
+ .../build_evidence/logs/03_environment.log         |  6 ++
+ .../build_evidence/logs/04a_build.log              |  4 ++
+ .../build_evidence/logs/04b_test_gates.log         |  8 +++
+ .../build_evidence/logs/04c_plan.log               | 25 ++++++++
+ .../build_evidence/logs/05_tracked_files_check.log |  3 +
+ .../build_evidence/logs/COMMAND_OUTPUTS_FULL.log   | 68 ++++++++++++++++++++++
+ unseen_conditions_v1/registration.json             | 31 ++++++++++
+ 11 files changed, 274 insertions(+), 9 deletions(-)
+ create mode 100644 unseen_conditions_v1/SOURCE_LOCK.json
+ create mode 100644 unseen_conditions_v1/build_evidence/BUILD_ONLY_VERIFICATION.json
+ create mode 100644 unseen_conditions_v1/build_evidence/logs/02_sha256sum.log
+ create mode 100644 unseen_conditions_v1/build_evidence/logs/03_environment.log
+ create mode 100644 unseen_conditions_v1/build_evidence/logs/04a_build.log
+ create mode 100644 unseen_conditions_v1/build_evidence/logs/04b_test_gates.log
+ create mode 100644 unseen_conditions_v1/build_evidence/logs/04c_plan.log
+ create mode 100644 unseen_conditions_v1/build_evidence/logs/05_tracked_files_check.log
+ create mode 100644 unseen_conditions_v1/build_evidence/logs/COMMAND_OUTPUTS_FULL.log
+ create mode 100644 unseen_conditions_v1/registration.json
+
+exit_status=0
+elapsed_seconds=4.749849908

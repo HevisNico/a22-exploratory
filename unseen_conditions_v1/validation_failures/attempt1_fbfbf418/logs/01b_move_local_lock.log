@@ -1,0 +1,6 @@
+$ mv SOURCE_LOCK.json /tmp/SOURCE_LOCK.local.json
+working_directory=/workspace/scratch/1ebdaa405a5d/build_only_a3578419/a22-exploratory/unseen_conditions_v1
+mv: cannot move 'SOURCE_LOCK.json' to '/tmp/SOURCE_LOCK.local.json': No such file or directory
+
+exit_status=1
+elapsed_seconds=0.002443621

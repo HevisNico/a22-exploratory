@@ -1,0 +1,23 @@
+$ python study.py validate
+working_directory=/workspace/scratch/1ebdaa405a5d/build_only_a3578419/a22-exploratory/unseen_conditions_v1
+Traceback (most recent call last):
+  File "/workspace/scratch/1ebdaa405a5d/build_only_a3578419/a22-exploratory/unseen_conditions_v1/study.py", line 549, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/workspace/scratch/1ebdaa405a5d/build_only_a3578419/a22-exploratory/unseen_conditions_v1/study.py", line 536, in main
+    globals()[command]()
+  File "/workspace/scratch/1ebdaa405a5d/build_only_a3578419/a22-exploratory/unseen_conditions_v1/study.py", line 500, in validate
+    validation.run(reg)
+  File "/workspace/scratch/1ebdaa405a5d/build_only_a3578419/a22-exploratory/unseen_conditions_v1/validation.py", line 87, in run
+    suffix_path, suffix = fixture('suffix_64', 'active', 64, start=512.0, offset=64,
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/1ebdaa405a5d/build_only_a3578419/a22-exploratory/unseen_conditions_v1/validation.py", line 73, in fixture
+    job = s.run_job(f, spec, inputs, reg, checkpoint,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/1ebdaa405a5d/build_only_a3578419/a22-exploratory/unseen_conditions_v1/study.py", line 321, in run_job
+    raise StudyError('Execution fault retained in '+str(dest)+': '+r.stderr)
+study.StudyError: Execution fault retained in /workspace/scratch/1ebdaa405a5d/build_only_a3578419/a22-exploratory/unseen_conditions_v1/validation/fbfbf4183737bb82a4277b7cdbb260f5b8ccc4caaf182c46e366e2bf9b7e80bf/suffix_64.json: layer=45 lane=1 nonchronological continuation
+
+
+exit_status=1
+elapsed_seconds=1.146591494

@@ -1,0 +1,117 @@
+$ sha256sum SOURCE_LOCK.json
+fbfbf4183737bb82a4277b7cdbb260f5b8ccc4caaf182c46e366e2bf9b7e80bf  SOURCE_LOCK.json
+
+exit_status=0
+elapsed_seconds=0.003059536
+
+$ mv SOURCE_LOCK.json /tmp/SOURCE_LOCK.local.json
+working_directory=/workspace/scratch/1ebdaa405a5d/build_only_a3578419/a22-exploratory/unseen_conditions_v1
+mv: cannot move 'SOURCE_LOCK.json' to '/tmp/SOURCE_LOCK.local.json': No such file or directory
+
+exit_status=1
+elapsed_seconds=0.002443621
+
+$ mv SOURCE_LOCK.json /workspace/scratch/1ebdaa405a5d/build_only_a3578419/validate_request_logs/SOURCE_LOCK.local.json
+working_directory=/workspace/scratch/1ebdaa405a5d/build_only_a3578419/a22-exploratory/unseen_conditions_v1
+
+exit_status=0
+elapsed_seconds=0.004079760
+
+$ git pull origin main
+working_directory=/workspace/scratch/1ebdaa405a5d/build_only_a3578419/a22-exploratory
+From https://github.com/HevisNico/a22-exploratory
+ * branch            main       -> FETCH_HEAD
+   a357841..bc9c231  main       -> origin/main
+Updating a357841..bc9c231
+Fast-forward
+ unseen_conditions_v1/REGISTRATION.md               | 18 +++---
+ unseen_conditions_v1/SOURCE_LOCK.json              | 37 ++++++++++++
+ .../build_evidence/BUILD_ONLY_VERIFICATION.json    | 56 ++++++++++++++++++
+ .../build_evidence/logs/02_sha256sum.log           | 27 +++++++++
+ .../build_evidence/logs/03_environment.log         |  6 ++
+ .../build_evidence/logs/04a_build.log              |  4 ++
+ .../build_evidence/logs/04b_test_gates.log         |  8 +++
+ .../build_evidence/logs/04c_plan.log               | 25 ++++++++
+ .../build_evidence/logs/05_tracked_files_check.log |  3 +
+ .../build_evidence/logs/COMMAND_OUTPUTS_FULL.log   | 68 ++++++++++++++++++++++
+ unseen_conditions_v1/registration.json             | 31 ++++++++++
+ 11 files changed, 274 insertions(+), 9 deletions(-)
+ create mode 100644 unseen_conditions_v1/SOURCE_LOCK.json
+ create mode 100644 unseen_conditions_v1/build_evidence/BUILD_ONLY_VERIFICATION.json
+ create mode 100644 unseen_conditions_v1/build_evidence/logs/02_sha256sum.log
+ create mode 100644 unseen_conditions_v1/build_evidence/logs/03_environment.log
+ create mode 100644 unseen_conditions_v1/build_evidence/logs/04a_build.log
+ create mode 100644 unseen_conditions_v1/build_evidence/logs/04b_test_gates.log
+ create mode 100644 unseen_conditions_v1/build_evidence/logs/04c_plan.log
+ create mode 100644 unseen_conditions_v1/build_evidence/logs/05_tracked_files_check.log
+ create mode 100644 unseen_conditions_v1/build_evidence/logs/COMMAND_OUTPUTS_FULL.log
+ create mode 100644 unseen_conditions_v1/registration.json
+
+exit_status=0
+elapsed_seconds=4.749849908
+
+$ git log -1 --oneline
+working_directory=/workspace/scratch/1ebdaa405a5d/build_only_a3578419/a22-exploratory/unseen_conditions_v1
+bc9c231 Merge pull request #6 from HevisNico/registration-implementation
+
+exit_status=0
+elapsed_seconds=0.003081347
+
+$ sha256sum SOURCE_LOCK.json
+working_directory=/workspace/scratch/1ebdaa405a5d/build_only_a3578419/a22-exploratory/unseen_conditions_v1
+fbfbf4183737bb82a4277b7cdbb260f5b8ccc4caaf182c46e366e2bf9b7e80bf  SOURCE_LOCK.json
+
+exit_status=0
+elapsed_seconds=0.002707415
+
+$ sha256sum build/driver build/driver_reference
+working_directory=/workspace/scratch/1ebdaa405a5d/build_only_a3578419/a22-exploratory/unseen_conditions_v1
+0c2009bf71a36f57cb14415050ab2dae61542d4bf9f6a77a98dc84216aa5b074  build/driver
+e57efa8fda833c9651525b3b63437f554e9ba143b3dc641ae9b09aa8ebd2ea9c  build/driver_reference
+
+exit_status=0
+elapsed_seconds=0.003060922
+
+$ python study.py check-registration
+working_directory=/workspace/scratch/1ebdaa405a5d/build_only_a3578419/a22-exploratory/unseen_conditions_v1
+Evidence structure and local hashes are consistent; public evidence still requires human verification.
+
+exit_status=0
+elapsed_seconds=0.065945571
+
+$ python study.py validate
+working_directory=/workspace/scratch/1ebdaa405a5d/build_only_a3578419/a22-exploratory/unseen_conditions_v1
+Traceback (most recent call last):
+  File "/workspace/scratch/1ebdaa405a5d/build_only_a3578419/a22-exploratory/unseen_conditions_v1/study.py", line 549, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/workspace/scratch/1ebdaa405a5d/build_only_a3578419/a22-exploratory/unseen_conditions_v1/study.py", line 536, in main
+    globals()[command]()
+  File "/workspace/scratch/1ebdaa405a5d/build_only_a3578419/a22-exploratory/unseen_conditions_v1/study.py", line 500, in validate
+    validation.run(reg)
+  File "/workspace/scratch/1ebdaa405a5d/build_only_a3578419/a22-exploratory/unseen_conditions_v1/validation.py", line 87, in run
+    suffix_path, suffix = fixture('suffix_64', 'active', 64, start=512.0, offset=64,
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/1ebdaa405a5d/build_only_a3578419/a22-exploratory/unseen_conditions_v1/validation.py", line 73, in fixture
+    job = s.run_job(f, spec, inputs, reg, checkpoint,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/1ebdaa405a5d/build_only_a3578419/a22-exploratory/unseen_conditions_v1/study.py", line 321, in run_job
+    raise StudyError('Execution fault retained in '+str(dest)+': '+r.stderr)
+study.StudyError: Execution fault retained in /workspace/scratch/1ebdaa405a5d/build_only_a3578419/a22-exploratory/unseen_conditions_v1/validation/fbfbf4183737bb82a4277b7cdbb260f5b8ccc4caaf182c46e366e2bf9b7e80bf/suffix_64.json: layer=45 lane=1 nonchronological continuation
+
+
+exit_status=1
+elapsed_seconds=1.146591494
+
+$ git status --short
+NOTE: executed after validate was already launched, following the additional user instruction.
+?? unseen_conditions_v1/validation/
+
+exit_status=0
+elapsed_seconds=0.004962762
+
+$ git diff --exit-code HEAD --
+
+exit_status=0
+elapsed_seconds=0.003380312
+
