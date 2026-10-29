@@ -1,0 +1,112 @@
+{
+  "status": "AMENDMENT_1_REBUILD_ONLY_COMPLETE",
+  "commit": "7bd4cb6446f1829ebcd0b766ade6b2e1f3fcad63",
+  "merge_pr": 8,
+  "sandbox_path": "/workspace/scratch/1ebdaa405a5d/rebuild_amendment1_pr8/a22-exploratory",
+  "study_path": "/workspace/scratch/1ebdaa405a5d/rebuild_amendment1_pr8/a22-exploratory/unseen_conditions_v1",
+  "source_checksums_ok": 24,
+  "source_files_unchanged": true,
+  "only_changed_tracked_file": "unseen_conditions_v1/SOURCE_LOCK.json",
+  "registration_restored_identically": true,
+  "registration_backup_outside_repo": "/workspace/scratch/1ebdaa405a5d/rebuild_amendment1_pr8/set_aside/registration.json",
+  "source_lock_sha256": "2575b7aa8a76ca4c72f7d06a1f6c47b7e024ca07530a86ea057b06f76b3f87de",
+  "binaries_sha256": {
+    "driver": "60f2a7d600ac5d4eb67bfd876c39f7a66dfe6184befbaf221dbb9830e071e4c3",
+    "driver_reference": "67aff94f68e93d3ec4478b9a1514e1b9e3d56a3476b224291a7d3bf17c7d4a74"
+  },
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "g++": "13.3.0",
+  "cpp_standard": "C++17",
+  "software_gate_tests_passed": 13,
+  "numerical_fixtures_run": false,
+  "validation_run": false,
+  "design_run": false,
+  "held_out_test_run": false,
+  "analysis_run": false,
+  "commands": [
+    {
+      "command": [
+        "cp",
+        "SOURCE_LOCK.json",
+        "/workspace/scratch/1ebdaa405a5d/rebuild_amendment1_pr8/set_aside/SOURCE_LOCK.before_rebuild.json"
+      ],
+      "log": "06a_save_previous_source_lock.log",
+      "exit_status": 0,
+      "elapsed_seconds": 0.0026324009959353134
+    },
+    {
+      "command": [
+        "mv",
+        "registration.json",
+        "/workspace/scratch/1ebdaa405a5d/rebuild_amendment1_pr8/set_aside/registration.json"
+      ],
+      "log": "06b_set_aside_registration.log",
+      "exit_status": 0,
+      "elapsed_seconds": 0.0021562440088018775
+    },
+    {
+      "command": [
+        "python",
+        "study.py",
+        "build"
+      ],
+      "log": "07_build.log",
+      "exit_status": 0,
+      "elapsed_seconds": 3.995413146010833
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "test_gates.py"
+      ],
+      "log": "08_test_gates.log",
+      "exit_status": 0,
+      "elapsed_seconds": 0.0974935429985635
+    },
+    {
+      "command": [
+        "python",
+        "study.py",
+        "plan"
+      ],
+      "log": "09_plan.log",
+      "exit_status": 0,
+      "elapsed_seconds": 0.04982590599684045
+    },
+    {
+      "command": [
+        "cp",
+        "/workspace/scratch/1ebdaa405a5d/rebuild_amendment1_pr8/set_aside/registration.json",
+        "registration.json"
+      ],
+      "log": "10_restore_identical_registration.log",
+      "exit_status": 0,
+      "elapsed_seconds": 0.003551326008164324
+    },
+    {
+      "command": [
+        "git",
+        "status",
+        "--short"
+      ],
+      "log": "11_git_status_short.log",
+      "exit_status": 0,
+      "elapsed_seconds": 0.004269181998097338
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--name-only",
+        "HEAD",
+        "--"
+      ],
+      "log": "12_changed_tracked_paths.log",
+      "exit_status": 0,
+      "elapsed_seconds": 0.0031638700020266697
+    }
+  ]
+}
