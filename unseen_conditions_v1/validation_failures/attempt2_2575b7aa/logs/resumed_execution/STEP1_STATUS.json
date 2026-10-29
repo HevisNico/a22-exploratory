@@ -1,0 +1,61 @@
+{
+  "status": "PASS_ALL_REQUESTED_HASHES_MATCH_NO_TRACKED_CHANGES",
+  "records": [
+    {
+      "command": [
+        "git",
+        "pull",
+        "origin",
+        "main"
+      ],
+      "log": "01a_git_pull.log",
+      "exit_status": 0,
+      "elapsed_seconds": 4.840430242998991
+    },
+    {
+      "command": [
+        "git",
+        "log",
+        "-1",
+        "--oneline"
+      ],
+      "log": "01b_git_log.log",
+      "exit_status": 0,
+      "elapsed_seconds": 0.0029841280047548935
+    },
+    {
+      "command": [
+        "sha256sum",
+        "SOURCE_LOCK.json"
+      ],
+      "log": "01c_source_lock.log",
+      "exit_status": 0,
+      "elapsed_seconds": 0.002366401007748209
+    },
+    {
+      "command": [
+        "sha256sum",
+        "build/driver",
+        "build/driver_reference"
+      ],
+      "log": "01d_binary_hashes.log",
+      "exit_status": 0,
+      "elapsed_seconds": 0.0032660029974067584
+    },
+    {
+      "command": [
+        "git",
+        "status",
+        "--short"
+      ],
+      "log": "01e_git_status.log",
+      "exit_status": 0,
+      "elapsed_seconds": 0.0047314300027210265
+    }
+  ],
+  "expected_source_lock_sha256": "2575b7aa8a76ca4c72f7d06a1f6c47b7e024ca07530a86ea057b06f76b3f87de",
+  "expected_binary_sha256": {
+    "driver": "60f2a7d600ac5d4eb67bfd876c39f7a66dfe6184befbaf221dbb9830e071e4c3",
+    "driver_reference": "67aff94f68e93d3ec4478b9a1514e1b9e3d56a3476b224291a7d3bf17c7d4a74"
+  }
+}

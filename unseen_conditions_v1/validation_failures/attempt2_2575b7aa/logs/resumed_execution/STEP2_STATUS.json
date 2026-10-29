@@ -1,0 +1,23 @@
+{
+  "status": "PASS_FAILURE1_RESTORED_HASH_MATCHES",
+  "records": [
+    {
+      "command": "mkdir -p validation",
+      "log": "02a_mkdir_validation.log",
+      "exit_status": 0,
+      "elapsed_seconds": 0.002381148995482363
+    },
+    {
+      "command": "cp -r validation_failures/attempt1_fbfbf418/validation/* validation/",
+      "log": "02b_copy_failure1.log",
+      "exit_status": 0,
+      "elapsed_seconds": 0.0070893350057303905
+    },
+    {
+      "command": "sha256sum validation/fbfbf418*/VALIDATION.json",
+      "log": "02c_failure1_sha256.log",
+      "exit_status": 0,
+      "elapsed_seconds": 0.0035478520003380254
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+$ python study.py validate
+working_directory=/workspace/scratch/1ebdaa405a5d/rebuild_amendment1_pr8/a22-exploratory/unseen_conditions_v1
+Traceback (most recent call last):
+  File "/workspace/scratch/1ebdaa405a5d/rebuild_amendment1_pr8/a22-exploratory/unseen_conditions_v1/study.py", line 549, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/workspace/scratch/1ebdaa405a5d/rebuild_amendment1_pr8/a22-exploratory/unseen_conditions_v1/study.py", line 536, in main
+    globals()[command]()
+  File "/workspace/scratch/1ebdaa405a5d/rebuild_amendment1_pr8/a22-exploratory/unseen_conditions_v1/study.py", line 500, in validate
+    validation.run(reg)
+  File "/workspace/scratch/1ebdaa405a5d/rebuild_amendment1_pr8/a22-exploratory/unseen_conditions_v1/validation.py", line 108, in run
+    raise ValueError('Rested static shortcut is not exact: '+mode)
+ValueError: Rested static shortcut is not exact: static_00
+
+exit_status=1
+elapsed_seconds=2.460123327
