@@ -1,0 +1,37 @@
+{
+  "sources": {
+    "PROTOCOL.md": "6e87280e8ceef910f2d38c09ee599f900fd0a8a2db65594a4945a720415db867",
+    "README_EN.md": "f7c1f7b694f6fb72811344a1f20635c6dcfe5304f82bed87309ca227d012bb4f",
+    "IMPLEMENTATION_NOTES.md": "b84896a129eafe654806298676278a00dd3b3c471b9e50cf228cded3ce0839f7",
+    "driver.cpp": "07f447f7eb5f84bb8a605923881010ac0ec3566d36b915659d4e0b9a0fb17011",
+    "config.py": "5e57e96213cdbfdc569a5a70f895be4910012c4851d97575494ecd827f336369",
+    "study.py": "7cc181f8475e4e6dfcde6a70664996a1420ddd45856a51d6015259b29f924e84",
+    "scoring.py": "d335048014265a8d3f76a707e7e7221727b16e17a008ac144367fc2fb67eb793",
+    "inference.py": "439e39ec7afee7383b855454ecf0162532fd13cc6c81a474ef8d3d334d32b989",
+    "analysis.py": "6a7593a3bc7eba200b5e6d7af7a0a0056d04228d10740240972dedb26db71c2d",
+    "validation.py": "c7d29b9afc616d917c91170647a0015c2493b8783bb404281fac8baf80a28a9d",
+    "requirements.txt": "7bd6b8946940b79948c548c8048e545684b91c8edc9444d8dfc0c8f76a97c0a7",
+    "LICENSE": "bbd0bcaf7c8adbedf996a2661d4a8699b143eaa0b6048a5b86611d40b98ca257",
+    "LICENSE-docs.md": "ab5e7539c252dbff049646754eedd072ebde5e0c765b013cbccd639956099429",
+    "registration.example.json": "af4592bdb3a1ccde1135f31aa1c744348cb9ec963b99c6c5d8aecf3cd675ca80",
+    "selection_evidence.example.json": "a26b513e27261a83a9c1bf148eb0b170f636ee5141f6e383f56444d02e201059",
+    "test_gates.py": "79570994767eec02cee2964dc41ddcf7c05116e586abac13408991d985426f92",
+    "vendor/field.hpp": "e36f9e987b207e183d416f2722051a8674359bf492b77e53c718b659a32b150f",
+    "vendor/work_budget.hpp": "3f39afb71bc61bd3fc5fbc89c78dde80dd95d3f59ebd070f3e4abefec761f0ff",
+    "vendor/work_cell.cpp": "c0c0e7355cc2d7449e64bb634157c351c8f838a19c3f6bf7ce37d3c181a4f89f",
+    "vendor/work_common.cpp": "6772afe444ba7339e3f70e8c9e0f05e6c10075886b2fa071d1e9e796a8ebfd8a",
+    "reference_vendor/field.hpp": "e36f9e987b207e183d416f2722051a8674359bf492b77e53c718b659a32b150f",
+    "reference_vendor/work_budget.hpp": "3f39afb71bc61bd3fc5fbc89c78dde80dd95d3f59ebd070f3e4abefec761f0ff",
+    "reference_vendor/work_cell.cpp": "b85dae5e46cf18780202625d2ad9f7726c6183582852a1d0e74346b53df98627",
+    "reference_vendor/work_common.cpp": "6772afe444ba7339e3f70e8c9e0f05e6c10075886b2fa071d1e9e796a8ebfd8a"
+  },
+  "binaries": {
+    "driver": "60f2a7d600ac5d4eb67bfd876c39f7a66dfe6184befbaf221dbb9830e071e4c3",
+    "driver_reference": "67aff94f68e93d3ec4478b9a1514e1b9e3d56a3476b224291a7d3bf17c7d4a74"
+  },
+  "protocol_basis": "65e51bfb9988ef5cb95c42fcb8b8ac2152054822",
+  "built_at": "2026-10-29T02:40:33.034025+00:00",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0"
+}

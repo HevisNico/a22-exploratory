@@ -1,0 +1,6 @@
+{
+  "status": "INCOMPLETE_NO_INFERENCE",
+  "phase": "design",
+  "error": "Another phase is running, or an interrupted run needs manual audit.",
+  "stopped_at": "2026-10-29T03:00:21.712450+00:00"
+}

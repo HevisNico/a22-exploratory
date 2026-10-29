@@ -1,0 +1,21 @@
+{
+  "status": "DESIGN_REFUSED_EXISTING_PHASE_LOCK",
+  "design_exit_code": 2,
+  "design_invocations": 1,
+  "command_completed_at_utc": "2026-10-29T03:00:21.721902+00:00",
+  "head": "b74c9bd6e64023653da5733bf908eb702237e28f",
+  "design_duration_seconds": 0.075126604991965,
+  "runs_files": [
+    "INCOMPLETE.json"
+  ],
+  "design_selection_created": false,
+  "campaign_clock_created": false,
+  "sandbox": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory",
+  "tracked_files_unchanged": true,
+  "expected_hashes_after": {
+    "SOURCE_LOCK.json": "c041e033e4e81ba589d6d02c490823aa5319cb9b66e1524c737e3b4820af705c",
+    "build/driver": "60f2a7d600ac5d4eb67bfd876c39f7a66dfe6184befbaf221dbb9830e071e4c3",
+    "build/driver_reference": "67aff94f68e93d3ec4478b9a1514e1b9e3d56a3476b224291a7d3bf17c7d4a74",
+    "validation/c041e033e4e81ba589d6d02c490823aa5319cb9b66e1524c737e3b4820af705c/VALIDATION.json": "6d0bc76b850b3620541bc72ff1feeb4f22c50cc4717908614532b9cc0140d2db"
+  }
+}

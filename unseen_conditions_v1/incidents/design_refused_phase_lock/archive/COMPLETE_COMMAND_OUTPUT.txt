@@ -1,0 +1,397 @@
+{
+  "number": 1,
+  "argv": [
+    "git",
+    "rev-parse",
+    "HEAD"
+  ],
+  "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory",
+  "started_utc": "2026-10-29T02:59:54.661362+00:00",
+  "duration_seconds": 0.0030811780015937984,
+  "exit_code": 0,
+  "output": "01.log"
+}
+$ git rev-parse HEAD
+b74c9bd6e64023653da5733bf908eb702237e28f
+
+[exit_code=0]
+
+{
+  "number": 2,
+  "argv": [
+    "sha256sum",
+    "SOURCE_LOCK.json",
+    "build/driver",
+    "build/driver_reference",
+    "validation/c041e033e4e81ba589d6d02c490823aa5319cb9b66e1524c737e3b4820af705c/VALIDATION.json"
+  ],
+  "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory/unseen_conditions_v1",
+  "started_utc": "2026-10-29T02:59:54.664763+00:00",
+  "duration_seconds": 0.003100572997936979,
+  "exit_code": 0,
+  "output": "02.log"
+}
+$ sha256sum SOURCE_LOCK.json build/driver build/driver_reference validation/c041e033e4e81ba589d6d02c490823aa5319cb9b66e1524c737e3b4820af705c/VALIDATION.json
+c041e033e4e81ba589d6d02c490823aa5319cb9b66e1524c737e3b4820af705c  SOURCE_LOCK.json
+60f2a7d600ac5d4eb67bfd876c39f7a66dfe6184befbaf221dbb9830e071e4c3  build/driver
+67aff94f68e93d3ec4478b9a1514e1b9e3d56a3476b224291a7d3bf17c7d4a74  build/driver_reference
+6d0bc76b850b3620541bc72ff1feeb4f22c50cc4717908614532b9cc0140d2db  validation/c041e033e4e81ba589d6d02c490823aa5319cb9b66e1524c737e3b4820af705c/VALIDATION.json
+
+[exit_code=0]
+
+{
+  "number": 3,
+  "argv": [
+    "git",
+    "status",
+    "--short"
+  ],
+  "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory",
+  "started_utc": "2026-10-29T02:59:54.668139+00:00",
+  "duration_seconds": 0.005649275000905618,
+  "exit_code": 0,
+  "output": "03.log"
+}
+$ git status --short
+?? unseen_conditions_v1/RUNNING.lock
+?? unseen_conditions_v1/cc0xdGW0.s
+?? unseen_conditions_v1/validation/
+
+[exit_code=0]
+
+{
+  "number": 4,
+  "argv": [
+    "git",
+    "diff",
+    "--exit-code",
+    "HEAD",
+    "--"
+  ],
+  "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory",
+  "started_utc": "2026-10-29T02:59:54.674030+00:00",
+  "duration_seconds": 0.0033809990127338096,
+  "exit_code": 0,
+  "output": "04.log"
+}
+$ git diff --exit-code HEAD --
+
+[exit_code=0]
+
+{
+  "number": 5,
+  "argv": [
+    "test",
+    "!",
+    "-e",
+    "runs"
+  ],
+  "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory/unseen_conditions_v1",
+  "started_utc": "2026-10-29T02:59:54.678084+00:00",
+  "duration_seconds": 0.0024029410124057904,
+  "exit_code": 0,
+  "output": "05.log"
+}
+$ test '!' -e runs
+
+[exit_code=0]
+
+{
+  "number": 6,
+  "argv": [
+    "test",
+    "!",
+    "-e",
+    "selection_evidence.json"
+  ],
+  "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory/unseen_conditions_v1",
+  "started_utc": "2026-10-29T02:59:54.680739+00:00",
+  "duration_seconds": 0.0021820920082973316,
+  "exit_code": 0,
+  "output": "06.log"
+}
+$ test '!' -e selection_evidence.json
+
+[exit_code=0]
+
+{
+  "number": 7,
+  "argv": [
+    "sha256sum",
+    "cc0xdGW0.s"
+  ],
+  "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory/unseen_conditions_v1",
+  "started_utc": "2026-10-29T02:59:54.683368+00:00",
+  "duration_seconds": 0.0035879919887520373,
+  "exit_code": 0,
+  "output": "07.log"
+}
+$ sha256sum cc0xdGW0.s
+7c6b90d06d719b4ac7a020563c6178e89be3a300d292ec1d037c7cc89574064c  cc0xdGW0.s
+
+[exit_code=0]
+
+{
+  "number": 8,
+  "argv": [
+    "sed",
+    "-n",
+    "365,465p",
+    "study.py"
+  ],
+  "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory/unseen_conditions_v1",
+  "started_utc": "2026-10-29T02:59:54.687215+00:00",
+  "duration_seconds": 0.0027175480063306168,
+  "exit_code": 0,
+  "output": "08.log"
+}
+$ sed -n 365,465p study.py
+                completed += 1
+                status = dict(status='RUNNING', phase=name, completed_contexts=completed,
+                              expected_contexts=expected, updated_at=utcnow(),
+                              source_lock_sha256=registration['source_lock_sha256'])
+                write(c.ROOT/'runs'/'STATUS.json', status)
+                print(json.dumps(status), flush=True)
+        except Exception:
+            ABORT.set()
+            for f in futures:
+                f.cancel()
+            raise
+
+
+def design_context(device, condition, reg, inputs):
+    for candidate in c.CANDIDATES:
+        mode = f'static_{candidate:02d}'
+        run_job(result_path('design', device, condition, mode), job_spec('design', device, condition, mode), inputs, reg)
+
+
+def design():
+    reg = require_validation()
+    if (c.ROOT/'runs'/'INCOMPLETE.json').exists():
+        raise GateError('An incomplete-study record requires prospective review; no automatic retry.')
+    previous = c.ROOT/'runs'/'DESIGN_SELECTION.json'
+    if previous.exists():
+        saved = read(previous)
+        if saved['source_lock_sha256'] != reg['source_lock_sha256'] or saved['registration_sha256'] != reg['registration_sha256']:
+            raise GateError('Existing design selection belongs to another registration.')
+        for name, expected in saved['design_metadata_sha256'].items():
+            f = c.ROOT/'runs'/name
+            if sha(f) != expected:
+                raise StudyError('Frozen design selection data changed')
+            verify_job(f)
+        print('Design already selected and frozen; no search or selection rewrite performed.')
+        return
+    if (c.ROOT/'runs'/'inputs'/'test').exists():
+        raise GateError('Held-out inputs exist; starting a new design search is forbidden.')
+    with phase_lock('design'):
+        deadline_check(start=True)
+        inputs = {device: generate_inputs('design', device) for device in c.DESIGN_DEVICES}
+        tasks = [(design_context, (device, condition, reg, inputs[device])) for device in c.DESIGN_DEVICES for condition in c.CONDITIONS]
+        pool_phase('design', tasks, reg)
+        deadline_check()
+        scores, hashes = [], {}
+        for candidate in c.CANDIDATES:
+            fractions = []
+            for condition in c.CONDITIONS:
+                count = 0
+                for device in c.DESIGN_DEVICES:
+                    f = result_path('design', device, condition, f'static_{candidate:02d}')
+                    d = verify_job(f)
+                    hashes[str(f.relative_to(c.ROOT/'runs'))] = sha(f)
+                    count += d['score']['complete_words'] if d['status'] == OK else 0
+                fractions.append(count/(len(c.DESIGN_DEVICES)*2))
+            scores.append(dict(candidate=candidate, family_success_fractions=fractions,
+                               worst_family=min(fractions), overall=sum(fractions)/4,
+                               nominal_gain_sum=c.nominal_gain_sum(candidate), b=1.1 if candidate % 2 else .5))
+        winner = min(scores, key=lambda r: (-r['worst_family'], -r['overall'], *c.candidate_tie_key(r['candidate'])))
+        write(c.ROOT/'runs'/'DESIGN_SELECTION.json', dict(status='DESIGN_COMPLETE_TEST_NOT_STARTED',
+              selected_candidate=winner['candidate'], candidates=scores, design_metadata_sha256=hashes,
+              registration_sha256=reg['registration_sha256'], source_lock_sha256=reg['source_lock_sha256'],
+              selection_rule='maximin, overall, nominal gain sum, largest b, smallest ID', completed_at=utcnow()))
+        write(c.ROOT/'runs'/'STATUS.json', dict(status='DESIGN_COMPLETE_AWAITING_COMMITTED_SELECTION', completed_at=utcnow()))
+
+
+def unavailable_job(dest, spec, inputs, reg, cause):
+    d = dict(status=UNAVAILABLE, cause=cause, job_spec=spec, binding=dict(
+        source_lock_sha256=reg['source_lock_sha256'], registration_sha256=reg['registration_sha256'],
+        physical_sha256=sha(inputs/'physical.txt'), H_sha256=sha(inputs/spec['H_file'])), files={})
+    if dest.exists() and read(dest) != d:
+        raise StudyError('Unavailable result changed on resume')
+    write(dest, d)
+
+
+def test_context(device, condition, reg, inputs):
+    acq_path = result_path('test', device, condition, 'acquisition')
+    acquired = run_job(acq_path, job_spec('test', device, condition, 'learn', 'acquisition'), inputs, reg)
+    if acquired['status'] == OK:
+        for line in acq_path.with_suffix('.states').read_text().splitlines():
+            row = [float(x) for x in line.split()]
+            if len(row) != 7 or not all(math.isfinite(x) for x in row) or row[6] != 0 or row[5] >= c.EVAL_START:
+                raise StudyError('Acquisition checkpoint is not READY before the fixed evaluation date; prospective review required.')
+    for arm in ('active', 'frozen'):
+        dest = result_path('test', device, condition, arm)
+        spec = job_spec('test', device, condition, arm)
+        if acquired['status'] == OK:
+            run_job(dest, spec, inputs, reg, checkpoint=acq_path.with_suffix('.states'))
+        else:
+            unavailable_job(dest, spec, inputs, reg, acquired['status'])
+    candidates = []
+    for candidate in c.CANDIDATES:
+        mode = f'static_{candidate:02d}'
+        d = run_job(result_path('test', device, condition, mode), job_spec('test', device, condition, mode), inputs, reg)
+        candidates.append((candidate, d['score']['complete_words'] if d['status'] == OK else 0))
+    oracle = min(candidates, key=lambda pair: (-pair[1], *c.candidate_tie_key(pair[0])))[0]
+    oracle_path = result_path('test', device, condition, 'oracle_choice')
+    choice = dict(candidate=oracle, rule='Hindsight maximum over four words; no deployable/generalization claim',
+                  source_lock_sha256=reg['source_lock_sha256'])
+    if oracle_path.exists() and read(oracle_path) != choice:
+        raise StudyError('Oracle choice changed on resume')
+    write(oracle_path, choice)
+
+[exit_code=0]
+
+{
+  "number": 9,
+  "argv": [
+    "rg",
+    "-n",
+    "CAMPAIGN|WORKERS|JOB_TIMEOUT|DESIGN_DEVICES|ACQUISITION|WORD",
+    "config.py"
+  ],
+  "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory/unseen_conditions_v1",
+  "started_utc": "2026-10-29T02:59:54.690253+00:00",
+  "duration_seconds": 0.0037741080013802275,
+  "exit_code": 0,
+  "output": "09.log"
+}
+$ rg -n 'CAMPAIGN|WORKERS|JOB_TIMEOUT|DESIGN_DEVICES|ACQUISITION|WORD' config.py
+10:DESIGN_DEVICES = tuple(range(910100, 910108))
+14:ACQUISITION_PULSES = 2048
+17:WORD_LENGTH = 128
+18:EVAL_START = 8.0 * (ACQUISITION_PULSES - 1) + 512.0
+22:WORKERS = 4
+23:JOB_TIMEOUT = 300
+24:CAMPAIGN_SECONDS = 12 * 3600
+46:    devices = DESIGN_DEVICES if group == 'design' else TEST_DEVICES
+
+[exit_code=0]
+
+{
+  "number": 10,
+  "argv": [
+    "python",
+    "study.py",
+    "design"
+  ],
+  "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory/unseen_conditions_v1",
+  "started_utc": "2026-10-29T03:00:21.646316+00:00",
+  "duration_seconds": 0.075126604991965,
+  "exit_code": 2,
+  "output": "10.log"
+}
+$ python study.py design
+Another phase is running, or an interrupted run needs manual audit.
+
+[exit_code=2]
+
+{
+  "number": 11,
+  "argv": [
+    "date",
+    "-u",
+    "+%Y-%m-%dT%H:%M:%S.%NZ"
+  ],
+  "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory/unseen_conditions_v1",
+  "started_utc": "2026-10-29T03:00:21.722186+00:00",
+  "duration_seconds": 0.002604950001114048,
+  "exit_code": 0,
+  "output": "11.log"
+}
+$ date -u +%Y-%m-%dT%H:%M:%S.%NZ
+2026-10-29T03:00:21.724669335Z
+
+[exit_code=0]
+
+{
+  "number": 12,
+  "argv": [
+    "git",
+    "status",
+    "--short"
+  ],
+  "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory",
+  "started_utc": "2026-10-29T03:00:21.725360+00:00",
+  "duration_seconds": 0.005226294990279712,
+  "exit_code": 0,
+  "output": "12.log"
+}
+$ git status --short
+?? unseen_conditions_v1/RUNNING.lock
+?? unseen_conditions_v1/cc0xdGW0.s
+?? unseen_conditions_v1/runs/
+?? unseen_conditions_v1/validation/
+
+[exit_code=0]
+
+{
+  "number": 13,
+  "argv": [
+    "git",
+    "diff",
+    "--exit-code",
+    "HEAD",
+    "--"
+  ],
+  "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory",
+  "started_utc": "2026-10-29T03:00:21.730890+00:00",
+  "duration_seconds": 0.0038385420048143715,
+  "exit_code": 0,
+  "output": "13.log"
+}
+$ git diff --exit-code HEAD --
+
+[exit_code=0]
+
+{
+  "number": 14,
+  "argv": [
+    "sha256sum",
+    "SOURCE_LOCK.json",
+    "build/driver",
+    "build/driver_reference",
+    "validation/c041e033e4e81ba589d6d02c490823aa5319cb9b66e1524c737e3b4820af705c/VALIDATION.json",
+    "cc0xdGW0.s"
+  ],
+  "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory/unseen_conditions_v1",
+  "started_utc": "2026-10-29T03:00:21.735043+00:00",
+  "duration_seconds": 0.0029712840041611344,
+  "exit_code": 0,
+  "output": "14.log"
+}
+$ sha256sum SOURCE_LOCK.json build/driver build/driver_reference validation/c041e033e4e81ba589d6d02c490823aa5319cb9b66e1524c737e3b4820af705c/VALIDATION.json cc0xdGW0.s
+c041e033e4e81ba589d6d02c490823aa5319cb9b66e1524c737e3b4820af705c  SOURCE_LOCK.json
+60f2a7d600ac5d4eb67bfd876c39f7a66dfe6184befbaf221dbb9830e071e4c3  build/driver
+67aff94f68e93d3ec4478b9a1514e1b9e3d56a3476b224291a7d3bf17c7d4a74  build/driver_reference
+6d0bc76b850b3620541bc72ff1feeb4f22c50cc4717908614532b9cc0140d2db  validation/c041e033e4e81ba589d6d02c490823aa5319cb9b66e1524c737e3b4820af705c/VALIDATION.json
+7c6b90d06d719b4ac7a020563c6178e89be3a300d292ec1d037c7cc89574064c  cc0xdGW0.s
+
+[exit_code=0]
+
+{
+  "number": 15,
+  "argv": [
+    "test",
+    "!",
+    "-e",
+    "selection_evidence.json"
+  ],
+  "cwd": "/workspace/scratch/1ebdaa405a5d/rebuild_pr11/a22-exploratory/unseen_conditions_v1",
+  "started_utc": "2026-10-29T03:00:21.738346+00:00",
+  "duration_seconds": 0.0019068130059167743,
+  "exit_code": 0,
+  "output": "15.log"
+}
+$ test '!' -e selection_evidence.json
+
+[exit_code=0]
+
