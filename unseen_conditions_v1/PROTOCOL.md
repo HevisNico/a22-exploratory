@@ -1,10 +1,46 @@
 # A22 adaptation to held-out operating conditions — preregistration v1
 
-Status: protocol registered before any simulation or candidate evaluation for
-this study. The first public GitHub commit containing this file is the
-registration timestamp. The implementation and its hashes must also be committed
-before numerical validation and before design/test simulations. This study is
-separate from the earlier six-device and TouchReal experiments.
+Status: preregistration draft; the registration and launch gate below is not yet
+complete. No numerical validation, simulation or candidate evaluation for this
+study has been launched. This study is separate from the earlier six-device and
+TouchReal experiments.
+
+## Registration record and launch gate
+
+A commit date is supplied by the author/committer, and a branch can be rewritten.
+The first public branch commit is therefore a version reference, not independent
+proof of when this protocol existed. A tag can also be moved unless protected;
+neither a commit date nor an unprotected tag is accepted as timestamp evidence.
+
+Before any numerical fixture, candidate evaluation or study simulation:
+
+1. Submit the final protocol through a reviewed pull request and merge it into
+   main. Retain the PR URL, its server-recorded merge event and the full merged
+   commit SHA in a registration record.
+2. Create the release tag `prereg-unseen-conditions-v1` at that exact merged SHA.
+   Record the full SHA, protocol SHA-256 and tag reference; protect the tag
+   against movement/deletion. Never replace that tag to conceal an amendment.
+3. Protect main at least to the standard used for the certified repository:
+   reviewed PR merges, blocked force pushes/deletions and the applicable required
+   checks. Record the actual configured rules and any bypass permissions rather
+   than merely claiming that main is protected.
+4. Publish the implementation and its source hashes before numerical validation.
+   Record its exact revision alongside the protocol registration.
+
+A published, versioned deposit on an external timestamped service such as OSF or
+Zenodo is strongly recommended for evidence independent of this GitHub branch.
+Archive the exact protocol and hashes, and retain the public version URL,
+service-recorded publication time and DOI when available. A private draft,
+reserved DOI or author-entered date is not a published timestamped deposit.
+A merged PR and protected tag improve auditability but do not alone constitute
+an immutable third-party timestamp.
+
+Until the required steps above are completed and their evidence is linked, the
+document remains a draft and the study must not launch. Any claim of an external
+timestamp additionally requires the actual published deposit; none exists merely
+because this document recommends one. Amendments must retain the earlier
+registered version, explain the change and be recorded prospectively before the
+affected calculations.
 
 ## Question and permitted conclusion
 
@@ -33,6 +69,16 @@ finite test, not a theoretical upper bound on all learning algorithms.
 * The base C, Lm, Ls, Le, M fields are independently uniform within ±1e-4 of
   nominal per cell and port. Larger heterogeneity below concerns effective main
   actuation gains, not auxiliary timing constants.
+* H is a physical device/environment factor, not a privilege of the adaptive
+  arm. On the same device, condition, cell, port and operating phase, exactly the
+  same H multiplies exp(z) in every arm: learning active, acquired then frozen,
+  the one robust static and every candidate used by the static oracle. Static
+  setpoints are not exempt from H. Draw H once per device/condition, never once
+  per arm; where no large variation is specified, H=1 for all arms. The drift
+  schedule, including H=1 before the change and the common post-change H field,
+  is shared by all arms. Main-admission work and the resource bound include H
+  identically in every arm. Record matching H-field hashes and transition
+  schedules in the paired results; a mismatch invalidates the comparison.
 * Link amplitude: independent mean-one lognormal noise, log standard deviation
   0.10. Link delay 0.1 plus centered uniform jitter of standard deviation 0.03.
   No additive background or spurious source events.
@@ -72,6 +118,29 @@ finite test, not a theoretical upper bound on all learning algorithms.
    no unscored post-drift retraining period. This is an abrupt gain change after
    a quiet interval, not drift during FAST/SLOW or a continuously varying
    auxiliary constant.
+
+## Prespecified expectation for the wider held-out range
+
+The design range H in [0.9,1.1] and held-out range H in [0.8,1.2] deliberately
+differ. This is a declared out-of-design-range challenge, not an assertion that
+design and test are identically distributed. The robust static is optimized on
+the stated design set only; it is not claimed to be the optimum over the wider
+held-out range.
+
+Before observing any outcomes, the larger gain heterogeneity and post-acquisition
+drift are the leading hypothesized sources of an adaptive advantage, if one
+exists. A static selected over a narrower range may lose performance outside it,
+whereas in-place plasticity may compensate for local changes. This expectation
+may be false and is not a result. The source-only shift is a weaker expected
+challenge because of lane equivariance.
+
+Keep the four preregistered family weights and report every family separately
+regardless of outcome. If a positive pooled comparison is driven by heterogeneity
+or drift, describe it specifically as an advantage under this declared range
+expansion or gain change. Do not generalize it to all unseen conditions, claim
+that source shifts or cuts benefited without their own descriptive evidence, or
+retune the static/test ranges after seeing results. No supplementary tuned
+static can replace the originally selected primary comparator.
 
 ## Acquisition and evaluation schedule
 
@@ -189,8 +258,10 @@ direction survives those bounds. Unavailable work is never imputed as zero.
 
 ## Execution, validation, stopping and publication
 
-Commit this protocol first, then commit the implementation/source hashes before
-any numerical fixture. Validate unchanged-case parity, frozen invariants,
+Complete and document the registration/launch gate above, and commit the
+implementation/source hashes before any numerical fixture. Validate identical
+H fields and drift schedules across every adaptive/static arm, unchanged-case
+parity, frozen invariants,
 H=1 equivalence, H effect on charge/work, cuts, chronological continuation and
 rest equivalence on dedicated validation seeds outside both cohorts. Fixtures
 cannot select new operating parameters or static candidates. If validation
