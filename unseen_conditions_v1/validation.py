@@ -24,6 +24,21 @@ def compare_events(a, b, minimum_label=None):
     return dict(events=events, max_time_difference=maximum, output_labels_identical=True)
 
 
+def max_relative(a, b):
+    """Largest relative difference between two lists of the nine work components."""
+    if len(a) != len(b):
+        raise ValueError('Work components differ in length')
+    return max(abs(x-y)/max(1.0, abs(x), abs(y)) for x, y in zip(a, b))
+
+
+# Amendment 2: counts and word outcomes are compared exactly; output times within 1e-7 model
+# units; work within a relative 1e-9 (binary64 roundoff differs when a run starts at another
+# time origin or from a checkpoint).
+EXACT_KEYS = ('words', 'complete_words', 'expected_words', 'missing_labels', 'duplicate_labels',
+              'ambiguous_events', 'outside_labels', 'order_violations', 'final_events',
+              'interval_pairs', 'fires', 'layer_event_counts', 'input_pulses')
+
+
 def state_rows(path):
     rows = [[float(x) for x in line.split()] for line in path.read_text().splitlines()]
     if len(rows) != 1560 or any(len(row) != 7 or any(not math.isfinite(x) for x in row) for row in rows):
@@ -79,11 +94,13 @@ def run(reg):
 
         old_path, old = fixture('original_128', 'learn', 128, reference=True)
         full_path, full = fixture('modified_128', 'learn', 128)
-        if old['outputs'] != full['outputs'] or old['work_components'] != full['work_components']:
+        if old['outputs'] != full['outputs'] or old['work_components'] != full['work_components'] \
+                or old['layer_event_counts'] != full['layer_event_counts'] or old['fires'] != full['fires']:
             raise ValueError('H=1 parity with the unmodified kernel failed')
         if old_path.with_suffix('.states').read_bytes() != full_path.with_suffix('.states').read_bytes():
             raise ValueError('H=1 terminal checkpoint parity failed')
-        result['unmodified_kernel_H1_parity'] = dict(all_outputs_bitwise_identical=True, work_and_states_identical=True)
+        result['unmodified_kernel_H1_parity'] = dict(all_outputs_bitwise_identical=True, output_events=sum(map(len, full['outputs'])),
+                                                   work_states_layer_counts_and_fires_identical=True)
         # Amendment 1: split only at a quiet point, as the study does. The continuous reference has
         # the same 512-unit quiet interval between pulses 63 and 64 (schedule 'trainquiet').
         prefix_path, _ = fixture('prefix_64', 'learn', 64)
@@ -91,11 +108,27 @@ def run(reg):
         suffix_path, suffix = fixture('suffix_64', 'active', 64, start=8.0*63+512.0, offset=64,
                                       checkpoint=prefix_path.with_suffix('.states'))
         result['chronological_continuation'] = compare_events(quiet, suffix, minimum_label=64)
-        max_parameter = max(abs(a-b) for x, y in zip(state_rows(quiet_path.with_suffix('.states')),
-                            state_rows(suffix_path.with_suffix('.states'))) for a, b in zip(x[:4], y[:4]))
-        if max_parameter > 1e-7:
-            raise ValueError('Continued learned parameters differ')
-        result['chronological_continuation']['max_parameter_difference'] = max_parameter
+        # Amendment 2: during training the waves die before the output layer, so the output
+        # comparison above has no events. The split is checked on the whole network instead:
+        # per-layer event counts and fires add up exactly, work adds up, and all seven state
+        # fields of every cell agree at the end.
+        prefix = s.raw_result(prefix_path)
+        whole = [a+b for a, b in zip(prefix['layer_event_counts'], suffix['layer_event_counts'])]
+        if whole != quiet['layer_event_counts'] or prefix['fires']+suffix['fires'] != quiet['fires']:
+            raise ValueError('Continued event counts differ')
+        if suffix['fires'] == 0:
+            raise ValueError('Continuation fixture is vacuous')
+        work = max_relative(quiet['work_components'], [x+y for x, y in zip(prefix['work_components'],
+                                                                                suffix['work_components'])])
+        if work > 1e-9:
+            raise ValueError('Continued work differs')
+        max_state = max(abs(a-b) for x, y in zip(state_rows(quiet_path.with_suffix('.states')),
+                        state_rows(suffix_path.with_suffix('.states'))) for a, b in zip(x, y))
+        if max_state > 1e-7:
+            raise ValueError('Continued cell states differ')
+        result['chronological_continuation'].update(
+            layer_event_counts_and_fires_additive=True, events_after_split=sum(suffix['layer_event_counts']),
+            max_relative_work_difference=work, max_state_difference_all_7_fields=max_state)
 
         static_checks = []
         for candidate in c.CANDIDATES:
@@ -104,11 +137,21 @@ def run(reg):
             _, fresh = fixture(f'fresh_{mode}', mode, 32, start=32*8.0+512.0, H='H_drift.txt', schedule='test')
             frozen_path, continued = fixture(f'continued_{mode}', 'frozen', 32, start=32*8.0+512.0,
                                            checkpoint=pre_path.with_suffix('.states'), H='H_drift.txt', schedule='test')
-            if fresh['outputs'] != continued['outputs'] or fresh['work_components'] != continued['work_components']:
-                raise ValueError('Rested static shortcut is not exact: '+mode)
+            differing = [k for k in EXACT_KEYS if fresh[k] != continued[k]]
+            if differing:
+                raise ValueError('Rested static shortcut changes '+', '.join(differing)+': '+mode)
+            timing = compare_events(fresh, continued)
+            if timing['events'] == 0:
+                raise ValueError('Rested static fixture is vacuous: '+mode)
+            work = max_relative(fresh['work_components'], continued['work_components'])
+            if work > 1e-9:
+                raise ValueError('Rested static work differs: '+mode)
             if [r[:4] for r in state_rows(pre_path.with_suffix('.states'))] != [r[:4] for r in state_rows(frozen_path.with_suffix('.states'))]:
                 raise ValueError('Frozen static parameters moved')
-            static_checks.append(dict(candidate=candidate, outputs_and_service_work_bitwise_identical=True))
+            static_checks.append(dict(candidate=candidate, word_outcomes_and_counts_identical=True,
+                                      output_events=timing['events'], max_time_difference=timing['max_time_difference'],
+                                      max_relative_work_difference=work,
+                                      outputs_bitwise_identical=fresh['outputs'] == continued['outputs']))
         result['all_12_static_rest_equivalence_checks'] = static_checks
         frozen_path, _ = fixture('acquired_frozen', 'frozen', 32, start=128*8.0+512.0,
                                 checkpoint=full_path.with_suffix('.states'), H='H_drift.txt', schedule='test')
