@@ -1,4 +1,4 @@
-# Exploratory simulations (not certified)
+OBSOLETE # Exploratory simulations (not certified)
 
 These studies test the A22 physical kernel with a point simulator, outside the certified setting:
 noise, other inputs, other topologies, ablations of the learning rule and longer training. They are
