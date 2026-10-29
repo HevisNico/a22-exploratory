@@ -44,8 +44,9 @@ No absolute output-latency cutoff is introduced.
 
 The oracle intentionally sees all four test words of every static candidate.
 Its score is not used to choose the primary global static. Rested static
-evaluation is a computational shortcut for the post-change epoch; exact rest
-equivalence must pass on all twelve templates before the shortcut is enabled.
+evaluation is a computational shortcut for the post-change epoch; rest
+equivalence must pass on all twelve templates before the shortcut is enabled
+(word outcomes and counts identical; tolerances as in Amendment 2).
 The chosen robust/oracle statics' pre-change work is then actually simulated.
 If that prehistory is numerically unassessed, the corresponding deployment is
 also unassessed; its work is not treated as zero.
@@ -88,7 +89,10 @@ reference, verify checkpoint continuation and frozen invariants, test H's
 effect on isolated charge/work and central-link removal, verify arm pairing,
 and check the static rest shortcut on every candidate. A tolerance of 1e-7 model
 units/parameter units is used for split-continuation comparisons; H=1 parity
-and static-rest shortcut comparisons require exact output and work equality.
+requires exact output and work equality. Amendment 2: the static-rest shortcut
+requires identical word outcomes, labels and event counts, output times within
+1e-7 and work within a relative 1e-9; the continuation fixture is checked on
+per-layer event counts, fires, work and all seven state fields.
 Dedicated validation seed 930901 is outside both cohorts. A failure is retained
 and requires a public prospective amendment before a new implementation is tried.
 
